@@ -1,0 +1,6 @@
+E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\bin\Debug\Service.dll
+E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\bin\Debug\Service.pdb
+E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.csprojAssemblyReference.cache
+E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.dll
+E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.pdb
