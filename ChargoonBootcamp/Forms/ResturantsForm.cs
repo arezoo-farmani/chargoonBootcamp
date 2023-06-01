@@ -32,7 +32,7 @@ namespace UI
         {
             if (ResturantsList.SelectedItems.Count > 0)
             {
-                Form menuForm = new MenuForm(MenuViewType.ReadOnlyMode);
+                Form menuForm = new MenuForm(MenuViewType.OrderMode);
                 menuForm.Show();
             }
         }

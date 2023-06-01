@@ -21,3 +21,4 @@ D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.Res
 D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.ResturantRegistrationForm.resources
 D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.ResturantsForm.resources
 D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.UserRegistrationForm.resources
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.OrderBasketForm.resources

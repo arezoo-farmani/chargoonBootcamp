@@ -33,13 +33,13 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuBox = new System.Windows.Forms.GroupBox();
-            this.MenuSubmitBtn = new System.Windows.Forms.Button();
             this.MenuDataGrid = new System.Windows.Forms.DataGridView();
             this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Minus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuSubmitBtn = new System.Windows.Forms.Button();
             this.MenuBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -57,18 +57,6 @@ namespace UI
             this.MenuBox.TabIndex = 3;
             this.MenuBox.TabStop = false;
             this.MenuBox.Text = "منو";
-            // 
-            // MenuSubmitBtn
-            // 
-            this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
-            this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
-            this.MenuSubmitBtn.Name = "MenuSubmitBtn";
-            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
-            this.MenuSubmitBtn.TabIndex = 13;
-            this.MenuSubmitBtn.Text = "ثبت منو جدید";
-            this.MenuSubmitBtn.UseVisualStyleBackColor = false;
             // 
             // MenuDataGrid
             // 
@@ -142,6 +130,19 @@ namespace UI
             this.FoodPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.FoodPrice.HeaderText = "قیمت";
             this.FoodPrice.Name = "FoodPrice";
+            // 
+            // MenuSubmitBtn
+            // 
+            this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
+            this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
+            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
+            this.MenuSubmitBtn.Name = "MenuSubmitBtn";
+            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
+            this.MenuSubmitBtn.TabIndex = 13;
+            this.MenuSubmitBtn.Text = "ثبت منو جدید";
+            this.MenuSubmitBtn.UseVisualStyleBackColor = false;
+            this.MenuSubmitBtn.Click += new System.EventHandler(this.MenuSubmitBtn_Click);
             // 
             // MenuForm
             // 

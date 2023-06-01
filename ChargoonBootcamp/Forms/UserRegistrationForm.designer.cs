@@ -52,7 +52,6 @@ namespace UI
             this.RegistrationUserBox.Controls.Add(this.PhoneNumberTxt);
             this.RegistrationUserBox.Controls.Add(this.PhoneNumberLabel);
             this.RegistrationUserBox.Controls.Add(this.NationalCodeTxt);
-            this.RegistrationUserBox.Controls.Add(this.UserSubmitBtn);
             this.RegistrationUserBox.Controls.Add(this.AddressTxt);
             this.RegistrationUserBox.Controls.Add(this.LastNameTxt);
             this.RegistrationUserBox.Controls.Add(this.AddressLabel);
@@ -122,7 +121,7 @@ namespace UI
             this.UserSubmitBtn.BackColor = System.Drawing.Color.Teal;
             this.UserSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UserSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.UserSubmitBtn.Location = new System.Drawing.Point(6, 264);
+            this.UserSubmitBtn.Location = new System.Drawing.Point(100, 386);
             this.UserSubmitBtn.Name = "UserSubmitBtn";
             this.UserSubmitBtn.Size = new System.Drawing.Size(60, 30);
             this.UserSubmitBtn.TabIndex = 13;
@@ -213,6 +212,7 @@ namespace UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.RegistrationUserBox);
+            this.Controls.Add(this.UserSubmitBtn);
             this.Name = "UserRegistrationForm";
             this.Text = "UserRegistrationForm";
             this.RegistrationUserBox.ResumeLayout(false);
