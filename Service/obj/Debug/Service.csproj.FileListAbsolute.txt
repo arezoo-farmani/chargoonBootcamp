@@ -4,3 +4,11 @@ E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\
 E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
 E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.dll
 E:\Backend_Chargoon\Backend_SecondPhase\FinalProject_WindowsFormApp\Service\obj\Debug\Service.pdb
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\bin\Debug\Service.dll
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\bin\Debug\Service.pdb
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\bin\Debug\Newtonsoft.Json.dll
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\bin\Debug\Newtonsoft.Json.xml
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.csproj.CoreCompileInputs.cache
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.csproj.CopyComplete
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.dll
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.pdb

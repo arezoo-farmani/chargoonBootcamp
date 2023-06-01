@@ -1,10 +1,8 @@
 ﻿using System.Collections.Generic;
 using System.IO;
-using UI;
-using System.Text;
 using Newtonsoft.Json;
 using Microsoft.VisualBasic.ApplicationServices;
-using WindowsFormsApp_Restaurant;
+using ResturantApp;
 
 namespace Repository
 {
