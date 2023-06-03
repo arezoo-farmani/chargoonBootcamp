@@ -35,7 +35,7 @@
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\RestaurantList.cs" />
     <Compile Include="Models\User.cs" />
-    <Compile Include="Repository.cs" />
+    <Compile Include="DataRepository.cs" />
     <Compile Include="IRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

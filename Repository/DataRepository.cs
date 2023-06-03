@@ -5,12 +5,12 @@ using Repository.Models;
 
 namespace Repository
 {
-    public class Repository:IRepository
+    public class DataRepository:IRepository
     {
         private readonly string UserFilePath;
         private readonly string RestaurantFilePath;
 
-        public Repository()
+        public DataRepository()
         {
             this.UserFilePath = @"..\..\Files\users.json";
             this.RestaurantFilePath = @"..\..\Files\restaurant.json";

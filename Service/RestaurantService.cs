@@ -11,7 +11,7 @@ namespace Service
       
         public RestaurantService()
         {
-            this._repository = new Repository.Repository();
+            this._repository = new Repository.DataRepository();
         }
 
         public List<Restaurant> GetAllRestaurants()

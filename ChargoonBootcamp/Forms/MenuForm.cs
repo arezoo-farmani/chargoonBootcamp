@@ -14,6 +14,11 @@ namespace UI
             MenuForm_Load();
         }
 
+        public MenuForm()
+        {
+            InitializeComponent();
+        }
+
         private void MenuForm_Load()
         {
             //just for test

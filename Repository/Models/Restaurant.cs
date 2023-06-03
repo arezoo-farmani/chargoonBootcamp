@@ -15,5 +15,6 @@ namespace Repository.Models
         public DateTime Closetime { get; set; }
         public string Address { get; set; }
         public List<Food> Menu { get; set; }
+        public string PhoneNumber { get; set; }
     }
 }
