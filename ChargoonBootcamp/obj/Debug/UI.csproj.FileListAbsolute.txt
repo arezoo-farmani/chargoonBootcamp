@@ -75,3 +75,6 @@ C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.cs
 C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.csproj.CopyComplete
 C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.exe
 C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.pdb
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\ChargoonBootcamp\bin\Debug\WindowsFormsApp_Restaurant.exe.config
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.exe
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.pdb
