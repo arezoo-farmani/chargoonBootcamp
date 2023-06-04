@@ -1,5 +1,8 @@
-﻿using ResturantApp;
+﻿using Repository;
+using Repository.Models;
+using ResturantApp;
 using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 
 namespace UI
@@ -19,9 +22,51 @@ namespace UI
 
         private void ResturantSubmitBtn_Click(object sender, EventArgs e)
         {
+            string name = ResturantNameTxt.Text;
+            string possessor = ResturantOwnerTxt.Text;
+            decimal openTime = HourFromTxt.Value;
+            decimal closeTime = HourToTxt.Value;
+            string address = AddressTxt.Text;
+            string phoneNumber = PhoneNumberTxt.Text;
+
+            Restaurant newRestaurant = new Restaurant
+            {
+                Guid = Guid.NewGuid(),
+                RestaurantName = name,
+                RestaurantPossessor = possessor,
+                OpenTime = openTime,
+                Closetime = closeTime,
+                Address = address,
+                PhoneNumber = phoneNumber,
+                Menu = new List<Food>()
+            };
+            DataRepository dataRepository = new DataRepository();
+            dataRepository.SaveAllRestaurants(newRestaurant);
+            MessageBox.Show("Restaurant was registered successfully.");
+            ClearFields();
+
             this.Hide();
             Form resturantOwnerForm = new ResturantOwnerForm();
             resturantOwnerForm.Show();
+        }
+        private void ClearFields()
+        {
+            ResturantNameTxt.Text = string.Empty;
+            ResturantOwnerTxt.Text = string.Empty;
+            HourFromTxt.Value = 1;
+            HourToTxt.Value = 1;
+            AddressTxt.Text = string.Empty;
+            PhoneNumberTxt.Text = string.Empty;
+        }
+
+        private void ResturantRegBox_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void WorkHoursLabel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

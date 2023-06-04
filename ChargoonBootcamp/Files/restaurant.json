@@ -1,11 +1,1 @@
-[
-{
-  "PhoneNumber": "09124000000",
-},
-{
-  "PhoneNumber": "09125000000",
-},
-{
-  "PhoneNumber": "09126000000",
-}
-]
+[{"Guid":"4252df68-fc1d-42e5-88fd-1b8583bbada3","RestaurantName":"Naeb","RestaurantPossessor":"Ali","OpenTime":8.0,"Closetime":21.0,"Address":"Test","Menu":[],"PhoneNumber":"800"}]

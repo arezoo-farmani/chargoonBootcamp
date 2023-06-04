@@ -1,11 +1,1 @@
-[
-{
-  "PhoneNumber": "09121000000",
-},
-{
-  "PhoneNumber": "09122000000",
-},
-{
-  "PhoneNumber": "09123000000",
-}
-]
+[{"Guid":"803cf57a-a173-4be4-a57f-794797c3120e","Name":"آرزو ","Family":"فرمانی","NationalCode":"100","Address":"آدرس تست","PhoneNumber":"256"}]

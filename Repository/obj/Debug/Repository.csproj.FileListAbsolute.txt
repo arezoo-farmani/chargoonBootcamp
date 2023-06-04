@@ -31,3 +31,12 @@ C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\bin\Debug\Ne
 C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
 C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\obj\Debug\Repository.dll
 C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\obj\Debug\Repository.pdb
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\bin\Debug\Repository.dll
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\bin\Debug\Repository.pdb
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\bin\Debug\Newtonsoft.Json.dll
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\bin\Debug\Newtonsoft.Json.xml
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.csproj.CoreCompileInputs.cache
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.csproj.CopyComplete
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.dll
+C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.pdb

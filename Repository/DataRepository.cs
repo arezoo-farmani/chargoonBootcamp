@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
 using Repository.Models;
@@ -23,6 +24,13 @@ namespace Repository
             return users ?? new List<User>();
         }
 
+        public void SaveAllUsers(User newUser)
+        {
+            List<User> users = new List<User>();
+            users.Add(newUser);
+            this.SaveAllUsers(users);
+        }
+
         public void SaveAllUsers(List<User> users)
         {
             string jsonData = JsonConvert.SerializeObject(users);
@@ -36,12 +44,17 @@ namespace Repository
             return  restaurants ?? new List<Restaurant>();
         }
 
+        public void SaveAllRestaurants(Restaurant restaurant)
+        {
+            List<Restaurant> restaurants = new List<Restaurant>();
+            restaurants.Add(restaurant);
+            this.SaveAllRestaurants(restaurants);
+        }
+
         public void SaveAllRestaurants(List<Restaurant> restaurants)
         {
             string jsonData = JsonConvert.SerializeObject(restaurants);
             File.WriteAllText(RestaurantFilePath, jsonData);
         }
     }
-
-
 }
