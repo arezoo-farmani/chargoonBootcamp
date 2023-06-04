@@ -50,6 +50,24 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enumration\MenuViewType.cs" />
+    <Compile Include="Forms\FactorsListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FactorsListForm.Designer.cs">
+      <DependentUpon>FactorsListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FoodListMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodListMenu.Designer.cs">
+      <DependentUpon>FoodListMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FoodMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodMenu.Designer.cs">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InvoicesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -67,6 +85,12 @@
     </Compile>
     <Compile Include="Forms\MenuForm.designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MenuFormTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MenuFormTest.Designer.cs">
+      <DependentUpon>MenuFormTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RegistrationForm.cs">
       <SubType>Form</SubType>
@@ -103,6 +127,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Models\Restaurant.cs" />
     <Compile Include="Models\User.cs" />
+    <EmbeddedResource Include="Forms\FactorsListForm.resx">
+      <DependentUpon>FactorsListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FoodListMenu.resx">
+      <DependentUpon>FoodListMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FoodMenu.resx">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InvoicesForm.resx">
       <DependentUpon>InvoicesForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -111,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MenuFormTest.resx">
+      <DependentUpon>MenuFormTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RegistrationForm.resx">
       <DependentUpon>RegistrationForm.cs</DependentUpon>
@@ -135,6 +171,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
@@ -155,6 +192,9 @@
       <Project>{41ed3681-bfb1-4552-ba23-5f7fbe4452fd}</Project>
       <Name>Service</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-close-30.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

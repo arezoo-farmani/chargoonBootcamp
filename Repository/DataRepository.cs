@@ -2,6 +2,7 @@
 using System.IO;
 using Newtonsoft.Json;
 using Microsoft.VisualBasic.ApplicationServices;
+using UI;
 using ResturantApp;
 
 namespace Repository
@@ -15,10 +16,12 @@ namespace Repository
         {
             this.UserFilePath = @"..\..\Files\users.json";
             this.RestaurantFilePath = @"..\..\Files\restaurant.json";
+          
         }
-
+        
         public List<User> GetAllUsers()
         {
+            
             string jsonData = File.ReadAllText(UserFilePath);
             List<User> users = JsonConvert.DeserializeObject<List<User>>(jsonData);
             return users ?? new List<User>();
@@ -27,6 +30,7 @@ namespace Repository
         public void SaveAllUsers(List<User> users)
         {
             string jsonData = JsonConvert.SerializeObject(users);
+            
             File.WriteAllText(UserFilePath, jsonData);
         }
 
@@ -42,6 +46,7 @@ namespace Repository
             string jsonData = JsonConvert.SerializeObject(restaurants);
             File.WriteAllText(RestaurantFilePath, jsonData);
         }
+        
     }
 
 

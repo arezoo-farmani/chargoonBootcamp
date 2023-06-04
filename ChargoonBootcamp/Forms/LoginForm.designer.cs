@@ -35,7 +35,10 @@ namespace ResturantApp
             this.Required1 = new System.Windows.Forms.Label();
             this.PhoneNumberTxt = new System.Windows.Forms.TextBox();
             this.PhoneNumberLabel = new System.Windows.Forms.Label();
+            this.CloseBtn = new System.Windows.Forms.PictureBox();
+            this.button1 = new System.Windows.Forms.Button();
             this.LoginBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).BeginInit();
             this.SuspendLayout();
             // 
             // LoginBox
@@ -76,7 +79,7 @@ namespace ResturantApp
             this.Required1.ForeColor = System.Drawing.Color.Red;
             this.Required1.Location = new System.Drawing.Point(78, 51);
             this.Required1.Name = "Required1";
-            this.Required1.Size = new System.Drawing.Size(13, 16);
+            this.Required1.Size = new System.Drawing.Size(14, 16);
             this.Required1.TabIndex = 2;
             this.Required1.Text = "*";
             this.Required1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -100,21 +103,44 @@ namespace ResturantApp
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Teal;
             this.PhoneNumberLabel.Location = new System.Drawing.Point(273, 51);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(74, 16);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(75, 16);
             this.PhoneNumberLabel.TabIndex = 0;
             this.PhoneNumberLabel.Text = "شماره موبایل";
+            // 
+            // CloseBtn
+            // 
+            this.CloseBtn.Image = global::WindowsFormsApp_Restaurant.Properties.Resources.icons8_close_30;
+            this.CloseBtn.Location = new System.Drawing.Point(530, 24);
+            this.CloseBtn.Name = "CloseBtn";
+            this.CloseBtn.Size = new System.Drawing.Size(29, 32);
+            this.CloseBtn.TabIndex = 15;
+            this.CloseBtn.TabStop = false;
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(387, 241);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 16;
+            this.button1.Text = "فرم منوها";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(600, 300);
+            this.ClientSize = new System.Drawing.Size(624, 319);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.LoginBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.LoginBox.ResumeLayout(false);
             this.LoginBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.CloseBtn)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -126,5 +152,7 @@ namespace ResturantApp
         private Label PhoneNumberLabel;
         private Label Required1;
         private Button LoginBtn;
+        private PictureBox CloseBtn;
+        private Button button1;
     }
 }

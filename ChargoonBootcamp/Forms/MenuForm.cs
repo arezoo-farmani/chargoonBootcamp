@@ -35,5 +35,14 @@ namespace UI
             }
         }
 
+        private void MenuSubmitBtn_Click(object sender, System.EventArgs e)
+        {
+
+        }
+
+        private void MenuForm_Load(object sender, System.EventArgs e)
+        {
+
+        }
     }
 }

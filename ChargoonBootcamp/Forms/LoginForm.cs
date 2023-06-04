@@ -2,6 +2,7 @@ using System;
 using System.Drawing;
 using System.Windows.Forms;
 using UI;
+using WindowsFormsApp_Restaurant.Forms;
 
 namespace ResturantApp
 {
@@ -38,6 +39,17 @@ namespace ResturantApp
             {
                 PhoneNumberTxt.BackColor = _defaultTextBoxColor;
             }
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MenuFormTest menuFormTest = new MenuFormTest();
+            menuFormTest.ShowDialog();
         }
     }
 }
