@@ -5,6 +5,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using UI;
 using Repository;
+using WindowsFormsApp_Restaurant.Forms;
 
 namespace ResturantApp
 {
@@ -15,7 +16,7 @@ namespace ResturantApp
         private List<User> userList;
         private List<Restaurant> restaurantList;
         private IRepository dataRepository;
-        private object PhoneNumberTextBox;
+        //private object PhoneNumberTextBox;
         // private string phoneNumber;
 
         public LoginForm()
@@ -101,6 +102,17 @@ namespace ResturantApp
             {
                 PhoneNumberTxt.BackColor = _defaultTextBoxColor;
             }
+        }
+
+        private void CloseBtn_Click(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            MainMenuForm mainManuForm = new MainMenuForm();
+            mainManuForm.ShowDialog();
         }
     }
 }

@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp_Restaurant.Forms
 {
-    partial class MenuFormTest
+    partial class MainMenuForm
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.FoodMenuBtn = new System.Windows.Forms.Button();
-            this.FactorListBtn = new System.Windows.Forms.Button();
+            this.InvoicesListBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // FoodMenuBtn
@@ -37,36 +37,36 @@
             this.FoodMenuBtn.BackColor = System.Drawing.Color.Teal;
             this.FoodMenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.FoodMenuBtn.ForeColor = System.Drawing.Color.White;
-            this.FoodMenuBtn.Location = new System.Drawing.Point(73, 67);
+            this.FoodMenuBtn.Location = new System.Drawing.Point(78, 67);
             this.FoodMenuBtn.Name = "FoodMenuBtn";
             this.FoodMenuBtn.Size = new System.Drawing.Size(120, 30);
-            this.FoodMenuBtn.TabIndex = 7;
+            this.FoodMenuBtn.TabIndex = 9;
             this.FoodMenuBtn.Text = "منوی غذا";
             this.FoodMenuBtn.UseVisualStyleBackColor = false;
             this.FoodMenuBtn.Click += new System.EventHandler(this.FoodMenuBtn_Click);
             // 
-            // FactorListBtn
+            // InvoicesListBtn
             // 
-            this.FactorListBtn.BackColor = System.Drawing.Color.Teal;
-            this.FactorListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.FactorListBtn.ForeColor = System.Drawing.Color.White;
-            this.FactorListBtn.Location = new System.Drawing.Point(73, 149);
-            this.FactorListBtn.Name = "FactorListBtn";
-            this.FactorListBtn.Size = new System.Drawing.Size(120, 30);
-            this.FactorListBtn.TabIndex = 6;
-            this.FactorListBtn.Text = "لیست فاکتورها";
-            this.FactorListBtn.UseVisualStyleBackColor = false;
-            this.FactorListBtn.Click += new System.EventHandler(this.FactorListBtn_Click);
+            this.InvoicesListBtn.BackColor = System.Drawing.Color.Teal;
+            this.InvoicesListBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.InvoicesListBtn.ForeColor = System.Drawing.Color.White;
+            this.InvoicesListBtn.Location = new System.Drawing.Point(78, 149);
+            this.InvoicesListBtn.Name = "InvoicesListBtn";
+            this.InvoicesListBtn.Size = new System.Drawing.Size(120, 30);
+            this.InvoicesListBtn.TabIndex = 8;
+            this.InvoicesListBtn.Text = "لیست فاکتورها";
+            this.InvoicesListBtn.UseVisualStyleBackColor = false;
+            this.InvoicesListBtn.Click += new System.EventHandler(this.FactorListBtn_Click);
             // 
-            // MenuFormTest
+            // MainMenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(461, 312);
+            this.ClientSize = new System.Drawing.Size(379, 282);
             this.Controls.Add(this.FoodMenuBtn);
-            this.Controls.Add(this.FactorListBtn);
-            this.Name = "MenuFormTest";
-            this.Text = "MenuFormTest";
+            this.Controls.Add(this.InvoicesListBtn);
+            this.Name = "MainMenuForm";
+            this.Text = "MainMenuForm";
             this.ResumeLayout(false);
 
         }
@@ -74,6 +74,6 @@
         #endregion
 
         private System.Windows.Forms.Button FoodMenuBtn;
-        private System.Windows.Forms.Button FactorListBtn;
+        private System.Windows.Forms.Button InvoicesListBtn;
     }
 }

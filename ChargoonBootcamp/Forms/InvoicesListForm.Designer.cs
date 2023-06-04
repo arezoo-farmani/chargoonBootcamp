@@ -1,6 +1,6 @@
 ﻿namespace WindowsFormsApp_Restaurant.Forms
 {
-    partial class FactorsListForm
+    partial class InvoicesListForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,13 +30,14 @@
         {
             this.SuspendLayout();
             // 
-            // FactorsListForm
+            // InvoicesListForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(343, 296);
-            this.Name = "FactorsListForm";
-            this.Text = "FactorsListForm";
+            this.ClientSize = new System.Drawing.Size(284, 261);
+            this.Name = "InvoicesListForm";
+            this.Text = "InvoicesListForm";
+            this.Load += new System.EventHandler(this.InvoicesListForm_Load);
             this.ResumeLayout(false);
 
         }

@@ -24,3 +24,10 @@ C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\Repository\obj\Debug\Repository.
 C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\Repository\obj\Debug\Repository.csproj.CopyComplete
 C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\Repository\obj\Debug\Repository.dll
 C:\Users\rezas\Desktop\Chargon\chargoonBootcamp\Repository\obj\Debug\Repository.pdb
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\bin\Debug\Repository.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\bin\Debug\Repository.pdb
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\obj\Debug\Repository.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\obj\Debug\Repository.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Repository\obj\Debug\Repository.pdb

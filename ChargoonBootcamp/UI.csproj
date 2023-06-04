@@ -51,17 +51,41 @@
   <ItemGroup>
     <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Enumration\MenuViewType.cs" />
+    <Compile Include="Forms\FoodListMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodListMenu.Designer.cs">
+      <DependentUpon>FoodListMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FoodMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodMenu.Designer.cs">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\InvoicesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\InvoicesForm.designer.cs">
       <DependentUpon>InvoicesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\InvoicesListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\InvoicesListForm.Designer.cs">
+      <DependentUpon>InvoicesListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MainMenuForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\MainMenuForm.Designer.cs">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MenuForm.cs">
       <SubType>Form</SubType>
@@ -107,11 +131,23 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FoodListMenu.resx">
+      <DependentUpon>FoodListMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FoodMenu.resx">
+      <DependentUpon>FoodMenu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\InvoicesForm.resx">
       <DependentUpon>InvoicesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\InvoicesListForm.resx">
+      <DependentUpon>InvoicesListForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\MainMenuForm.resx">
+      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>

@@ -115,7 +115,7 @@ namespace ResturantApp
             this.CloseBtn.Size = new System.Drawing.Size(29, 32);
             this.CloseBtn.TabIndex = 15;
             this.CloseBtn.TabStop = false;
-         
+            this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // button1
             // 
@@ -125,7 +125,7 @@ namespace ResturantApp
             this.button1.TabIndex = 16;
             this.button1.Text = "فرم منوها";
             this.button1.UseVisualStyleBackColor = true;
-         
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // LoginForm
             // 

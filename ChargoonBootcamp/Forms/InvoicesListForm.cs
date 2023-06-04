@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace WindowsFormsApp_Restaurant.Forms
 {
-    public partial class FactorsListForm : Form
+    public partial class InvoicesListForm : Form
     {
-        public FactorsListForm()
+        public InvoicesListForm()
         {
             InitializeComponent();
+        }
+
+        private void InvoicesListForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

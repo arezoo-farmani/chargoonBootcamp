@@ -12,3 +12,12 @@ D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.csproj.
 D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.csproj.CopyComplete
 D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.dll
 D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.pdb
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\bin\Debug\Service.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\bin\Debug\Service.pdb
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\bin\Debug\Repository.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\bin\Debug\Repository.pdb
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\obj\Debug\Service.csprojResolveAssemblyReference.cache
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\obj\Debug\Service.dll
+C:\Users\Administrator\Documents\GitHub\chargoonBootcamp\Service\obj\Debug\Service.pdb
