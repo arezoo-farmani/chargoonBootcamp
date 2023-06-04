@@ -1,4 +1,8 @@
-﻿using System;
+﻿using Repository.Models;
+using ResturantApp.Controllers;
+using Service;
+using System;
+using System.Collections.Generic;
 using System.Windows.Forms;
 using UI.Enumration;
 
@@ -12,29 +16,31 @@ namespace UI
             AllResturantsForm_Load();
         }
 
-        private bool CheckIsAnyResturantExist()
-        {
-            // if no resturant registered
-            MessageLabel.Text = "رستورانی در سیستم ثبت نشده است !";
-            // else 
-            MessageLabel.Text = "برای مشاهده منوی رستوران روی رستوران مورد نظر کلیک کنید!";
-            return true;
-        }
-
         private void AllResturantsForm_Load()
         {
-            // just for test
-            ResturantsList.Items.Add("Resturant1");
-            ResturantsList.Items.Add("Resturant2");
+            RestaurantController controller = new RestaurantController();
+            if(controller.IsAnyResturantExit())
+            {
+                MessageLabel.Text = "برای مشاهده منوی رستوران روی رستوران مورد نظر کلیک کنید!";
+                List<RestaurantList> allData = controller.GetAllRestaurants();
+                RestaurantsDataGrid.DataSource = allData;
+        
+                RestaurantsDataGrid.Columns["Guid"].Visible = false;
+
+            } else
+            {
+                MessageLabel.Text = "رستورانی در سیستم ثبت نشده است !";
+            }
         }
 
-        private void ResturantsList_DoubleClick(object sender, EventArgs e)
+        private void RestaurantsDataGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (ResturantsList.SelectedItems.Count > 0)
-            {
-                Form menuForm = new MenuForm(MenuViewType.ReadOnlyMode);
-                menuForm.Show();
-            }
+       
+            string arg = RestaurantsDataGrid.Rows[e.RowIndex].Cells[0].Value.ToString();
+            Console.WriteLine(arg);
+            Form menuForm = new MenuForm(MenuViewType.OrderMode);
+            menuForm.Show();
+
         }
     }
 }

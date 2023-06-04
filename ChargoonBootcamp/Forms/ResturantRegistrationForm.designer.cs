@@ -54,7 +54,6 @@ namespace UI
             // 
             this.ResturantRegBox.Controls.Add(this.PhoneNumberTxt);
             this.ResturantRegBox.Controls.Add(this.PhoneNumberLabel);
-            this.ResturantRegBox.Controls.Add(this.ResturantSubmitBtn);
             this.ResturantRegBox.Controls.Add(this.HourToTxt);
             this.ResturantRegBox.Controls.Add(this.HourFromTxt);
             this.ResturantRegBox.Controls.Add(this.AddressTxt);
@@ -105,7 +104,7 @@ namespace UI
             this.ResturantSubmitBtn.BackColor = System.Drawing.Color.Teal;
             this.ResturantSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResturantSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.ResturantSubmitBtn.Location = new System.Drawing.Point(6, 264);
+            this.ResturantSubmitBtn.Location = new System.Drawing.Point(100, 386);
             this.ResturantSubmitBtn.Name = "ResturantSubmitBtn";
             this.ResturantSubmitBtn.Size = new System.Drawing.Size(60, 30);
             this.ResturantSubmitBtn.TabIndex = 13;
@@ -268,6 +267,7 @@ namespace UI
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.ResturantRegBox);
+            this.Controls.Add(this.ResturantSubmitBtn);
             this.Name = "ResturantRegistrationForm";
             this.Text = "ResturantRegistrationForm";
             this.ResturantRegBox.ResumeLayout(false);

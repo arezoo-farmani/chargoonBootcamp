@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace UI
+namespace Repository.Models
 {
     public class Food
     {
+        public Guid Guid { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }
         public Food GetFoodData(string name, decimal price)

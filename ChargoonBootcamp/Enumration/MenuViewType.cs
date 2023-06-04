@@ -5,6 +5,6 @@ namespace UI.Enumration
     {
         AddMode =1,
         EditMode,
-        ReadOnlyMode,
+        OrderMode,
     }
 }
