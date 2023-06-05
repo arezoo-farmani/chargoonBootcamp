@@ -40,4 +40,3 @@ C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Re
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.csproj.CopyComplete
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.dll
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Repository\obj\Debug\Repository.pdb
-D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Repository\obj\Debug\Repository.csproj.AssemblyReference.cache
