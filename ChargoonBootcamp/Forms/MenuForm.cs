@@ -1,15 +1,23 @@
-﻿using System.Windows.Forms;
+﻿using Repository.Models;
+using ResturantApp.Controllers;
+using System;
+using System.Collections.Generic;
+using System.Windows.Forms;
 using UI.Enumration;
 
 namespace UI
 {
     public partial class MenuForm : Form
     {
-        public static MenuViewType FormViewMode;
-        public MenuForm(MenuViewType viewMode)
+        private static MenuViewType _formViewMode;
+        private static int _menuFoodCounts;
+        private static Guid _restaurantGuid;
+
+        public MenuForm(MenuViewType viewMode, Guid restaurantGuid)
         {
             InitializeComponent();
-            FormViewMode = viewMode;
+            _formViewMode = viewMode;
+            _restaurantGuid = restaurantGuid;
             CustomizeFormDynamic();
             MenuForm_Load();
         }
@@ -19,23 +27,29 @@ namespace UI
             InitializeComponent();
         }
 
+
         private void MenuForm_Load()
         {
-            //just for test
-            // MenuDataGrid.DataSource = new List<object>();
+            RestaurantController controller = new RestaurantController();
+            if (_restaurantGuid != null)
+            {
+                List<Food> menu = controller.GetRestaurantMenu(_restaurantGuid);
+                MenuDataGrid.DataSource = menu;
+                MenuDataGrid.Columns["Guid"].Visible = false;
+                _menuFoodCounts = menu.Count;
+            }
         }
 
         private void CustomizeFormDynamic()
         {
-            if (FormViewMode == MenuViewType.OrderMode)
+            if (_formViewMode == MenuViewType.OrderMode)
             {
                 MenuSubmitBtn.Text = "تکمبل خرید";
                 MenuDataGrid.ReadOnly = true;
-                MenuDataGrid.Columns["Count"].ReadOnly = false;
             }
             else
             {
-                MenuSubmitBtn.Text = FormViewMode == MenuViewType.AddMode ? "ثبت منو" : "ویرایش منو";
+                MenuSubmitBtn.Text = _formViewMode == MenuViewType.AddMode ? "ثبت منو" : "ویرایش منو";
                 MenuDataGrid.Columns.Remove(Add);
                 MenuDataGrid.Columns.Remove(Minus);
                 MenuDataGrid.Columns.Remove(Count);
@@ -44,25 +58,95 @@ namespace UI
 
         private void MenuSubmitBtn_Click(object sender, System.EventArgs e)
         {
-            if (FormViewMode == MenuViewType.AddMode)
+            if (_formViewMode == MenuViewType.AddMode)
             {
                 // by hossein
             }
-            else if (FormViewMode == MenuViewType.EditMode)
+            else if (_formViewMode == MenuViewType.EditMode)
             {
                 // by hosein
             }
-            else if (FormViewMode == MenuViewType.OrderMode)
+            else if (_formViewMode == MenuViewType.OrderMode)
             {
-                handleShowOrderBasketForm();
+                handleSaveOrder();
             }
         }
 
-        private void handleShowOrderBasketForm()
+        private void handleSaveOrder()
+        {
+            if (checkAnyFoodSelected())
+            {
+                Order order = new Order();
+                order.OrderDetails = new List<OrderDetail>();
+                for (int i = 0; i < _menuFoodCounts; i++)
+                {
+                    int countValue = getCountValueOfFood(i);
+                    if (countValue > 0)
+                    {
+                        order.OrderDetails.Add(new OrderDetail()
+                        {
+                            Count = countValue,
+                            FoodName = MenuDataGrid.Rows[i]?.Cells[4]?.Value?.ToString(),
+                            FoodPrice = new decimal(Int32.Parse(MenuDataGrid.Rows[i]?.Cells[5]?.Value?.ToString())),
+                        });
+                    }
+                }
+                order.RestaurantGuid = _restaurantGuid;
+                RestaurantController controller = new RestaurantController();
+                var orderGuid = controller.SaveOrder(order);
+                handleShowOrderBasketForm(orderGuid);
+            }
+            else
+            {
+                MessageBox.Show("غذایی انتخاب نشده است!");
+            }
+
+        }
+
+        private void handleShowOrderBasketForm(Guid orderGuid)
         {
             this.Hide();
-            Form orderBasketForm = new OrderBasketForm();
+            Form orderBasketForm = new OrderBasketForm(orderGuid);
             orderBasketForm.Show();
+        }
+
+        private void MenuDataGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            var senderGrid = (DataGridView)sender;
+            if (senderGrid.Columns[e.ColumnIndex] is DataGridViewButtonColumn && e.RowIndex >= 0)
+            {
+                var countValue = getCountValueOfFood(e.RowIndex);
+                var newCountValue = 0;
+                if (e.ColumnIndex == 0)
+                {
+                    newCountValue = countValue + 1;
+                }
+                else if (e.ColumnIndex == 1)
+                {
+                    newCountValue = countValue == 0 ? 0 : countValue - 1;
+                }
+                senderGrid.Rows[e.RowIndex].Cells[2].Value = newCountValue.ToString();
+
+            }
+        }
+
+        private bool checkAnyFoodSelected()
+        {
+            var totalCount = 0;
+            if (_menuFoodCounts > 0)
+            {
+                for (int i = 0; i < _menuFoodCounts; i++)
+                {
+                    totalCount += getCountValueOfFood(i);
+                }
+            }
+            return totalCount > 0;
+        }
+
+        private int getCountValueOfFood(int index)
+        {
+            var countValue = MenuDataGrid.Rows[index]?.Cells[2]?.Value?.ToString();
+            return countValue == null ? 0 : Int32.Parse(countValue);
         }
     }
 }

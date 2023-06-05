@@ -1,4 +1,5 @@
 ﻿using Repository.Models;
+using System;
 using System.Collections.Generic;
 
 namespace Service.Interfaces
@@ -7,6 +8,9 @@ namespace Service.Interfaces
     {
         List<Restaurant> GetAllRestaurants();
         bool IsAnyResturantExist();
+        List<Food> GetRestaurantMenu(Guid restaurantGuid);
+        Guid SaveOrder(Order order);
+        Order GetOrder(Guid orderGuid);
 
     }
 }

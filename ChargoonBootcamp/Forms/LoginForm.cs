@@ -114,5 +114,10 @@ namespace ResturantApp
             MainMenuForm mainManuForm = new MainMenuForm();
             mainManuForm.ShowDialog();
         }
+
+        private void LoginBox_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

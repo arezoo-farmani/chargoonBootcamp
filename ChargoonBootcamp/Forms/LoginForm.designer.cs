@@ -50,13 +50,16 @@ namespace ResturantApp
             this.LoginBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LoginBox.ForeColor = System.Drawing.Color.Teal;
-            this.LoginBox.Location = new System.Drawing.Point(80, 70);
+            this.LoginBox.Location = new System.Drawing.Point(120, 108);
+            this.LoginBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoginBox.Name = "LoginBox";
+            this.LoginBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoginBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.LoginBox.Size = new System.Drawing.Size(400, 150);
+            this.LoginBox.Size = new System.Drawing.Size(600, 231);
             this.LoginBox.TabIndex = 0;
             this.LoginBox.TabStop = false;
             this.LoginBox.Text = "ورود";
+            this.LoginBox.Enter += new System.EventHandler(this.LoginBox_Enter);
             // 
             // LoginBtn
             // 
@@ -64,9 +67,10 @@ namespace ResturantApp
             this.LoginBtn.BackColor = System.Drawing.Color.Teal;
             this.LoginBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.LoginBtn.ForeColor = System.Drawing.Color.White;
-            this.LoginBtn.Location = new System.Drawing.Point(16, 105);
+            this.LoginBtn.Location = new System.Drawing.Point(24, 162);
+            this.LoginBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LoginBtn.Name = "LoginBtn";
-            this.LoginBtn.Size = new System.Drawing.Size(60, 30);
+            this.LoginBtn.Size = new System.Drawing.Size(90, 46);
             this.LoginBtn.TabIndex = 14;
             this.LoginBtn.Text = "ورود";
             this.LoginBtn.UseVisualStyleBackColor = false;
@@ -77,9 +81,10 @@ namespace ResturantApp
             this.Required1.AutoSize = true;
             this.Required1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Required1.ForeColor = System.Drawing.Color.Red;
-            this.Required1.Location = new System.Drawing.Point(78, 51);
+            this.Required1.Location = new System.Drawing.Point(117, 78);
+            this.Required1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.Required1.Name = "Required1";
-            this.Required1.Size = new System.Drawing.Size(14, 16);
+            this.Required1.Size = new System.Drawing.Size(21, 25);
             this.Required1.TabIndex = 2;
             this.Required1.Text = "*";
             this.Required1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -89,10 +94,11 @@ namespace ResturantApp
             this.PhoneNumberTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PhoneNumberTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PhoneNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PhoneNumberTxt.Location = new System.Drawing.Point(97, 47);
+            this.PhoneNumberTxt.Location = new System.Drawing.Point(146, 72);
+            this.PhoneNumberTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.PhoneNumberTxt.Multiline = true;
             this.PhoneNumberTxt.Name = "PhoneNumberTxt";
-            this.PhoneNumberTxt.Size = new System.Drawing.Size(160, 20);
+            this.PhoneNumberTxt.Size = new System.Drawing.Size(240, 31);
             this.PhoneNumberTxt.TabIndex = 1;
             this.PhoneNumberTxt.TextChanged += new System.EventHandler(this.PhoneNumberTxt_TextChanged);
             // 
@@ -101,27 +107,30 @@ namespace ResturantApp
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Teal;
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(273, 51);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(410, 78);
+            this.PhoneNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(75, 16);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(98, 25);
             this.PhoneNumberLabel.TabIndex = 0;
             this.PhoneNumberLabel.Text = "شماره موبایل";
             // 
             // CloseBtn
             // 
             this.CloseBtn.Image = global::WindowsFormsApp_Restaurant.Properties.Resources.icons8_close_30;
-            this.CloseBtn.Location = new System.Drawing.Point(530, 24);
+            this.CloseBtn.Location = new System.Drawing.Point(795, 37);
+            this.CloseBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.CloseBtn.Name = "CloseBtn";
-            this.CloseBtn.Size = new System.Drawing.Size(29, 32);
+            this.CloseBtn.Size = new System.Drawing.Size(44, 49);
             this.CloseBtn.TabIndex = 15;
             this.CloseBtn.TabStop = false;
             this.CloseBtn.Click += new System.EventHandler(this.CloseBtn_Click);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(387, 241);
+            this.button1.Location = new System.Drawing.Point(580, 371);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(112, 35);
             this.button1.TabIndex = 16;
             this.button1.Text = "فرم منوها";
             this.button1.UseVisualStyleBackColor = true;
@@ -129,13 +138,14 @@ namespace ResturantApp
             // 
             // LoginForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(624, 319);
+            this.ClientSize = new System.Drawing.Size(936, 491);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.CloseBtn);
             this.Controls.Add(this.LoginBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "LoginForm";
             this.Text = "LoginForm";
             this.LoginBox.ResumeLayout(false);

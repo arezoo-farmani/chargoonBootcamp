@@ -28,7 +28,8 @@ namespace UI
         {
             var isMenuExist = CheckMenuIsExist();
             var menuViewMode = isMenuExist ? MenuViewType.EditMode : MenuViewType.AddMode;
-            Form menuForm = new MenuForm(menuViewMode);
+            // empty guid replace with resturant guid
+            Form menuForm = new MenuForm(menuViewMode, Guid.Empty);
             this.Hide();
             menuForm.Show();
         }

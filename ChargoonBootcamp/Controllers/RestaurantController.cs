@@ -28,6 +28,11 @@ namespace ResturantApp.Controllers
             return _restaurantService.IsAnyResturantExist();
         }
 
+        public List<Food> GetRestaurantMenu(Guid restaurantGuid)
+        {
+            return _restaurantService.GetRestaurantMenu(restaurantGuid);
+        }
+
         private RestaurantList ToViewModel(Restaurant restaurant)
         {
             return new RestaurantList
@@ -35,7 +40,15 @@ namespace ResturantApp.Controllers
                 Guid = restaurant.Guid,
                 RestaurantName = restaurant.RestaurantName,
             };
+        }
 
+        public Guid SaveOrder(Order order)
+        {
+            return _restaurantService.SaveOrder(order);
+        }
+        public Order GetOrder(Guid orderGuid)
+        {
+            return _restaurantService.GetOrder(orderGuid);
         }
 
     }
