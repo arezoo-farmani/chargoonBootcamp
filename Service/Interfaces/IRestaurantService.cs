@@ -6,11 +6,9 @@ namespace Service.Interfaces
 {
     public interface IRestaurantService
     {
-        List<Restaurant> GetAllRestaurants();
-        bool IsAnyResturantExist();
+        Guid SaveRestaurant(Restaurant restaurant);
+        List<RestaurantList> GetAllRestaurants();
+        bool IsAnyRestaurantExist();
         List<Food> GetRestaurantMenu(Guid restaurantGuid);
-        Guid SaveOrder(Order order);
-        Order GetOrder(Guid orderGuid);
-
     }
 }

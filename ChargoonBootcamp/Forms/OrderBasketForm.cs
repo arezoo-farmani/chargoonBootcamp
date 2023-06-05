@@ -1,4 +1,5 @@
-﻿using ResturantApp.Controllers;
+﻿using Service;
+using Service.Interfaces;
 using System;
 using System.Windows.Forms;
 
@@ -17,10 +18,10 @@ namespace UI
 
         private void OrderBasketForm_Load()
         {
-            RestaurantController controller = new RestaurantController();
+            IOrderService orderService = new OrderService();
             if (_orderGuid != null)
             {
-                var order = controller.GetOrder(_orderGuid);
+                var order = orderService.GetOrder(_orderGuid);
                 OrderBasketDataGrid.DataSource = order.OrderDetails;
                 SumLabel.Text = order.TotalOrderAmount.ToString();
             }

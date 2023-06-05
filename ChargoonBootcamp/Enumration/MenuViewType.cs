@@ -3,7 +3,7 @@ namespace UI.Enumration
 {
     public enum MenuViewType
     {
-        AddMode =1,
+        AddMode = 1,
         EditMode,
         OrderMode,
     }

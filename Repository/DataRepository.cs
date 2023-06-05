@@ -6,71 +6,57 @@ using Repository.Models;
 
 namespace Repository
 {
-    public class DataRepository:IRepository
+    public class DataRepository<T> : IRepository<T> where T : BaseEntity
     {
-        private readonly string UserFilePath;
-        private readonly string RestaurantFilePath;
-        private readonly string OrderFilePath;
+        private readonly string _directoryPath = @"..\..\..\Repository\Files";
+        private readonly string _filePath;
 
         public DataRepository()
         {
-            this.UserFilePath = @"..\..\Files\users.json";
-            this.RestaurantFilePath = @"..\..\Files\restaurant.json";
-            this.OrderFilePath = @"..\..\Files\order.json";
+            _filePath = _directoryPath + $@"\{typeof(T).Name}s.json";
+            CreateFolderAndFile();
         }
 
-        public List<User> GetAllUsers()
+        private void CreateFolderAndFile()
         {
-            string jsonData = File.ReadAllText(UserFilePath);
-            List<User> users = JsonConvert.DeserializeObject<List<User>>(jsonData);
-            return users ?? new List<User>();
+            if (!Directory.Exists(_directoryPath))
+            {
+                Directory.CreateDirectory(_directoryPath);
+            }
+            if (!File.Exists(_filePath))
+            {
+                using (FileStream fs = File.Create(_filePath)) { };
+            }
         }
 
-        public void SaveAllUsers(User newUser)
+        public List<T> GetAll()
         {
-            List<User> users = new List<User>();
-            users.Add(newUser);
-            this.SaveAllUsers(users);
+            string jsonData = File.ReadAllText(_filePath);
+            List<T> allData = JsonConvert.DeserializeObject<List<T>>(jsonData);
+            return allData ?? new List<T>();
         }
 
-        public void SaveAllUsers(List<User> users)
+        public void SaveAll(List<T> entities)
         {
-            string jsonData = JsonConvert.SerializeObject(users);
-            File.WriteAllText(UserFilePath, jsonData);
+            string jsonData = JsonConvert.SerializeObject(entities);
+            File.WriteAllText(_filePath, jsonData);
         }
 
-        public List<Restaurant> GetAllRestaurants()
+        public Guid Save(T entity)
         {
-            string jsonData = File.ReadAllText(RestaurantFilePath);
-            List<Restaurant> restaurants = JsonConvert.DeserializeObject<List<Restaurant>>(jsonData);
-            return  restaurants ?? new List<Restaurant>();
+            List<T> entities = GetAll();
+            entities.Add(entity);
+            string jsonData = JsonConvert.SerializeObject(entities);
+            File.WriteAllText(_filePath, jsonData);
+            return entity.Guid;
         }
 
-        public void SaveAllRestaurants(Restaurant restaurant)
+        public T GetByGuid(Guid guid)
         {
-            List<Restaurant> restaurants = new List<Restaurant>();
-            restaurants.Add(restaurant);
-            this.SaveAllRestaurants(restaurants);
-        }
-
-        public void SaveAllRestaurants(List<Restaurant> restaurants)
-        {
-            string jsonData = JsonConvert.SerializeObject(restaurants);
-            File.WriteAllText(RestaurantFilePath, jsonData);
-        }
-
-        public Guid SaveOrder(Order order)
-        {
-            string jsonData = JsonConvert.SerializeObject(order);
-            File.WriteAllText(OrderFilePath, jsonData);
-            return order.Guid;
-        }
-
-        public Order GetOrder(Guid orderGuid)
-        {
-            string jsonData = File.ReadAllText(OrderFilePath);
-            Order order = JsonConvert.DeserializeObject<Order>(jsonData);
-            return order ?? order;
+            string jsonData = File.ReadAllText(_filePath);
+            List<T> entities = JsonConvert.DeserializeObject<List<T>>(jsonData);
+            T entity = entities?.Find(item => item.Guid.Equals(guid));
+            return entity;
         }
     }
 }

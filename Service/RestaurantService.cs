@@ -3,55 +3,46 @@ using Repository.Models;
 using Service.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Service
 {
     public class RestaurantService : IRestaurantService
     {
-        private IRepository _repository;
-      
+        private IRepository<Restaurant> _repository;
+
         public RestaurantService()
         {
-            this._repository = new Repository.DataRepository();
+            this._repository = new DataRepository<Restaurant>();
         }
 
-        public List<Restaurant> GetAllRestaurants()
+        public List<RestaurantList> GetAllRestaurants()
         {
-            return _repository.GetAllRestaurants();
+            return _repository.GetAll().Select(item =>
+            (new RestaurantList
+            {
+                Guid = item.Guid,
+                RestaurantName = item.RestaurantName
+            }
+            ))?.ToList();
         }
 
-        public bool IsAnyResturantExist()
+        public bool IsAnyRestaurantExist()
         {
-            return _repository.GetAllRestaurants()?.Count > 0 ? true : false;
+            return _repository.GetAll()?.Count > 0 ? true : false;
         }
 
         public List<Food> GetRestaurantMenu(Guid restaurantGuid)
         {
-            var restaurant = _repository.GetAllRestaurants()?.Find((resturant) => resturant.Guid == restaurantGuid);
+            var restaurant = _repository.GetAll()?.Find((resturant) => resturant.Guid == restaurantGuid);
             return restaurant.Menu;
         }
 
-        public Guid SaveOrder(Order order)
+        public Guid SaveRestaurant(Restaurant restaurant)
         {
-            order.Guid = Guid.NewGuid();
-            order.TotalOrderAmount = GetTotalAmountOfOrder(order.OrderDetails);
-            return _repository.SaveOrder(order);
+            restaurant.Guid = Guid.NewGuid();
+            return _repository.Save(restaurant);
         }
 
-        public Order GetOrder(Guid orderGuid)
-        {
-            return _repository.GetOrder(orderGuid);
-        }
-
-        private decimal GetTotalAmountOfOrder(List<OrderDetail> orderDetails)
-        {
-            decimal totalAmount = 0;
-            orderDetails?.ForEach((detail) =>
-            {
-                var eachFoodAmount = detail.FoodPrice * detail.Count;
-                totalAmount += eachFoodAmount;
-            });
-            return totalAmount;
-        }
     }
 }

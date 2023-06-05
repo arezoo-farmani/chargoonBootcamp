@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\RestaurantController.cs" />
     <Compile Include="Enumration\MenuViewType.cs" />
     <Compile Include="Forms\FoodListMenu.cs">
       <SubType>Form</SubType>

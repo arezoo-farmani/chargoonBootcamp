@@ -1,5 +1,6 @@
 ﻿using Repository.Models;
-using ResturantApp.Controllers;
+using Service;
+using Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -17,11 +18,11 @@ namespace UI
 
         private void AllResturantsForm_Load()
         {
-            RestaurantController controller = new RestaurantController();
-            if (controller.IsAnyResturantExit())
+            IRestaurantService restaurantService = new RestaurantService();
+            if (restaurantService.IsAnyRestaurantExist())
             {
                 MessageLabel.Text = "برای مشاهده منوی رستوران روی رستوران مورد نظر کلیک کنید!";
-                List<RestaurantList> allRestaurants = controller.GetAllRestaurants();
+                List<RestaurantList> allRestaurants = restaurantService.GetAllRestaurants();
                 RestaurantsDataGrid.DataSource = allRestaurants;
                 RestaurantsDataGrid.Columns["Guid"].Visible = false;
             }
@@ -33,7 +34,7 @@ namespace UI
 
         private void RestaurantsDataGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string resturantGuid = RestaurantsDataGrid.Rows[e.RowIndex]?.Cells[0]?.Value?.ToString();
+            string resturantGuid = RestaurantsDataGrid.Rows[e.RowIndex]?.Cells[1]?.Value?.ToString();
             if (resturantGuid != null)
             {
                 Form menuForm = new MenuForm(MenuViewType.OrderMode, new Guid(resturantGuid));

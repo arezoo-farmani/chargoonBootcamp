@@ -39,8 +39,8 @@ namespace UI
                 Address = address,
                 PhoneNumber = phoneNumber
             };
-            DataRepository dataRepository = new DataRepository();
-            dataRepository.SaveAllUsers(newUser);
+            DataRepository<User> dataRepository = new DataRepository<User>();
+            dataRepository.Save(newUser);
 
             MessageBox.Show("User was registered successfully.");
             ClearFields();

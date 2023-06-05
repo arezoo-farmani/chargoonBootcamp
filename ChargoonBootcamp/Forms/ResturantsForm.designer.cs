@@ -106,6 +106,7 @@ namespace UI
             this.RestaurantName.DataPropertyName = "RestaurantName";
             this.RestaurantName.HeaderText = "RestaurantName";
             this.RestaurantName.Name = "RestaurantName";
+            this.RestaurantName.ReadOnly = true;
             // 
             // Guid
             // 

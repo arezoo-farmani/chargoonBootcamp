@@ -24,8 +24,8 @@ namespace UI
         {
             string name = ResturantNameTxt.Text;
             string possessor = ResturantOwnerTxt.Text;
-            decimal openTime = HourFromTxt.Value;
-            decimal closeTime = HourToTxt.Value;
+            int openTime = (int)HourFromTxt.Value;
+            int closeTime = (int)HourToTxt.Value;
             string address = AddressTxt.Text;
             string phoneNumber = PhoneNumberTxt.Text;
 
@@ -40,8 +40,8 @@ namespace UI
                 PhoneNumber = phoneNumber,
                 Menu = new List<Food>()
             };
-            DataRepository dataRepository = new DataRepository();
-            dataRepository.SaveAllRestaurants(newRestaurant);
+            DataRepository<Restaurant> dataRepository = new DataRepository<Restaurant>();
+            dataRepository.Save(newRestaurant);
             MessageBox.Show("Restaurant was registered successfully.");
             ClearFields();
 

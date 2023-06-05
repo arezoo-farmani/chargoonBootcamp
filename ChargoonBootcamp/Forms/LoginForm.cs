@@ -15,16 +15,18 @@ namespace ResturantApp
         public static string LoginPhoneNumber;
         private List<User> userList;
         private List<Restaurant> restaurantList;
-        private IRepository dataRepository;
+        private IRepository<User> dataRepository;
         //private object PhoneNumberTextBox;
         // private string phoneNumber;
 
         public LoginForm()
         {
             InitializeComponent();
-            dataRepository = new DataRepository();
-            userList = dataRepository.GetAllUsers();
-            restaurantList = dataRepository.GetAllRestaurants();
+            
+            // must change base on service layer and using generic repository
+            //dataRepository = new DataRepository();
+            //userList = dataRepository.GetAllUsers();
+            //restaurantList = dataRepository.GetAllRestaurants();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
@@ -41,8 +43,8 @@ namespace ResturantApp
             }
             if (UserExists(LoginPhoneNumber))
             {
-                MenuForm menuForm = new MenuForm();
-                menuForm.Show();
+                ResturantsForm resturantsForm = new ResturantsForm();
+                resturantsForm.Show();
                 this.Hide();
             }
             else if (RestaurantExists(LoginPhoneNumber))
@@ -61,20 +63,26 @@ namespace ResturantApp
 
         private bool UserExists(string phoneNumber)
         {
-            foreach (User user in userList)
+            if (userList?.Count > 0)
             {
-                if (user.PhoneNumber == phoneNumber)
-                    return true;
+                foreach (User user in userList)
+                {
+                    if (user.PhoneNumber == phoneNumber)
+                        return true;
+                }
             }
             return false;
         }
 
         private bool RestaurantExists(string phoneNumber)
         {
-            foreach (Restaurant restaurant in restaurantList)
+            if (restaurantList?.Count > 0)
             {
-                if (restaurant.PhoneNumber == phoneNumber)
-                    return true;
+                foreach (Restaurant restaurant in restaurantList)
+                {
+                    if (restaurant.PhoneNumber == phoneNumber)
+                        return true;
+                }
             }
             return false;
         }

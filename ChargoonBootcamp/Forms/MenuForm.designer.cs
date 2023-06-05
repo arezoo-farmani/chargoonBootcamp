@@ -144,7 +144,7 @@ namespace UI
             // FoodName
             // 
             this.FoodName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FoodName.DataPropertyName = "Name";
+            this.FoodName.DataPropertyName = "FoodName";
             this.FoodName.HeaderText = "نام غذا";
             this.FoodName.Name = "FoodName";
             // 

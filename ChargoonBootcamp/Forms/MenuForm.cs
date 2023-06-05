@@ -1,5 +1,6 @@
 ﻿using Repository.Models;
-using ResturantApp.Controllers;
+using Service;
+using Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -22,20 +23,15 @@ namespace UI
             MenuForm_Load();
         }
 
-        public MenuForm()
-        {
-            InitializeComponent();
-        }
-
-
         private void MenuForm_Load()
         {
-            RestaurantController controller = new RestaurantController();
             if (_restaurantGuid != null)
             {
-                List<Food> menu = controller.GetRestaurantMenu(_restaurantGuid);
+                IRestaurantService restaurantService = new RestaurantService();
+                List<Food> menu = restaurantService.GetRestaurantMenu(_restaurantGuid);
                 MenuDataGrid.DataSource = menu;
                 MenuDataGrid.Columns["Guid"].Visible = false;
+                MenuDataGrid.ReadOnly = true;
                 _menuFoodCounts = menu.Count;
             }
         }
@@ -86,14 +82,14 @@ namespace UI
                         order.OrderDetails.Add(new OrderDetail()
                         {
                             Count = countValue,
-                            FoodName = MenuDataGrid.Rows[i]?.Cells[4]?.Value?.ToString(),
-                            FoodPrice = new decimal(Int32.Parse(MenuDataGrid.Rows[i]?.Cells[5]?.Value?.ToString())),
+                            FoodName = MenuDataGrid.Rows[i]?.Cells[3]?.Value?.ToString(),
+                            FoodPrice = new decimal(Int32.Parse(MenuDataGrid.Rows[i]?.Cells[4]?.Value?.ToString())),
                         });
                     }
                 }
                 order.RestaurantGuid = _restaurantGuid;
-                RestaurantController controller = new RestaurantController();
-                var orderGuid = controller.SaveOrder(order);
+                IOrderService orderService = new OrderService();
+                var orderGuid = orderService.SaveOrder(order);
                 handleShowOrderBasketForm(orderGuid);
             }
             else
@@ -105,7 +101,6 @@ namespace UI
 
         private void handleShowOrderBasketForm(Guid orderGuid)
         {
-            this.Hide();
             Form orderBasketForm = new OrderBasketForm(orderGuid);
             orderBasketForm.Show();
         }

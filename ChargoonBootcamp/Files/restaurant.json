@@ -6,7 +6,8 @@
     "OpenTime": 8.0,
     "Closetime": 21.0,
     "Address": "Test",
-    "Menu": [],
+    "Menu": [
+      {"Name": "kabab","Price": "2222"}],
     "PhoneNumber": "800"
   }
 ]

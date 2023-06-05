@@ -5,13 +5,11 @@ using System.Collections.Generic;
 
 namespace Repository
 {
-    public interface IRepository
+    public interface IRepository<T> where T : BaseEntity
     {
-        List<User> GetAllUsers();
-        void SaveAllUsers(List<User> users);
-        List<Restaurant> GetAllRestaurants();
-        void SaveAllRestaurants(List<Restaurant> restaurants);
-        Guid SaveOrder(Order order);
-        Order GetOrder(Guid orderGuid);
+        List<T> GetAll();
+        void SaveAll(List<T> entities);
+        Guid Save(T entity);
+        T GetByGuid(Guid guid);
     }
 }

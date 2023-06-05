@@ -3,9 +3,8 @@ using System.Collections.Generic;
 
 namespace Repository.Models
 {
-    public class Order
+    public class Order : BaseEntity
     {
-        public Guid Guid { get; set; }
         public Guid UserGuid { get; set; }
         public Guid RestaurantGuid { get; set; }
         public decimal TotalOrderAmount { get; set; }

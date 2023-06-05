@@ -1,14 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository.Models
 {
-    public class RestaurantList
+    public class RestaurantList : BaseEntity
     {
-        public Guid Guid { get; set; }
         public string RestaurantName { get; set; }
     }
 }
