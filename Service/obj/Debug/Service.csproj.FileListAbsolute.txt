@@ -32,3 +32,6 @@ C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Service\obj\Debug\Servi
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Service\obj\Debug\Service.csproj.CopyComplete
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Service\obj\Debug\Service.dll
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\Service\obj\Debug\Service.pdb
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\bin\Debug\Repository.dll
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\bin\Debug\Repository.pdb
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\Service\obj\Debug\Service.csproj.AssemblyReference.cache

@@ -132,3 +132,7 @@ C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\ChargoonBootcamp\obj\De
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\ChargoonBootcamp\obj\Debug\UI.csproj.CopyComplete
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.exe
 C:\Users\rezas\Desktop\Chargon\Clone_01\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.pdb
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.Forms.FoodListMenu.resources
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.Forms.FoodMenu.resources
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.Forms.InvoicesListForm.resources
+D:\GitHub\ChargoonTeamProject\chargoonBootcamp\ChargoonBootcamp\obj\Debug\WindowsFormsApp_Restaurant.Forms.MainMenuForm.resources

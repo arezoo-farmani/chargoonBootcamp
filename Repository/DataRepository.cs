@@ -10,11 +10,13 @@ namespace Repository
     {
         private readonly string UserFilePath;
         private readonly string RestaurantFilePath;
+        private readonly string OrderFilePath;
 
         public DataRepository()
         {
             this.UserFilePath = @"..\..\Files\users.json";
             this.RestaurantFilePath = @"..\..\Files\restaurant.json";
+            this.OrderFilePath = @"..\..\Files\order.json";
         }
 
         public List<User> GetAllUsers()
@@ -55,6 +57,20 @@ namespace Repository
         {
             string jsonData = JsonConvert.SerializeObject(restaurants);
             File.WriteAllText(RestaurantFilePath, jsonData);
+        }
+
+        public Guid SaveOrder(Order order)
+        {
+            string jsonData = JsonConvert.SerializeObject(order);
+            File.WriteAllText(OrderFilePath, jsonData);
+            return order.Guid;
+        }
+
+        public Order GetOrder(Guid orderGuid)
+        {
+            string jsonData = File.ReadAllText(OrderFilePath);
+            Order order = JsonConvert.DeserializeObject<Order>(jsonData);
+            return order ?? order;
         }
     }
 }
