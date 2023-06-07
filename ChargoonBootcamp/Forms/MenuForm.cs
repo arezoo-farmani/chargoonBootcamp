@@ -5,7 +5,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using UI.Enumration;
-
+using Repository;
 namespace UI
 {
     public partial class MenuForm : Form
@@ -22,7 +22,6 @@ namespace UI
             CustomizeFormDynamic();
             MenuForm_Load();
         }
-
         private void MenuForm_Load()
         {
             if (_restaurantGuid != null)
@@ -57,6 +56,7 @@ namespace UI
             if (_formViewMode == MenuViewType.AddMode)
             {
                 // by hossein
+
             }
             else if (_formViewMode == MenuViewType.EditMode)
             {
@@ -142,6 +142,11 @@ namespace UI
         {
             var countValue = MenuDataGrid.Rows[index]?.Cells[2]?.Value?.ToString();
             return countValue == null ? 0 : Int32.Parse(countValue);
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

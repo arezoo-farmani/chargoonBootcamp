@@ -41,5 +41,10 @@ namespace UI
                 menuForm.Show();
             }
         }
+
+        private void ResturantsForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

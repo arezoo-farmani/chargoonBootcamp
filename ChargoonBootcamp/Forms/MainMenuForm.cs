@@ -27,7 +27,7 @@ namespace WindowsFormsApp_Restaurant.Forms
 
         private void FoodMenuBtn_Click(object sender, EventArgs e)
         {
-            FoodMenu foodMenu = new Forms.FoodMenu();
+            FoodMenu foodMenu = new FoodMenu();
             foodMenu.ShowDialog();
         }
     }

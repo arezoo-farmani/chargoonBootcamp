@@ -4,6 +4,7 @@ using ResturantApp;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Service;
 
 namespace UI
 {
@@ -65,6 +66,11 @@ namespace UI
         }
 
         private void WorkHoursLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ResturantRegistrationForm_Load(object sender, EventArgs e)
         {
 
         }

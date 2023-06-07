@@ -34,9 +34,9 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.ResturantsListBox = new System.Windows.Forms.GroupBox();
             this.RestaurantsDataGrid = new System.Windows.Forms.DataGridView();
-            this.MessageLabel = new System.Windows.Forms.Label();
             this.RestaurantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Guid = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MessageLabel = new System.Windows.Forms.Label();
             this.ResturantsListBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RestaurantsDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -88,19 +88,6 @@ namespace UI
             this.RestaurantsDataGrid.TabIndex = 15;
             this.RestaurantsDataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RestaurantsDataGrid_CellContentDoubleClick);
             // 
-            // MessageLabel
-            // 
-            this.MessageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.MessageLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MessageLabel.ForeColor = System.Drawing.Color.Red;
-            this.MessageLabel.Location = new System.Drawing.Point(92, 380);
-            this.MessageLabel.Name = "MessageLabel";
-            this.MessageLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.MessageLabel.Size = new System.Drawing.Size(400, 20);
-            this.MessageLabel.TabIndex = 5;
-            this.MessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // RestaurantName
             // 
             this.RestaurantName.DataPropertyName = "RestaurantName";
@@ -117,6 +104,19 @@ namespace UI
             this.Guid.ReadOnly = true;
             this.Guid.Visible = false;
             // 
+            // MessageLabel
+            // 
+            this.MessageLabel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.MessageLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MessageLabel.ForeColor = System.Drawing.Color.Red;
+            this.MessageLabel.Location = new System.Drawing.Point(92, 380);
+            this.MessageLabel.Name = "MessageLabel";
+            this.MessageLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.MessageLabel.Size = new System.Drawing.Size(400, 20);
+            this.MessageLabel.TabIndex = 5;
+            this.MessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ResturantsForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -126,6 +126,7 @@ namespace UI
             this.Controls.Add(this.ResturantsListBox);
             this.Name = "ResturantsForm";
             this.Text = "AllResturantsForm";
+            this.Load += new System.EventHandler(this.ResturantsForm_Load);
             this.ResturantsListBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RestaurantsDataGrid)).EndInit();
             this.ResumeLayout(false);

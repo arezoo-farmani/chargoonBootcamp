@@ -10,13 +10,12 @@ namespace Repository
     {
         private readonly string _directoryPath = @"..\..\..\Repository\Files";
         private readonly string _filePath;
-
         public DataRepository()
         {
             _filePath = _directoryPath + $@"\{typeof(T).Name}s.json";
             CreateFolderAndFile();
         }
-
+        
         private void CreateFolderAndFile()
         {
             if (!Directory.Exists(_directoryPath))
@@ -28,7 +27,7 @@ namespace Repository
                 using (FileStream fs = File.Create(_filePath)) { };
             }
         }
-
+       
         public List<T> GetAll()
         {
             string jsonData = File.ReadAllText(_filePath);

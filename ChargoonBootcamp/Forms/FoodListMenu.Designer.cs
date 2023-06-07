@@ -31,11 +31,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.FoodGridView = new System.Windows.Forms.DataGridView();
-            this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.BackBtn = new System.Windows.Forms.Button();
             this.EditBtn = new System.Windows.Forms.Button();
-            this.DeleteBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.FoodGridView)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,9 +47,6 @@
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.FoodGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.FoodGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.FoodGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.FoodName,
-            this.FoodPrice});
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -66,16 +60,6 @@
             this.FoodGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.FoodGridView.Size = new System.Drawing.Size(393, 267);
             this.FoodGridView.TabIndex = 26;
-            // 
-            // FoodName
-            // 
-            this.FoodName.HeaderText = "غذا";
-            this.FoodName.Name = "FoodName";
-            // 
-            // FoodPrice
-            // 
-            this.FoodPrice.HeaderText = "قیمت";
-            this.FoodPrice.Name = "FoodPrice";
             // 
             // BackBtn
             // 
@@ -95,24 +79,13 @@
             this.EditBtn.BackColor = System.Drawing.Color.Teal;
             this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.EditBtn.ForeColor = System.Drawing.Color.White;
-            this.EditBtn.Location = new System.Drawing.Point(197, 289);
+            this.EditBtn.Location = new System.Drawing.Point(294, 289);
             this.EditBtn.Name = "EditBtn";
             this.EditBtn.Size = new System.Drawing.Size(60, 30);
             this.EditBtn.TabIndex = 24;
             this.EditBtn.Text = "ویرایش";
             this.EditBtn.UseVisualStyleBackColor = false;
-            // 
-            // DeleteBtn
-            // 
-            this.DeleteBtn.BackColor = System.Drawing.Color.Teal;
-            this.DeleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteBtn.ForeColor = System.Drawing.Color.White;
-            this.DeleteBtn.Location = new System.Drawing.Point(288, 289);
-            this.DeleteBtn.Name = "DeleteBtn";
-            this.DeleteBtn.Size = new System.Drawing.Size(60, 30);
-            this.DeleteBtn.TabIndex = 23;
-            this.DeleteBtn.Text = "حذف";
-            this.DeleteBtn.UseVisualStyleBackColor = false;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // FoodListMenu
             // 
@@ -122,7 +95,6 @@
             this.Controls.Add(this.FoodGridView);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.EditBtn);
-            this.Controls.Add(this.DeleteBtn);
             this.Name = "FoodListMenu";
             this.Text = "FoodListMenu";
             this.Load += new System.EventHandler(this.FoodListMenu_Load);
@@ -134,10 +106,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView FoodGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodName;
-        private System.Windows.Forms.DataGridViewTextBoxColumn FoodPrice;
         private System.Windows.Forms.Button BackBtn;
         private System.Windows.Forms.Button EditBtn;
-        private System.Windows.Forms.Button DeleteBtn;
     }
 }

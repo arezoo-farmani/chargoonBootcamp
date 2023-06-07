@@ -163,9 +163,9 @@
         private System.Windows.Forms.Button ListMenuBtn;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Button SubmitBtn;
-        private System.Windows.Forms.TextBox FoodPriceText;
         private System.Windows.Forms.Label FoodPriceLabel;
-        private System.Windows.Forms.TextBox FoodNameText;
         private System.Windows.Forms.Label FoodNameLabel;
+        private System.Windows.Forms.TextBox FoodPriceText;
+        private System.Windows.Forms.TextBox FoodNameText;
     }
 }
