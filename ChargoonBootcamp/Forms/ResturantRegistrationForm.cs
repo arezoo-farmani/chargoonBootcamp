@@ -1,10 +1,8 @@
-﻿using Repository;
-using Repository.Models;
+﻿using Domain.Models;
 using ResturantApp;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Service;
 
 namespace UI
 {
@@ -41,8 +39,9 @@ namespace UI
                 PhoneNumber = phoneNumber,
                 Menu = new List<Food>()
             };
-            DataRepository<Restaurant> dataRepository = new DataRepository<Restaurant>();
-            dataRepository.Save(newRestaurant);
+            // using service layer
+            // DataRepository<Restaurant> dataRepository = new DataRepository<Restaurant>();
+            // dataRepository.Save(newRestaurant);
             MessageBox.Show("Restaurant was registered successfully.");
             ClearFields();
 
@@ -60,19 +59,5 @@ namespace UI
             PhoneNumberTxt.Text = string.Empty;
         }
 
-        private void ResturantRegBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void WorkHoursLabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ResturantRegistrationForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

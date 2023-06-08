@@ -1,8 +1,12 @@
 ﻿
-namespace Repository.Models
+using Domain.DataInterfaces;
+using System;
+
+namespace Domain.Models
 {
-    public class User : BaseEntity
+    public class User : IBaseEntity
     {
+        public Guid Guid { get; set; }
         public string Name { get; set; }
         public string Family { get; set; }
         public string NationalCode { get; set; }

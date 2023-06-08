@@ -172,7 +172,6 @@ namespace UI
             this.Controls.Add(this.MenuBox);
             this.Name = "MenuForm";
             this.Text = "MenuForm";
-            this.Load += new System.EventHandler(this.MenuForm_Load);
             this.MenuBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MenuDataGrid)).EndInit();
             this.ResumeLayout(false);

@@ -1,13 +1,13 @@
-﻿using Repository.Models;
+﻿using Domain.Models;
 using System;
 using System.Collections.Generic;
 
-namespace Service.Interfaces
+namespace Domain.ServiceInterfaces
 {
     public interface IRestaurantService
     {
-        Guid SaveRestaurant(Restaurant restaurant);
-        List<RestaurantList> GetAllRestaurants();
+        Guid Save(Restaurant restaurant);
+        List<RestaurantList> GetAll();
         bool IsAnyRestaurantExist();
         List<Food> GetRestaurantMenu(Guid restaurantGuid);
     }

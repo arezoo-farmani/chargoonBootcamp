@@ -1,5 +1,4 @@
-﻿using Repository;
-using Repository.Models;
+﻿using Domain.Models;
 using ResturantApp;
 using System;
 using System.Windows.Forms;
@@ -39,8 +38,9 @@ namespace UI
                 Address = address,
                 PhoneNumber = phoneNumber
             };
-            DataRepository<User> dataRepository = new DataRepository<User>();
-            dataRepository.Save(newUser);
+            // using service layer
+           // DataRepository<User> dataRepository = new DataRepository<User>();
+           // dataRepository.Save(newUser);
 
             MessageBox.Show("User was registered successfully.");
             ClearFields();

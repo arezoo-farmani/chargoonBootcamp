@@ -1,18 +1,6 @@
-﻿using Repository;
-using Repository.Models;
+﻿using Domain.Models;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using Newtonsoft.Json;
-using System.IO;
-using Service;
-using Newtonsoft.Json.Linq;
 
 namespace WindowsFormsApp_Restaurant.Forms
 {
@@ -23,17 +11,17 @@ namespace WindowsFormsApp_Restaurant.Forms
             InitializeComponent();
 
         }
-        public FoodMenu(string foodName,decimal foodPrice)
+        public FoodMenu(string foodName, decimal foodPrice)
         {
             InitializeComponent();
             FoodNameText.Text = foodName;
             FoodPriceText.Text = foodPrice.ToString();
         }
-       
+
         private void FoodMenu_Load(object sender, EventArgs e)
         {
-           
-            if(FoodNameText.Text =="" && FoodPriceText.Text=="")
+
+            if (FoodNameText.Text == "" && FoodPriceText.Text == "")
             {
                 EditBtn.Enabled = false;
             }
@@ -55,10 +43,11 @@ namespace WindowsFormsApp_Restaurant.Forms
                 Guid = Guid.NewGuid(),
                 FoodName = FoodNameText.Text,
                 Price = decimal.Parse(FoodPriceText.Text)
-             
+
             };
-            DataRepository<Food> dataRepository = new DataRepository<Food>();
-            dataRepository.Save(food);
+            // using service layer
+           // DataRepository<Food> dataRepository = new DataRepository<Food>();
+          //  dataRepository.Save(food);
             MessageBox.Show("Food Has Been Registered successfully.");
         }
 
@@ -71,8 +60,8 @@ namespace WindowsFormsApp_Restaurant.Forms
 
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            
-          
+
+
         }
     }
 }

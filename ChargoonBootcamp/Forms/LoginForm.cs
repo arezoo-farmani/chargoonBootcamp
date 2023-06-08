@@ -1,11 +1,11 @@
-using Repository.Models;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using UI;
-using Repository;
 using WindowsFormsApp_Restaurant.Forms;
+using Domain.RepositoryInterfaces;
 
 namespace ResturantApp
 {
@@ -15,14 +15,13 @@ namespace ResturantApp
         public static string LoginPhoneNumber;
         private List<User> userList;
         private List<Restaurant> restaurantList;
-        private IRepository<User> dataRepository;
         //private object PhoneNumberTextBox;
         // private string phoneNumber;
 
         public LoginForm()
         {
             InitializeComponent();
-            
+
             // must change base on service layer and using generic repository
             //dataRepository = new DataRepository();
             //userList = dataRepository.GetAllUsers();

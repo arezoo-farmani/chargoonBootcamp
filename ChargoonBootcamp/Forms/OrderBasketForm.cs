@@ -1,5 +1,5 @@
-﻿using Service;
-using Service.Interfaces;
+﻿using Domain.ServiceInterfaces;
+using Service;
 using System;
 using System.Windows.Forms;
 
@@ -21,7 +21,7 @@ namespace UI
             IOrderService orderService = new OrderService();
             if (_orderGuid != null)
             {
-                var order = orderService.GetOrder(_orderGuid);
+                var order = orderService.Get(_orderGuid);
                 OrderBasketDataGrid.DataSource = order.OrderDetails;
                 SumLabel.Text = order.TotalOrderAmount.ToString();
             }

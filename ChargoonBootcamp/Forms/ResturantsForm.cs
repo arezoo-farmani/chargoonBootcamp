@@ -1,6 +1,6 @@
-﻿using Repository.Models;
+﻿using Domain.Models;
+using Domain.ServiceInterfaces;
 using Service;
-using Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
@@ -22,7 +22,7 @@ namespace UI
             if (restaurantService.IsAnyRestaurantExist())
             {
                 MessageLabel.Text = "برای مشاهده منوی رستوران روی رستوران مورد نظر کلیک کنید!";
-                List<RestaurantList> allRestaurants = restaurantService.GetAllRestaurants();
+                List<RestaurantList> allRestaurants = restaurantService.GetAll();
                 RestaurantsDataGrid.DataSource = allRestaurants;
                 RestaurantsDataGrid.Columns["Guid"].Visible = false;
             }

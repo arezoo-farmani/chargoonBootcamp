@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Domain.DataInterfaces;
+using System;
 using System.Collections.Generic;
 
-namespace Repository.Models
+namespace Domain.Models
 {
-    public class Restaurant : BaseEntity
+    public class Restaurant : IBaseEntity
     {
+        public Guid Guid { get; set; }
         public string RestaurantName { get; set; }
         public string RestaurantPossessor { get; set; }
         public int OpenTime { get; set; }

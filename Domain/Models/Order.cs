@@ -1,10 +1,12 @@
-﻿using System;
+﻿using Domain.DataInterfaces;
+using System;
 using System.Collections.Generic;
 
-namespace Repository.Models
+namespace Domain.Models
 {
-    public class Order : BaseEntity
+    public class Order : IBaseEntity
     {
+        public Guid Guid { get; set; }
         public Guid UserGuid { get; set; }
         public Guid RestaurantGuid { get; set; }
         public decimal TotalOrderAmount { get; set; }

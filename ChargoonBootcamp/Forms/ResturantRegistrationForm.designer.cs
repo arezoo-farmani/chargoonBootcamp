@@ -75,7 +75,6 @@ namespace UI
             this.ResturantRegBox.TabIndex = 2;
             this.ResturantRegBox.TabStop = false;
             this.ResturantRegBox.Text = "ثبت نام رستوران";
-            this.ResturantRegBox.Enter += new System.EventHandler(this.ResturantRegBox_Enter);
             // 
             // PhoneNumberTxt
             // 
@@ -215,7 +214,6 @@ namespace UI
             this.WorkHoursLabel.Size = new System.Drawing.Size(79, 16);
             this.WorkHoursLabel.TabIndex = 4;
             this.WorkHoursLabel.Text = "ساعت کارکرد";
-            this.WorkHoursLabel.Click += new System.EventHandler(this.WorkHoursLabel_Click);
             // 
             // ResturantOwnerLabel
             // 
@@ -272,7 +270,6 @@ namespace UI
             this.Controls.Add(this.ResturantSubmitBtn);
             this.Name = "ResturantRegistrationForm";
             this.Text = "ResturantRegistrationForm";
-            this.Load += new System.EventHandler(this.ResturantRegistrationForm_Load);
             this.ResturantRegBox.ResumeLayout(false);
             this.ResturantRegBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HourToTxt)).EndInit();

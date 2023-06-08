@@ -1,11 +1,11 @@
-﻿using Repository.Models;
+﻿using Domain.Models;
+using Domain.ServiceInterfaces;
 using Service;
-using Service.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 using UI.Enumration;
-using Repository;
+
 namespace UI
 {
     public partial class MenuForm : Form
@@ -89,7 +89,7 @@ namespace UI
                 }
                 order.RestaurantGuid = _restaurantGuid;
                 IOrderService orderService = new OrderService();
-                var orderGuid = orderService.SaveOrder(order);
+                var orderGuid = orderService.Save(order);
                 handleShowOrderBasketForm(orderGuid);
             }
             else
@@ -144,9 +144,5 @@ namespace UI
             return countValue == null ? 0 : Int32.Parse(countValue);
         }
 
-        private void MenuForm_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

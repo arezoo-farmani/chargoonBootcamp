@@ -1,8 +1,9 @@
 ﻿using Repository;
-using Repository.Models;
-using Service.Interfaces;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
+using Domain.RepositoryInterfaces;
+using Domain.ServiceInterfaces;
 
 namespace Service
 {
@@ -14,14 +15,14 @@ namespace Service
         {
             this._repository = new DataRepository<Order>();
         }
-        public Guid SaveOrder(Order order)
+        public Guid Save(Order order)
         {
             order.Guid = Guid.NewGuid();
             order.TotalOrderAmount = GetTotalAmountOfOrder(order.OrderDetails);
             return _repository.Save(order);
         }
 
-        public Order GetOrder(Guid orderGuid)
+        public Order Get(Guid orderGuid)
         {
             return _repository.GetByGuid(orderGuid);
         }

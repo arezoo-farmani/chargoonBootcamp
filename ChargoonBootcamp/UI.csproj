@@ -193,9 +193,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Repository\Repository.csproj">
-      <Project>{0CE99AB0-199D-4096-BCD2-D634D46F379F}</Project>
-      <Name>Repository</Name>
+    <ProjectReference Include="..\Domain\Domain.csproj">
+      <Project>{FA1AF873-A85B-490E-8E56-B14213A8C076}</Project>
+      <Name>Domain</Name>
     </ProjectReference>
     <ProjectReference Include="..\Service\Service.csproj">
       <Project>{41ed3681-bfb1-4552-ba23-5f7fbe4452fd}</Project>

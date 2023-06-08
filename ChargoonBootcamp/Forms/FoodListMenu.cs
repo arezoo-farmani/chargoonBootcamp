@@ -1,13 +1,6 @@
-﻿using Repository;
-using Repository.Models;
+﻿using Domain.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace WindowsFormsApp_Restaurant.Forms
@@ -22,8 +15,8 @@ namespace WindowsFormsApp_Restaurant.Forms
         private void FoodListMenu_Load(object sender, EventArgs e)
         {
             List<Food> food = new List<Food>();
-            DataRepository<Food> dataRepository = new DataRepository<Food>();
-            food = dataRepository.GetAll();
+           // DataRepository<Food> dataRepository = new DataRepository<Food>();
+           // food = dataRepository.GetAll();
             FoodGridView.DataSource = food;
             FoodGridView.Columns["Guid"].Visible = false;
             FoodGridView.Columns[0].HeaderText = "نام غذا";

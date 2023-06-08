@@ -1,9 +1,10 @@
 ﻿using Repository;
-using Repository.Models;
-using Service.Interfaces;
+using Domain.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using Domain.RepositoryInterfaces;
+using Domain.ServiceInterfaces;
 
 namespace Service
 {
@@ -16,7 +17,7 @@ namespace Service
             this._repository = new DataRepository<Restaurant>();
         }
 
-        public List<RestaurantList> GetAllRestaurants()
+        public List<RestaurantList> GetAll()
         {
             return _repository.GetAll().Select(item =>
             (new RestaurantList
@@ -38,7 +39,7 @@ namespace Service
             return restaurant.Menu;
         }
 
-        public Guid SaveRestaurant(Restaurant restaurant)
+        public Guid Save(Restaurant restaurant)
         {
             restaurant.Guid = Guid.NewGuid();
             return _repository.Save(restaurant);
