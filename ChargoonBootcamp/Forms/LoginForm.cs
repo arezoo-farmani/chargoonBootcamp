@@ -6,102 +6,57 @@ using System.Windows.Forms;
 using UI;
 using WindowsFormsApp_Restaurant.Forms;
 using Domain.RepositoryInterfaces;
+using Service;
 
 namespace ResturantApp
 {
     public partial class LoginForm : Form
     {
         private Color _defaultTextBoxColor;
-        public static string LoginPhoneNumber;
-        private List<User> userList;
-        private List<Restaurant> restaurantList;
-        //private object PhoneNumberTextBox;
-        // private string phoneNumber;
+        public static string PhoneNumber { get; set; }
 
         public LoginForm()
         {
             InitializeComponent();
-
-            // must change base on service layer and using generic repository
-            //dataRepository = new DataRepository();
-            //userList = dataRepository.GetAllUsers();
-            //restaurantList = dataRepository.GetAllRestaurants();
         }
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
+            UserService service = new UserService();
             _defaultTextBoxColor = PhoneNumberTxt.BackColor;
-            if (PhoneNumberTxt.Text == "")
+
+            PhoneNumber = PhoneNumberTxt.Text;
+            if (string.IsNullOrWhiteSpace(PhoneNumber))
             {
                 PhoneNumberTxt.BackColor = Color.IndianRed;
                 return;
             }
-            else
+
+            User user = service.Exists<User>(PhoneNumber);
+            if (user != null)
             {
-                LoginPhoneNumber = PhoneNumberTxt.Text;
-            }
-            if (UserExists(LoginPhoneNumber))
-            {
-                ResturantsForm resturantsForm = new ResturantsForm();
+                ResturantsForm resturantsForm = new ResturantsForm(user);
                 resturantsForm.Show();
                 this.Hide();
             }
-            else if (RestaurantExists(LoginPhoneNumber))
-            {
-                ResturantOwnerForm ownerForm = new ResturantOwnerForm();
-                ownerForm.Show();
-                this.Hide();
-            }
             else
             {
-                RegistrationForm registerUserForm = new RegistrationForm();
-                registerUserForm.Show();
-                this.Hide();
-            }
-        }
-
-        private bool UserExists(string phoneNumber)
-        {
-            if (userList?.Count > 0)
-            {
-                foreach (User user in userList)
+                Restaurant restaurant = service.Exists<Restaurant>(PhoneNumber);
+                if (restaurant != null)
                 {
-                    if (user.PhoneNumber == phoneNumber)
-                        return true;
+                    ResturantOwnerForm ownerForm = new ResturantOwnerForm(restaurant);
+                    ownerForm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    RegistrationForm registerUserForm = new RegistrationForm();
+                    registerUserForm.Show();
+                    this.Hide();
                 }
             }
-            return false;
         }
 
-        private bool RestaurantExists(string phoneNumber)
-        {
-            if (restaurantList?.Count > 0)
-            {
-                foreach (Restaurant restaurant in restaurantList)
-                {
-                    if (restaurant.PhoneNumber == phoneNumber)
-                        return true;
-                }
-            }
-            return false;
-        }
-
-        //private void LoginBtn_Click(object sender, EventArgs e)
-        //{
-        //    _defaultTextBoxColor = PhoneNumberTxt.BackColor;
-        //    if (PhoneNumberTxt.Text == "")
-        //    {
-        //        PhoneNumberTxt.BackColor = Color.IndianRed;
-        //        return;
-        //    }
-        //    else
-        //    {
-        //        LoginPhoneNumber = PhoneNumberTxt.Text;
-        //        this.Hide();
-        //        Form registrationForm = new RegistrationForm();
-        //        registrationForm.Show();
-        //    }
-        //}
 
         private void PhoneNumberTxt_TextChanged(object sender, EventArgs e)
         {

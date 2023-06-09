@@ -94,11 +94,10 @@ namespace ResturantApp
             this.PhoneNumberTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PhoneNumberTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.PhoneNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PhoneNumberTxt.Location = new System.Drawing.Point(146, 72);
+            this.PhoneNumberTxt.Location = new System.Drawing.Point(146, 82);
             this.PhoneNumberTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PhoneNumberTxt.Multiline = true;
             this.PhoneNumberTxt.Name = "PhoneNumberTxt";
-            this.PhoneNumberTxt.Size = new System.Drawing.Size(240, 31);
+            this.PhoneNumberTxt.Size = new System.Drawing.Size(240, 19);
             this.PhoneNumberTxt.TabIndex = 1;
             this.PhoneNumberTxt.TextChanged += new System.EventHandler(this.PhoneNumberTxt_TextChanged);
             // 

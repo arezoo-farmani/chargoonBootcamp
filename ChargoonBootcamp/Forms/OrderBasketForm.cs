@@ -1,4 +1,5 @@
-﻿using Domain.ServiceInterfaces;
+﻿using Domain.Models;
+using Domain.ServiceInterfaces;
 using Service;
 using System;
 using System.Windows.Forms;
@@ -29,7 +30,8 @@ namespace UI
 
         private void PayBtn_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("پرداخت با موفقیت انجام شد");
+            string orderBasketMessage = MessageHandler.GetMessage("OrderBasketForm", "Registration", true);
+            MessageBox.Show(orderBasketMessage);
         }
     }
 }

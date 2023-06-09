@@ -93,10 +93,9 @@ namespace UI
             this.PhoneNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.PhoneNumberTxt.Location = new System.Drawing.Point(164, 191);
             this.PhoneNumberTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.PhoneNumberTxt.Multiline = true;
             this.PhoneNumberTxt.Name = "PhoneNumberTxt";
             this.PhoneNumberTxt.ReadOnly = true;
-            this.PhoneNumberTxt.Size = new System.Drawing.Size(240, 31);
+            this.PhoneNumberTxt.Size = new System.Drawing.Size(240, 19);
             this.PhoneNumberTxt.TabIndex = 16;
             // 
             // PhoneNumberLabel
@@ -118,9 +117,8 @@ namespace UI
             this.NationalCodeTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.NationalCodeTxt.Location = new System.Drawing.Point(164, 138);
             this.NationalCodeTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.NationalCodeTxt.Multiline = true;
             this.NationalCodeTxt.Name = "NationalCodeTxt";
-            this.NationalCodeTxt.Size = new System.Drawing.Size(240, 31);
+            this.NationalCodeTxt.Size = new System.Drawing.Size(240, 19);
             this.NationalCodeTxt.TabIndex = 14;
             // 
             // AddressTxt
@@ -132,7 +130,7 @@ namespace UI
             this.AddressTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.AddressTxt.Multiline = true;
             this.AddressTxt.Name = "AddressTxt";
-            this.AddressTxt.Size = new System.Drawing.Size(332, 118);
+            this.AddressTxt.Size = new System.Drawing.Size(332, 77);
             this.AddressTxt.TabIndex = 9;
             // 
             // LastNameTxt
@@ -142,9 +140,8 @@ namespace UI
             this.LastNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.LastNameTxt.Location = new System.Drawing.Point(164, 91);
             this.LastNameTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.LastNameTxt.Multiline = true;
             this.LastNameTxt.Name = "LastNameTxt";
-            this.LastNameTxt.Size = new System.Drawing.Size(240, 31);
+            this.LastNameTxt.Size = new System.Drawing.Size(240, 19);
             this.LastNameTxt.TabIndex = 8;
             // 
             // AddressLabel
@@ -190,9 +187,8 @@ namespace UI
             this.FirstNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.FirstNameTxt.Location = new System.Drawing.Point(164, 43);
             this.FirstNameTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.FirstNameTxt.Multiline = true;
             this.FirstNameTxt.Name = "FirstNameTxt";
-            this.FirstNameTxt.Size = new System.Drawing.Size(240, 31);
+            this.FirstNameTxt.Size = new System.Drawing.Size(240, 19);
             this.FirstNameTxt.TabIndex = 1;
             // 
             // FirstNameLabel

@@ -4,7 +4,7 @@ using System;
 
 namespace Domain.Models
 {
-    public class User : IBaseEntity
+    public class User : IBaseEntity, IPhoneNumber
     {
         public Guid Guid { get; set; }
         public string Name { get; set; }

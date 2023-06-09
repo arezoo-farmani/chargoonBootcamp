@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Domain.Models;
+using System;
 using System.Windows.Forms;
 using UI.Enumration;
 
@@ -6,7 +7,7 @@ namespace UI
 {
     public partial class ResturantOwnerForm : Form
     {
-        public ResturantOwnerForm()
+        public ResturantOwnerForm(Restaurant restaurant)
         {
             InitializeComponent();
             customizeFormDynamic();

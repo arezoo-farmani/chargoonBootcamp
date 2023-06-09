@@ -37,6 +37,7 @@ namespace UI
             this.RestaurantName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Guid = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MessageLabel = new System.Windows.Forms.Label();
+            this.lblInfo = new System.Windows.Forms.Label();
             this.ResturantsListBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.RestaurantsDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -47,10 +48,12 @@ namespace UI
             this.ResturantsListBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ResturantsListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResturantsListBox.ForeColor = System.Drawing.Color.Teal;
-            this.ResturantsListBox.Location = new System.Drawing.Point(92, 80);
+            this.ResturantsListBox.Location = new System.Drawing.Point(138, 123);
+            this.ResturantsListBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResturantsListBox.Name = "ResturantsListBox";
+            this.ResturantsListBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ResturantsListBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ResturantsListBox.Size = new System.Drawing.Size(400, 300);
+            this.ResturantsListBox.Size = new System.Drawing.Size(600, 462);
             this.ResturantsListBox.TabIndex = 4;
             this.ResturantsListBox.TabStop = false;
             this.ResturantsListBox.Text = "رستوران ها";
@@ -81,10 +84,12 @@ namespace UI
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.RestaurantsDataGrid.DefaultCellStyle = dataGridViewCellStyle2;
-            this.RestaurantsDataGrid.Location = new System.Drawing.Point(6, 21);
+            this.RestaurantsDataGrid.Location = new System.Drawing.Point(9, 32);
+            this.RestaurantsDataGrid.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RestaurantsDataGrid.Name = "RestaurantsDataGrid";
             this.RestaurantsDataGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RestaurantsDataGrid.Size = new System.Drawing.Size(373, 255);
+            this.RestaurantsDataGrid.RowHeadersWidth = 62;
+            this.RestaurantsDataGrid.Size = new System.Drawing.Size(560, 392);
             this.RestaurantsDataGrid.TabIndex = 15;
             this.RestaurantsDataGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.RestaurantsDataGrid_CellContentDoubleClick);
             // 
@@ -92,14 +97,17 @@ namespace UI
             // 
             this.RestaurantName.DataPropertyName = "RestaurantName";
             this.RestaurantName.HeaderText = "RestaurantName";
+            this.RestaurantName.MinimumWidth = 8;
             this.RestaurantName.Name = "RestaurantName";
             this.RestaurantName.ReadOnly = true;
+            this.RestaurantName.Width = 150;
             // 
             // Guid
             // 
             this.Guid.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Guid.DataPropertyName = "Guid";
             this.Guid.HeaderText = "Guid";
+            this.Guid.MinimumWidth = 8;
             this.Guid.Name = "Guid";
             this.Guid.ReadOnly = true;
             this.Guid.Visible = false;
@@ -110,26 +118,40 @@ namespace UI
             this.MessageLabel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MessageLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MessageLabel.ForeColor = System.Drawing.Color.Red;
-            this.MessageLabel.Location = new System.Drawing.Point(92, 380);
+            this.MessageLabel.Location = new System.Drawing.Point(138, 585);
+            this.MessageLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.MessageLabel.Name = "MessageLabel";
             this.MessageLabel.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.MessageLabel.Size = new System.Drawing.Size(400, 20);
+            this.MessageLabel.Size = new System.Drawing.Size(600, 31);
             this.MessageLabel.TabIndex = 5;
             this.MessageLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // lblInfo
+            // 
+            this.lblInfo.AutoSize = true;
+            this.lblInfo.Location = new System.Drawing.Point(422, 58);
+            this.lblInfo.Name = "lblInfo";
+            this.lblInfo.Size = new System.Drawing.Size(40, 20);
+            this.lblInfo.TabIndex = 6;
+            this.lblInfo.Text = "Test";
+            this.lblInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ResturantsForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.ClientSize = new System.Drawing.Size(876, 709);
+            this.Controls.Add(this.lblInfo);
             this.Controls.Add(this.MessageLabel);
             this.Controls.Add(this.ResturantsListBox);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "ResturantsForm";
             this.Text = "AllResturantsForm";
             this.Load += new System.EventHandler(this.ResturantsForm_Load);
             this.ResturantsListBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RestaurantsDataGrid)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -140,5 +162,6 @@ namespace UI
         private DataGridView RestaurantsDataGrid;
         private DataGridViewTextBoxColumn RestaurantName;
         private DataGridViewTextBoxColumn Guid;
+        private Label lblInfo;
     }
 }

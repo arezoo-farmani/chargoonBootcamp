@@ -3,6 +3,7 @@ using ResturantApp;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
+using Service;
 
 namespace UI
 {
@@ -16,37 +17,28 @@ namespace UI
 
         private void CustomizeFormDynamic()
         {
-            PhoneNumberTxt.Text = LoginForm.LoginPhoneNumber;
+            PhoneNumberTxt.Text = LoginForm.PhoneNumber;
         }
 
         private void ResturantSubmitBtn_Click(object sender, EventArgs e)
         {
-            string name = ResturantNameTxt.Text;
-            string possessor = ResturantOwnerTxt.Text;
-            int openTime = (int)HourFromTxt.Value;
-            int closeTime = (int)HourToTxt.Value;
-            string address = AddressTxt.Text;
-            string phoneNumber = PhoneNumberTxt.Text;
+            Restaurant newRestaurant = new Restaurant();
+            newRestaurant.RestaurantName = ResturantNameTxt.Text;
+            newRestaurant.RestaurantPossessor = ResturantOwnerTxt.Text;
+            newRestaurant.OpenTime = (int)HourFromTxt.Value;
+            newRestaurant.Closetime = (int)HourFromTxt.Value;
+            newRestaurant.Address = AddressTxt.Text;
+            newRestaurant.PhoneNumber = PhoneNumberTxt.Text;
+            newRestaurant.Menu = new List<Food>();
 
-            Restaurant newRestaurant = new Restaurant
-            {
-                Guid = Guid.NewGuid(),
-                RestaurantName = name,
-                RestaurantPossessor = possessor,
-                OpenTime = openTime,
-                Closetime = closeTime,
-                Address = address,
-                PhoneNumber = phoneNumber,
-                Menu = new List<Food>()
-            };
-            // using service layer
-            // DataRepository<Restaurant> dataRepository = new DataRepository<Restaurant>();
-            // dataRepository.Save(newRestaurant);
-            MessageBox.Show("Restaurant was registered successfully.");
+            UserService service = new UserService();
+            Guid guid = service.Save<Restaurant>(newRestaurant);
+            string restaurantRegMessage = MessageHandler.GetMessage("ResturantRegistrationForm", "Registration", true);
+            MessageBox.Show(restaurantRegMessage);
             ClearFields();
 
             this.Hide();
-            Form resturantOwnerForm = new ResturantOwnerForm();
+            ResturantOwnerForm resturantOwnerForm = new ResturantOwnerForm(newRestaurant);
             resturantOwnerForm.Show();
         }
         private void ClearFields()

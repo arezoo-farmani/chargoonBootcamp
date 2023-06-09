@@ -2,6 +2,8 @@
 using ResturantApp;
 using System;
 using System.Windows.Forms;
+using Service;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace UI
 {
@@ -15,35 +17,29 @@ namespace UI
 
         private void CustomizeFormDynamic()
         {
-            PhoneNumberTxt.Text = LoginForm.LoginPhoneNumber;
+            PhoneNumberTxt.Text = LoginForm.PhoneNumber;
         }
 
         private void UserSubmitBtn_Click_1(object sender, EventArgs e)
         {
-            string name = FirstNameTxt.Text;
-            string family = LastNameTxt.Text;
-            string nationalCode = NationalCodeTxt.Text;
-            string address = AddressTxt.Text;
-            string phoneNumber = PhoneNumberTxt.Text;
-            this.Hide();
-            Form resturantsForm = new ResturantsForm();
-            resturantsForm.Show();
+            User user = new User();
+            user.Guid = Guid.NewGuid();
+            user.Name = FirstNameTxt.Text;
+            user.Family = LastNameTxt.Text;
+            user.NationalCode = NationalCodeTxt.Text;
+            user.Address = AddressTxt.Text;
+            user.PhoneNumber = PhoneNumberTxt.Text;
 
-            User newUser = new User
-            {
-                Guid = Guid.NewGuid(),
-                Name = name,
-                Family = family,
-                NationalCode = nationalCode,
-                Address = address,
-                PhoneNumber = phoneNumber
-            };
-            // using service layer
-           // DataRepository<User> dataRepository = new DataRepository<User>();
-           // dataRepository.Save(newUser);
+            UserService service = new UserService();
+            Guid guid = service.Save<User>(user);
 
-            MessageBox.Show("User was registered successfully.");
+            string userRegMessage = MessageHandler.GetMessage("UserRegistrationForm", "Registration", true);
+            MessageBox.Show(userRegMessage);
             ClearFields();
+
+            this.Hide();
+            ResturantsForm resturantsForm = new ResturantsForm(user);
+            resturantsForm.Show();
         }
 
         private void ClearFields()

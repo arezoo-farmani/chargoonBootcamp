@@ -10,11 +10,14 @@ namespace UI
 {
     public partial class ResturantsForm : Form
     {
-        public ResturantsForm()
+        public ResturantsForm(User user)
         {
             InitializeComponent();
             AllResturantsForm_Load();
+            CurrentUser = user;
+            this.lblInfo.Text = $"{CurrentUser.Name} خوش آمدید ";
         }
+        public User CurrentUser { get; set; }
 
         private void AllResturantsForm_Load()
         {
@@ -34,7 +37,7 @@ namespace UI
 
         private void RestaurantsDataGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
-            string resturantGuid = RestaurantsDataGrid.Rows[e.RowIndex]?.Cells[1]?.Value?.ToString();
+            string resturantGuid = RestaurantsDataGrid.Rows[e.RowIndex]?.Cells["Guid"]?.Value?.ToString();
             if (resturantGuid != null)
             {
                 Form menuForm = new MenuForm(MenuViewType.OrderMode, new Guid(resturantGuid));
