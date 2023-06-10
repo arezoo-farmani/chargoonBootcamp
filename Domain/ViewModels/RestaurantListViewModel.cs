@@ -1,9 +1,9 @@
 ﻿using Domain.DataInterfaces;
 using System;
 
-namespace Domain.Models
+namespace Domain.ViewModels
 {
-    public class RestaurantList : IBaseEntity
+    public class RestaurantListViewModel : IBaseEntity
     {
         public Guid Guid { get; set; }
         public string RestaurantName { get; set; }

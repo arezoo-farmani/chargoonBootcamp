@@ -35,13 +35,12 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuBox = new System.Windows.Forms.GroupBox();
             this.MenuDataGrid = new System.Windows.Forms.DataGridView();
+            this.MenuSubmitBtn = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Minus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Guid = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.MenuSubmitBtn = new System.Windows.Forms.Button();
             this.MenuBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -79,8 +78,7 @@ namespace UI
             this.Minus,
             this.Count,
             this.FoodName,
-            this.FoodPrice,
-            this.Guid});
+            this.FoodPrice});
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -91,10 +89,24 @@ namespace UI
             this.MenuDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
             this.MenuDataGrid.Location = new System.Drawing.Point(23, 21);
             this.MenuDataGrid.Name = "MenuDataGrid";
+            this.MenuDataGrid.ReadOnly = true;
             this.MenuDataGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.MenuDataGrid.Size = new System.Drawing.Size(442, 258);
             this.MenuDataGrid.TabIndex = 14;
             this.MenuDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuDataGrid_CellContentClick);
+            // 
+            // MenuSubmitBtn
+            // 
+            this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
+            this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
+            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
+            this.MenuSubmitBtn.Name = "MenuSubmitBtn";
+            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
+            this.MenuSubmitBtn.TabIndex = 13;
+            this.MenuSubmitBtn.Text = "تکمبل خرید";
+            this.MenuSubmitBtn.UseVisualStyleBackColor = false;
+            this.MenuSubmitBtn.Click += new System.EventHandler(this.MenuSubmitBtn_Click);
             // 
             // Add
             // 
@@ -102,6 +114,7 @@ namespace UI
             this.Add.FillWeight = 60F;
             this.Add.HeaderText = "افزودن";
             this.Add.Name = "Add";
+            this.Add.ReadOnly = true;
             this.Add.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Add.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Add.Text = "+";
@@ -113,6 +126,7 @@ namespace UI
             this.Minus.FillWeight = 60F;
             this.Minus.HeaderText = "کاستن";
             this.Minus.Name = "Minus";
+            this.Minus.ReadOnly = true;
             this.Minus.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.Minus.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             this.Minus.Text = "-";
@@ -126,6 +140,7 @@ namespace UI
             this.Count.DefaultCellStyle = dataGridViewCellStyle2;
             this.Count.HeaderText = "تعداد";
             this.Count.Name = "Count";
+            this.Count.ReadOnly = true;
             this.Count.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             // 
             // FoodName
@@ -134,34 +149,15 @@ namespace UI
             this.FoodName.DataPropertyName = "FoodName";
             this.FoodName.HeaderText = "نام غذا";
             this.FoodName.Name = "FoodName";
+            this.FoodName.ReadOnly = true;
             // 
             // FoodPrice
             // 
             this.FoodPrice.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.FoodPrice.DataPropertyName = "Price";
+            this.FoodPrice.DataPropertyName = "FoodPrice";
             this.FoodPrice.HeaderText = "قیمت";
             this.FoodPrice.Name = "FoodPrice";
-            // 
-            // Guid
-            // 
-            this.Guid.DataPropertyName = "Guid";
-            this.Guid.HeaderText = "Guid";
-            this.Guid.Name = "Guid";
-            this.Guid.ReadOnly = true;
-            this.Guid.Visible = false;
-            // 
-            // MenuSubmitBtn
-            // 
-            this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
-            this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
-            this.MenuSubmitBtn.Name = "MenuSubmitBtn";
-            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
-            this.MenuSubmitBtn.TabIndex = 13;
-            this.MenuSubmitBtn.Text = "ثبت منو جدید";
-            this.MenuSubmitBtn.UseVisualStyleBackColor = false;
-            this.MenuSubmitBtn.Click += new System.EventHandler(this.MenuSubmitBtn_Click);
+            this.FoodPrice.ReadOnly = true;
             // 
             // MenuForm
             // 
@@ -188,6 +184,5 @@ namespace UI
         private DataGridViewTextBoxColumn Count;
         private DataGridViewTextBoxColumn FoodName;
         private DataGridViewTextBoxColumn FoodPrice;
-        private DataGridViewTextBoxColumn Guid;
     }
 }

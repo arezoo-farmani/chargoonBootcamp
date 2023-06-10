@@ -49,7 +49,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enumration\MenuViewType.cs" />
     <Compile Include="Forms\FoodEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,23 +73,11 @@
     <Compile Include="Forms\InvoicesForm.designer.cs">
       <DependentUpon>InvoicesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\InvoicesListForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\InvoicesListForm.Designer.cs">
-      <DependentUpon>InvoicesListForm.cs</DependentUpon>
-    </Compile>
     <Compile Include="Forms\LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\LoginForm.designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Forms\MainMenuForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Forms\MainMenuForm.Designer.cs">
-      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\MenuForm.cs">
       <SubType>Form</SubType>
@@ -148,14 +135,8 @@
     <EmbeddedResource Include="Forms\InvoicesForm.resx">
       <DependentUpon>InvoicesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\InvoicesListForm.resx">
-      <DependentUpon>InvoicesListForm.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Forms\MainMenuForm.resx">
-      <DependentUpon>MainMenuForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
@@ -188,6 +169,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Domain.Models.InvoiceList.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

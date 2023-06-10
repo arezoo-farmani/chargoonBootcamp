@@ -3,7 +3,7 @@ using ResturantApp;
 using System;
 using System.Windows.Forms;
 using Service;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using Domain.Handler;
 
 namespace UI
 {
@@ -22,24 +22,28 @@ namespace UI
 
         private void UserSubmitBtn_Click_1(object sender, EventArgs e)
         {
-            User user = new User();
-            user.Guid = Guid.NewGuid();
-            user.Name = FirstNameTxt.Text;
-            user.Family = LastNameTxt.Text;
-            user.NationalCode = NationalCodeTxt.Text;
-            user.Address = AddressTxt.Text;
-            user.PhoneNumber = PhoneNumberTxt.Text;
-
-            UserService service = new UserService();
-            Guid guid = service.Save<User>(user);
-
+            User newUser = CreateNewUser();
+            BaseService userService = new BaseService();
+            userService.Save<User>(newUser);
             string userRegMessage = MessageHandler.GetMessage("UserRegistrationForm", "Registration", true);
             MessageBox.Show(userRegMessage);
             ClearFields();
 
             this.Hide();
-            ResturantsForm resturantsForm = new ResturantsForm(user);
+            ResturantsForm resturantsForm = new ResturantsForm(newUser);
             resturantsForm.Show();
+        }
+
+        private User CreateNewUser()
+        {
+            return new User()
+            {
+                Name = FirstNameTxt.Text,
+                Family = LastNameTxt.Text,
+                NationalCode = NationalCodeTxt.Text,
+                Address = AddressTxt.Text,
+                PhoneNumber = PhoneNumberTxt.Text,
+            };
         }
 
         private void ClearFields()
@@ -51,14 +55,5 @@ namespace UI
             PhoneNumberTxt.Text = "";
         }
 
-        private void UserRegistrationForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void RegistrationUserBox_Enter(object sender, EventArgs e)
-        {
-
-        }
     }
 }

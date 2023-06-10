@@ -1,71 +1,42 @@
 ﻿using Domain.Models;
 using Domain.ServiceInterfaces;
+using Domain.ViewModels;
 using Service;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using UI.Enumration;
 
 namespace UI
 {
     public partial class MenuForm : Form
     {
-        private static MenuViewType _formViewMode;
         private static int _menuFoodCounts;
         private static Guid _restaurantGuid;
+        private static Guid _userGuid;
 
-        public MenuForm(MenuViewType viewMode, Guid restaurantGuid)
+        public MenuForm(Guid restaurantGuid, Guid userGuid)
         {
             InitializeComponent();
-            _formViewMode = viewMode;
             _restaurantGuid = restaurantGuid;
-            CustomizeFormDynamic();
+            _userGuid = userGuid;
             MenuForm_Load();
         }
+
         private void MenuForm_Load()
         {
-            if (_restaurantGuid != null)
+            if (_restaurantGuid != null && _restaurantGuid != System.Guid.Empty)
             {
-                IRestaurantService restaurantService = new RestaurantService();
-                List<Food> menu = restaurantService.GetRestaurantMenu(_restaurantGuid);
+                IFoodService foodService = new FoodService();
+                List<FoodListViewModel> menu = foodService.GetRestaurantMenu(_restaurantGuid);
                 MenuDataGrid.DataSource = menu;
-                MenuDataGrid.Columns["Guid"].Visible = false;
                 MenuDataGrid.ReadOnly = true;
                 _menuFoodCounts = menu.Count;
             }
         }
 
-        private void CustomizeFormDynamic()
-        {
-            if (_formViewMode == MenuViewType.OrderMode)
-            {
-                MenuSubmitBtn.Text = "تکمبل خرید";
-                MenuDataGrid.ReadOnly = true;
-            }
-            else
-            {
-                MenuSubmitBtn.Text = _formViewMode == MenuViewType.AddMode ? "ثبت منو" : "ویرایش منو";
-                MenuDataGrid.Columns.Remove(Add);
-                MenuDataGrid.Columns.Remove(Minus);
-                MenuDataGrid.Columns.Remove(Count);
-            }
-        }
-
         private void MenuSubmitBtn_Click(object sender, System.EventArgs e)
         {
-            if (_formViewMode == MenuViewType.AddMode)
-            {
-                // by hossein
-
-            }
-            else if (_formViewMode == MenuViewType.EditMode)
-            {
-                // by hosein
-            }
-            else if (_formViewMode == MenuViewType.OrderMode)
-            {
-                handleSaveOrder();
-            }
+            handleSaveOrder();
         }
 
         private void handleSaveOrder()
@@ -82,12 +53,13 @@ namespace UI
                         order.OrderDetails.Add(new OrderDetail()
                         {
                             Count = countValue,
-                            FoodName = MenuDataGrid.Rows[i]?.Cells[3]?.Value?.ToString(),
-                            FoodPrice = new decimal(Int32.Parse(MenuDataGrid.Rows[i]?.Cells[4]?.Value?.ToString())),
+                            FoodName = MenuDataGrid.Rows[i]?.Cells["FoodName"]?.Value?.ToString(),
+                            FoodPrice = Convert.ToDecimal(MenuDataGrid.Rows[i]?.Cells["FoodPrice"]?.Value?.ToString()),
                         });
                     }
                 }
                 order.RestaurantGuid = _restaurantGuid;
+                order.UserGuid = _userGuid;
                 IOrderService orderService = new OrderService();
                 var orderGuid = orderService.Save(order);
                 handleShowOrderBasketForm(orderGuid);
@@ -120,8 +92,7 @@ namespace UI
                 {
                     newCountValue = countValue == 0 ? 0 : countValue - 1;
                 }
-                senderGrid.Rows[e.RowIndex].Cells[2].Value = newCountValue.ToString();
-
+                senderGrid.Rows[e.RowIndex].Cells["Count"].Value = newCountValue.ToString();
             }
         }
 

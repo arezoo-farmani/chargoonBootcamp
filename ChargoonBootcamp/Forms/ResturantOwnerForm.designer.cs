@@ -60,7 +60,7 @@ namespace UI
             this.MenuBtn.Name = "MenuBtn";
             this.MenuBtn.Size = new System.Drawing.Size(120, 30);
             this.MenuBtn.TabIndex = 1;
-            this.MenuBtn.Text = "ثبت منو جدید";
+            this.MenuBtn.Text = "منو غذا";
             this.MenuBtn.UseVisualStyleBackColor = false;
             this.MenuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
             // 

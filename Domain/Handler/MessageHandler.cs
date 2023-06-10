@@ -1,20 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Security.Cryptography.X509Certificates;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-
-namespace Domain.Models
+﻿
+namespace Domain.Handler
 {
     public static class MessageHandler
     {
         public static readonly string userSubmitOk = ".ثبت نام شما با موفقیت انجام شد";
         public static readonly string userSubmitError = ".ثبت نام شما با مشکل مواجه شد";
-        public static readonly string orderBasketFormOk = ".ثبت نام شما با موفقیت انجام شد";
-        public static readonly string orderBasketFormError = "پرداخت با مشکل مواجه شد";
+        public static readonly string orderBasketFormError = ".پرداخت با مشکل مواجه شد";
+        public static readonly string orderBasketFormOk = ".پرداخت با موفقیت مواجه شد";
 
         public static string GetMessage(string formName, string action, bool success)
         {
@@ -42,7 +34,7 @@ namespace Domain.Models
                     message = userSubmitError;
                 }
             }
-            else if (formName == "OrderBasketFormError")
+            else if (formName == "OrderBasketForm")
             {
                 if (action == "Registration" && success)
                 {

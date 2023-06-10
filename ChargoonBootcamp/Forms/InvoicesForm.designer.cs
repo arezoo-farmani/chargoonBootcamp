@@ -30,14 +30,24 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.InvoicesBox = new System.Windows.Forms.GroupBox();
-            this.TotalLabel = new System.Windows.Forms.Label();
+            this.InvoicesDataGrid = new System.Windows.Forms.DataGridView();
+            this.InvoiceName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SumLabel = new System.Windows.Forms.Label();
+            this.TotalLabel = new System.Windows.Forms.Label();
             this.InvoicesBox.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGrid)).BeginInit();
             this.SuspendLayout();
             // 
             // InvoicesBox
             // 
+            this.InvoicesBox.Controls.Add(this.InvoicesDataGrid);
             this.InvoicesBox.Controls.Add(this.SumLabel);
             this.InvoicesBox.Controls.Add(this.TotalLabel);
             this.InvoicesBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -51,16 +61,70 @@ namespace UI
             this.InvoicesBox.TabStop = false;
             this.InvoicesBox.Text = "فاکتورها";
             // 
-            // TotalLabel
+            // InvoicesDataGrid
             // 
-            this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLabel.ForeColor = System.Drawing.Color.Teal;
-            this.TotalLabel.Location = new System.Drawing.Point(209, 259);
-            this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(32, 16);
-            this.TotalLabel.TabIndex = 0;
-            this.TotalLabel.Text = "جمع:";
+            this.InvoicesDataGrid.AllowUserToAddRows = false;
+            this.InvoicesDataGrid.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.InvoicesDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.InvoicesDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.InvoicesDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.InvoicesDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.InvoicesDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.InvoicesDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.InvoicesDataGrid.ColumnHeadersVisible = false;
+            this.InvoicesDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.InvoiceName,
+            this.Amount});
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.InvoicesDataGrid.DefaultCellStyle = dataGridViewCellStyle5;
+            this.InvoicesDataGrid.Location = new System.Drawing.Point(18, 35);
+            this.InvoicesDataGrid.Name = "InvoicesDataGrid";
+            this.InvoicesDataGrid.ReadOnly = true;
+            this.InvoicesDataGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.InvoicesDataGrid.Size = new System.Drawing.Size(376, 221);
+            this.InvoicesDataGrid.TabIndex = 16;
+            // 
+            // InvoiceName
+            // 
+            this.InvoiceName.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.InvoiceName.DataPropertyName = "InvoiceName";
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
+            this.InvoiceName.DefaultCellStyle = dataGridViewCellStyle3;
+            this.InvoiceName.HeaderText = "InvoiceName";
+            this.InvoiceName.Name = "InvoiceName";
+            this.InvoiceName.ReadOnly = true;
+            // 
+            // Amount
+            // 
+            this.Amount.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.Amount.DataPropertyName = "Amount";
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.Format = "N2";
+            dataGridViewCellStyle4.NullValue = null;
+            this.Amount.DefaultCellStyle = dataGridViewCellStyle4;
+            this.Amount.HeaderText = "Amount";
+            this.Amount.Name = "Amount";
+            this.Amount.ReadOnly = true;
             // 
             // SumLabel
             // 
@@ -73,16 +137,28 @@ namespace UI
             this.SumLabel.TabIndex = 1;
             this.SumLabel.Text = "0";
             // 
-            // AllInvoicesForm
+            // TotalLabel
+            // 
+            this.TotalLabel.AutoSize = true;
+            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLabel.ForeColor = System.Drawing.Color.Teal;
+            this.TotalLabel.Location = new System.Drawing.Point(209, 259);
+            this.TotalLabel.Name = "TotalLabel";
+            this.TotalLabel.Size = new System.Drawing.Size(32, 16);
+            this.TotalLabel.TabIndex = 0;
+            this.TotalLabel.Text = "جمع:";
+            // 
+            // InvoicesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.InvoicesBox);
-            this.Name = "AllInvoicesForm";
+            this.Name = "InvoicesForm";
             this.Text = "AllInvoicesForm";
             this.InvoicesBox.ResumeLayout(false);
             this.InvoicesBox.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGrid)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -92,5 +168,8 @@ namespace UI
         private GroupBox InvoicesBox;
         private Label TotalLabel;
         private Label SumLabel;
+        private DataGridView InvoicesDataGrid;
+        private DataGridViewTextBoxColumn InvoiceName;
+        private DataGridViewTextBoxColumn Amount;
     }
 }

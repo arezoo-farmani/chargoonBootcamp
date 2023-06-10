@@ -1,31 +1,31 @@
 ﻿using Domain.Models;
 using Domain.ServiceInterfaces;
+using Domain.ViewModels;
 using Service;
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using UI.Enumration;
 
 namespace UI
 {
     public partial class ResturantsForm : Form
     {
+        private static Guid _userGuid;
         public ResturantsForm(User user)
         {
             InitializeComponent();
             AllResturantsForm_Load();
-            CurrentUser = user;
-            this.lblInfo.Text = $"{CurrentUser.Name} خوش آمدید ";
+            _userGuid = user.Guid;
+            this.lblInfo.Text = $"{user.Name} خوش آمدید ";
         }
-        public User CurrentUser { get; set; }
 
         private void AllResturantsForm_Load()
         {
             IRestaurantService restaurantService = new RestaurantService();
-            if (restaurantService.IsAnyRestaurantExist())
+            if (Helper.IsAnyEntityExist<Restaurant>())
             {
                 MessageLabel.Text = "برای مشاهده منوی رستوران روی رستوران مورد نظر کلیک کنید!";
-                List<RestaurantList> allRestaurants = restaurantService.GetAll();
+                List<RestaurantListViewModel> allRestaurants = restaurantService.GetAll();
                 RestaurantsDataGrid.DataSource = allRestaurants;
                 RestaurantsDataGrid.Columns["Guid"].Visible = false;
             }
@@ -35,19 +35,14 @@ namespace UI
             }
         }
 
-        private void RestaurantsDataGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        private void RestaurantsDataGrid_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             string resturantGuid = RestaurantsDataGrid.Rows[e.RowIndex]?.Cells["Guid"]?.Value?.ToString();
             if (resturantGuid != null)
             {
-                Form menuForm = new MenuForm(MenuViewType.OrderMode, new Guid(resturantGuid));
+                Form menuForm = new MenuForm(new Guid(resturantGuid), _userGuid);
                 menuForm.Show();
             }
-        }
-
-        private void ResturantsForm_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }

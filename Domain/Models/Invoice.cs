@@ -3,11 +3,10 @@ using System;
 
 namespace Domain.Models
 {
-    public class Food : IBaseEntity
+    public class Invoice : IBaseEntity
     {
         public Guid Guid { get; set; }
         public Guid RestaurantGuid { get; set; }
-        public string FoodName { get; set; }
-        public decimal Price { get; set; }
+        public decimal InvoiceAmount { get; set; }
     }
 }

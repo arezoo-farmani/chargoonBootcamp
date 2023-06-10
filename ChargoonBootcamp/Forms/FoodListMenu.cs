@@ -1,22 +1,22 @@
-﻿using Domain.Models;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using Service;
 using System.Windows.Forms;
+using Domain.Models;
 
-namespace WindowsFormsApp_Restaurant.Forms
+namespace UI
 {
     public partial class FoodListMenu : Form
     {
-        public FoodListMenu()
+        public FoodListMenu(Guid restaurantGuid)
         {
             InitializeComponent();
+            FoodListMenu_Load(restaurantGuid);
         }
 
-        private void FoodListMenu_Load(object sender, EventArgs e)
+        private void FoodListMenu_Load(Guid restaurantGuid)
         {
             FoodService foodService = new FoodService();
-            FoodGridView.DataSource = foodService.GetAll();
+            FoodGridView.DataSource = foodService.GetAllRestaurantFoods(restaurantGuid);
             FoodGridView.Columns["Guid"].Visible = false;
             FoodGridView.Columns["RestaurantGuid"].Visible = false;
             FoodGridView.Columns[1].HeaderText = "نام غذا";
@@ -28,9 +28,20 @@ namespace WindowsFormsApp_Restaurant.Forms
             this.Close();
         }
 
+        private Food GetSelectedFood()
+        {
+            return new Food()
+            {
+                Guid = (Guid)FoodGridView["Guid", FoodGridView.CurrentRow.Index].Value,
+                FoodName = FoodGridView["FoodName", FoodGridView.CurrentRow.Index].Value.ToString(),
+                Price = (decimal)(FoodGridView["Price", FoodGridView.CurrentRow.Index].Value),
+                RestaurantGuid = (Guid)FoodGridView["RestaurantGuid", FoodGridView.CurrentRow.Index].Value,
+            };
+        }
+
         private void EditBtn_Click(object sender, EventArgs e)
         {
-            FoodEditForm foodEditForm = new FoodEditForm((Guid)FoodGridView[0, FoodGridView.CurrentRow.Index].Value, FoodGridView[1, FoodGridView.CurrentRow.Index].Value.ToString(), (decimal)(FoodGridView[2, FoodGridView.CurrentRow.Index].Value));
+            FoodEditForm foodEditForm = new FoodEditForm(GetSelectedFood());
             foodEditForm.ShowDialog();
             this.Close();
         }

@@ -1,44 +1,27 @@
 ﻿using Domain.Models;
 using System;
 using System.Windows.Forms;
-using UI.Enumration;
 
 namespace UI
 {
     public partial class ResturantOwnerForm : Form
     {
+        private static Guid _restaurantGuid;
         public ResturantOwnerForm(Restaurant restaurant)
         {
             InitializeComponent();
-            customizeFormDynamic();
-        }
-
-        private void customizeFormDynamic()
-        {
-            var isMenuExist = CheckMenuIsExist();
-            MenuBtn.Text = isMenuExist ? "ویرایش منو" : "ثبت منو جدید";
-        }
-
-        private bool CheckMenuIsExist()
-        {
-            // if user register menu before or not
-            return false;
+            _restaurantGuid = restaurant.Guid;
         }
 
         private void MenuBtn_Click(object sender, EventArgs e)
         {
-            var isMenuExist = CheckMenuIsExist();
-            var menuViewMode = isMenuExist ? MenuViewType.EditMode : MenuViewType.AddMode;
-            // empty guid replace with resturant guid
-            Form menuForm = new MenuForm(menuViewMode, Guid.Empty);
-            this.Hide();
-            menuForm.Show();
+            FoodMenu foodMenu = new FoodMenu(_restaurantGuid);
+            foodMenu.Show();
         }
 
         private void ShowInvoicesBtn_Click(object sender, EventArgs e)
         {
-            Form invoiceForm = new InvoicesForm();
-            this.Hide();
+            Form invoiceForm = new InvoicesForm(_restaurantGuid);
             invoiceForm.Show();
         }
     }

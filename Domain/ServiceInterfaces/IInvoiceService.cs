@@ -5,8 +5,8 @@ using System.Collections.Generic;
 
 namespace Domain.ServiceInterfaces
 {
-    public interface IRestaurantService : IBaseService
+    public interface IInvoiceService: IBaseService
     {
-        List<RestaurantListViewModel> GetAll();
+        List<InvoiceListViewModel> GetAllRestaurantInvoces(Guid reastaurantGuid);
     }
 }

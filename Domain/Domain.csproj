@@ -45,18 +45,22 @@
     <Compile Include="DataInterfaces\IBaseEntity.cs" />
     <Compile Include="DataInterfaces\IPhoneNumber.cs" />
     <Compile Include="Models\Food.cs" />
-    <Compile Include="Models\MessageHandler.cs" />
+    <Compile Include="Models\Invoice.cs" />
+    <Compile Include="ServiceInterfaces\IBaseService.cs" />
+    <Compile Include="ViewModels\FoodListViewModel.cs" />
+    <Compile Include="ViewModels\InvoiceListViewModel.cs" />
+    <Compile Include="Handler\MessageHandler.cs" />
     <Compile Include="Models\Order.cs" />
     <Compile Include="Models\OrderDetail.cs" />
     <Compile Include="Models\Restaurant.cs" />
-    <Compile Include="Models\RestaurantList.cs" />
+    <Compile Include="ViewModels\RestaurantListViewModel.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryInterfaces\IRepository.cs" />
+    <Compile Include="ServiceInterfaces\IInvoiceService.cs" />
     <Compile Include="ServiceInterfaces\IFoodService.cs" />
     <Compile Include="ServiceInterfaces\IOrderService.cs" />
     <Compile Include="ServiceInterfaces\IRestaurantService.cs" />
-    <Compile Include="ServiceInterfaces\IUserService.cs" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

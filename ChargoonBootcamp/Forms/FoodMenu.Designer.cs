@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp_Restaurant.Forms
+﻿namespace UI
 {
     partial class FoodMenu
     {

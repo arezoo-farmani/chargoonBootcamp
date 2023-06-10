@@ -1,12 +1,9 @@
 using Domain.Models;
+using Service;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using UI;
-using WindowsFormsApp_Restaurant.Forms;
-using Domain.RepositoryInterfaces;
-using Service;
 
 namespace ResturantApp
 {
@@ -22,17 +19,16 @@ namespace ResturantApp
 
         private void LoginBtn_Click(object sender, EventArgs e)
         {
-            UserService service = new UserService();
             _defaultTextBoxColor = PhoneNumberTxt.BackColor;
-
             PhoneNumber = PhoneNumberTxt.Text;
+
             if (string.IsNullOrWhiteSpace(PhoneNumber))
             {
                 PhoneNumberTxt.BackColor = Color.IndianRed;
                 return;
             }
 
-            User user = service.Exists<User>(PhoneNumber);
+            User user = Helper.GetEntityByPhoneNumber<User>(PhoneNumber);
             if (user != null)
             {
                 ResturantsForm resturantsForm = new ResturantsForm(user);
@@ -41,7 +37,7 @@ namespace ResturantApp
             }
             else
             {
-                Restaurant restaurant = service.Exists<Restaurant>(PhoneNumber);
+                Restaurant restaurant = Helper.GetEntityByPhoneNumber<Restaurant>(PhoneNumber);
                 if (restaurant != null)
                 {
                     ResturantOwnerForm ownerForm = new ResturantOwnerForm(restaurant);
@@ -71,17 +67,5 @@ namespace ResturantApp
             Environment.Exit(0);
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            MainMenuForm mainManuForm = new MainMenuForm();
-            mainManuForm.ShowDialog();
-        }
-
-        private void LoginBox_Enter(object sender, EventArgs e)
-        {
-
-        }
-
-       
     }
 }

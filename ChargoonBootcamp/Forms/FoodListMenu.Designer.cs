@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp_Restaurant.Forms
+﻿namespace UI
 {
     partial class FoodListMenu
     {
@@ -97,7 +97,6 @@
             this.Controls.Add(this.EditBtn);
             this.Name = "FoodListMenu";
             this.Text = "FoodListMenu";
-            this.Load += new System.EventHandler(this.FoodListMenu_Load);
             ((System.ComponentModel.ISupportInitialize)(this.FoodGridView)).EndInit();
             this.ResumeLayout(false);
 

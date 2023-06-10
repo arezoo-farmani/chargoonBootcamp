@@ -3,21 +3,18 @@ using System;
 using System.Windows.Forms;
 using Service;
 
-namespace WindowsFormsApp_Restaurant.Forms
+namespace UI
 {
     public partial class FoodMenu : Form
     {
         private static Guid _restaurantGuid;
-        public FoodMenu()
-        {
-            InitializeComponent();
 
-        }
-        public FoodMenu(Guid Guid)
+        public FoodMenu(Guid restaurantGuid)
         {
             InitializeComponent();
-            _restaurantGuid = Guid;
+            _restaurantGuid = restaurantGuid;
         }
+
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -27,7 +24,6 @@ namespace WindowsFormsApp_Restaurant.Forms
         {
             Food food = new Food
             {
-                Guid = Guid.NewGuid(),
                 FoodName = FoodNameText.Text,
                 Price = decimal.Parse(FoodPriceText.Text),
                 RestaurantGuid = _restaurantGuid
@@ -36,9 +32,10 @@ namespace WindowsFormsApp_Restaurant.Forms
             foodService.Save(food);
             MessageBox.Show("Food Has Been Registered successfully.");
         }
+
         private void ListMenuBtn_Click_1(object sender, EventArgs e)
         {
-            FoodListMenu foodListMenu = new Forms.FoodListMenu();
+            FoodListMenu foodListMenu = new FoodListMenu(_restaurantGuid);
             foodListMenu.ShowDialog();
         }
     }

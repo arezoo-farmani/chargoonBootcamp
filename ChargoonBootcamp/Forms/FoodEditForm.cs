@@ -1,28 +1,17 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Service;
 using Domain.Models;
 
-namespace WindowsFormsApp_Restaurant.Forms
+namespace UI
 {
     public partial class FoodEditForm : Form
     {
-        private static Guid _foodGuid;
-        private static string _foodName;
-        private static decimal _foodPrice;
-        public FoodEditForm(Guid Guid,string foodName,decimal foodPrice)
+        private static Food _editedFood;
+        public FoodEditForm(Food food)
         {
             InitializeComponent();
-            _foodGuid = Guid;
-            _foodName = foodName;
-            _foodPrice = foodPrice;
+            _editedFood = food;
         }
 
         private void BackBtn_Click(object sender, EventArgs e)
@@ -35,9 +24,10 @@ namespace WindowsFormsApp_Restaurant.Forms
             FoodService foodService = new FoodService();
             Food food = new Food
             {
-                Guid = _foodGuid,
+                Guid = _editedFood.Guid,
                 FoodName = FoodNameText.Text,
-                Price = decimal.Parse(FoodPriceText.Text)
+                Price = decimal.Parse(FoodPriceText.Text),
+                RestaurantGuid = _editedFood.RestaurantGuid,
             };
             foodService.Update(food);
             MessageBox.Show("تغییرات با موفقیت اعمال شد");
@@ -46,8 +36,8 @@ namespace WindowsFormsApp_Restaurant.Forms
 
         private void FoodEditForm_Load(object sender, EventArgs e)
         {
-            FoodNameText.Text = _foodName;
-            FoodPriceText.Text = _foodPrice.ToString();
+            FoodNameText.Text = _editedFood.FoodName;
+            FoodPriceText.Text = _editedFood.Price.ToString();
         }
     }
 }
