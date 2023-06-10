@@ -15,19 +15,19 @@ namespace Service
         {
         }
 
-        //public T Exists<T>(string phoneNumber)
-        //    where T : IBaseEntity, IPhoneNumber
-        //{
-        //    DataRepository<T> dataRepository = new DataRepository<T>();
-        //    List<T> itemList = dataRepository.GetAll();
+        public T Exists<T>(string phoneNumber)
+            where T : IBaseEntity, IPhoneNumber
+        {
+            DataRepository<T> dataRepository = new DataRepository<T>();
+            List<T> itemList = dataRepository.GetAll();
 
-        //    foreach (T item in itemList)
-        //    {
-        //        if (item.PhoneNumber == phoneNumber)
-        //            return item;
-        //    }
-        //    return default;
-        //}
+            foreach (T item in itemList)
+            {
+                if (item.PhoneNumber == phoneNumber)
+                    return item;
+            }
+            return default(T);
+        }
 
         public Guid Save<T>(T entity) where T :IBaseEntity
         {

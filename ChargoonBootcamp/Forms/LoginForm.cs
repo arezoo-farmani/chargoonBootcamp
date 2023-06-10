@@ -32,29 +32,29 @@ namespace ResturantApp
                 return;
             }
 
-            //User user = service.Exists<User>(PhoneNumber);
-            //if (user != null)
-            //{
-            //    ResturantsForm resturantsForm = new ResturantsForm(user);
-            //    resturantsForm.Show();
-            //    this.Hide();
-            //}
-            //else
-            //{
-            //    Restaurant restaurant = service.Exists<Restaurant>(PhoneNumber);
-            //    if (restaurant != null)
-            //    {
-            //        ResturantOwnerForm ownerForm = new ResturantOwnerForm(restaurant);
-            //        ownerForm.Show();
-            //        this.Hide();
-            //    }
-            //    else
-            //    {
-            //        RegistrationForm registerUserForm = new RegistrationForm();
-            //        registerUserForm.Show();
-            //        this.Hide();
-            //    }
-            //}
+            User user = service.Exists<User>(PhoneNumber);
+            if (user != null)
+            {
+                ResturantsForm resturantsForm = new ResturantsForm(user);
+                resturantsForm.Show();
+                this.Hide();
+            }
+            else
+            {
+                Restaurant restaurant = service.Exists<Restaurant>(PhoneNumber);
+                if (restaurant != null)
+                {
+                    ResturantOwnerForm ownerForm = new ResturantOwnerForm(restaurant);
+                    ownerForm.Show();
+                    this.Hide();
+                }
+                else
+                {
+                    RegistrationForm registerUserForm = new RegistrationForm();
+                    registerUserForm.Show();
+                    this.Hide();
+                }
+            }
         }
 
 
