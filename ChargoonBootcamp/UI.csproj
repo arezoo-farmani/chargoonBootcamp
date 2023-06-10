@@ -50,6 +50,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Enumration\MenuViewType.cs" />
+    <Compile Include="Forms\FoodEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FoodEditForm.designer.cs">
+      <DependentUpon>FoodEditForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FoodListMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FoodEditForm.resx">
+      <DependentUpon>FoodEditForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FoodListMenu.resx">
       <DependentUpon>FoodListMenu.cs</DependentUpon>
     </EmbeddedResource>

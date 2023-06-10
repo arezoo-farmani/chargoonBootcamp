@@ -1,36 +1,23 @@
 ﻿using Domain.Models;
 using System;
 using System.Windows.Forms;
+using Service;
 
 namespace WindowsFormsApp_Restaurant.Forms
 {
     public partial class FoodMenu : Form
     {
+        private static Guid _restaurantGuid;
         public FoodMenu()
         {
             InitializeComponent();
 
         }
-        public FoodMenu(string foodName, decimal foodPrice)
+        public FoodMenu(Guid Guid)
         {
             InitializeComponent();
-            FoodNameText.Text = foodName;
-            FoodPriceText.Text = foodPrice.ToString();
+            _restaurantGuid = Guid;
         }
-
-        private void FoodMenu_Load(object sender, EventArgs e)
-        {
-
-            if (FoodNameText.Text == "" && FoodPriceText.Text == "")
-            {
-                EditBtn.Enabled = false;
-            }
-            else
-            {
-                EditBtn.Enabled = true;
-            }
-        }
-
         private void BackBtn_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,26 +29,17 @@ namespace WindowsFormsApp_Restaurant.Forms
             {
                 Guid = Guid.NewGuid(),
                 FoodName = FoodNameText.Text,
-                Price = decimal.Parse(FoodPriceText.Text)
-
+                Price = decimal.Parse(FoodPriceText.Text),
+                RestaurantGuid = _restaurantGuid
             };
-            // using service layer
-           // DataRepository<Food> dataRepository = new DataRepository<Food>();
-          //  dataRepository.Save(food);
+            FoodService foodService = new FoodService();
+            foodService.Save(food);
             MessageBox.Show("Food Has Been Registered successfully.");
         }
-
-        private void ListMenuBtn_Click(object sender, EventArgs e)
+        private void ListMenuBtn_Click_1(object sender, EventArgs e)
         {
             FoodListMenu foodListMenu = new Forms.FoodListMenu();
             foodListMenu.ShowDialog();
-            EditBtn.Enabled = true;
-        }
-
-        private void EditBtn_Click(object sender, EventArgs e)
-        {
-
-
         }
     }
 }

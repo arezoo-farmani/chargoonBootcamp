@@ -53,6 +53,7 @@
     <Compile Include="Models\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RepositoryInterfaces\IRepository.cs" />
+    <Compile Include="ServiceInterfaces\IFoodService.cs" />
     <Compile Include="ServiceInterfaces\IOrderService.cs" />
     <Compile Include="ServiceInterfaces\IRestaurantService.cs" />
     <Compile Include="ServiceInterfaces\IUserService.cs" />

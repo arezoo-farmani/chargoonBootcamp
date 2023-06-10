@@ -43,6 +43,7 @@ namespace UI
             this.FirstNameTxt = new System.Windows.Forms.TextBox();
             this.FirstNameLabel = new System.Windows.Forms.Label();
             this.UserSubmitBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.RegistrationUserBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -62,12 +63,10 @@ namespace UI
             this.RegistrationUserBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.RegistrationUserBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RegistrationUserBox.ForeColor = System.Drawing.Color.Teal;
-            this.RegistrationUserBox.Location = new System.Drawing.Point(150, 123);
-            this.RegistrationUserBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.RegistrationUserBox.Location = new System.Drawing.Point(100, 80);
             this.RegistrationUserBox.Name = "RegistrationUserBox";
-            this.RegistrationUserBox.Padding = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.RegistrationUserBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.RegistrationUserBox.Size = new System.Drawing.Size(600, 462);
+            this.RegistrationUserBox.Size = new System.Drawing.Size(400, 300);
             this.RegistrationUserBox.TabIndex = 3;
             this.RegistrationUserBox.TabStop = false;
             this.RegistrationUserBox.Text = "ثبت نام کاربر";
@@ -78,10 +77,9 @@ namespace UI
             this.Required1.AutoSize = true;
             this.Required1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Required1.ForeColor = System.Drawing.Color.Red;
-            this.Required1.Location = new System.Drawing.Point(135, 145);
-            this.Required1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.Required1.Location = new System.Drawing.Point(90, 94);
             this.Required1.Name = "Required1";
-            this.Required1.Size = new System.Drawing.Size(21, 25);
+            this.Required1.Size = new System.Drawing.Size(14, 16);
             this.Required1.TabIndex = 17;
             this.Required1.Text = "*";
             this.Required1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -96,6 +94,13 @@ namespace UI
             this.PhoneNumberTxt.Name = "PhoneNumberTxt";
             this.PhoneNumberTxt.ReadOnly = true;
             this.PhoneNumberTxt.Size = new System.Drawing.Size(240, 19);
+
+            this.PhoneNumberTxt.Location = new System.Drawing.Point(109, 124);
+            this.PhoneNumberTxt.Multiline = true;
+            this.PhoneNumberTxt.Name = "PhoneNumberTxt";
+            this.PhoneNumberTxt.ReadOnly = true;
+            this.PhoneNumberTxt.Size = new System.Drawing.Size(160, 20);
+
             this.PhoneNumberTxt.TabIndex = 16;
             // 
             // PhoneNumberLabel
@@ -103,10 +108,9 @@ namespace UI
             this.PhoneNumberLabel.AutoSize = true;
             this.PhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Teal;
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(446, 188);
-            this.PhoneNumberLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(297, 122);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(98, 25);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(75, 16);
             this.PhoneNumberLabel.TabIndex = 15;
             this.PhoneNumberLabel.Text = "شماره موبایل";
             // 
@@ -119,6 +123,11 @@ namespace UI
             this.NationalCodeTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.NationalCodeTxt.Name = "NationalCodeTxt";
             this.NationalCodeTxt.Size = new System.Drawing.Size(240, 19);
+
+            this.NationalCodeTxt.Location = new System.Drawing.Point(109, 90);
+            this.NationalCodeTxt.Multiline = true;
+            this.NationalCodeTxt.Name = "NationalCodeTxt";
+            this.NationalCodeTxt.Size = new System.Drawing.Size(160, 20);
             this.NationalCodeTxt.TabIndex = 14;
             // 
             // AddressTxt
@@ -126,11 +135,13 @@ namespace UI
             this.AddressTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.AddressTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AddressTxt.Location = new System.Drawing.Point(72, 243);
-            this.AddressTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.AddressTxt.Location = new System.Drawing.Point(48, 158);
             this.AddressTxt.Multiline = true;
             this.AddressTxt.Name = "AddressTxt";
+
             this.AddressTxt.Size = new System.Drawing.Size(332, 77);
+            this.AddressTxt.Size = new System.Drawing.Size(221, 77);
+
             this.AddressTxt.TabIndex = 9;
             // 
             // LastNameTxt
@@ -142,6 +153,11 @@ namespace UI
             this.LastNameTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.LastNameTxt.Name = "LastNameTxt";
             this.LastNameTxt.Size = new System.Drawing.Size(240, 19);
+
+            this.LastNameTxt.Location = new System.Drawing.Point(109, 59);
+            this.LastNameTxt.Multiline = true;
+            this.LastNameTxt.Name = "LastNameTxt";
+            this.LastNameTxt.Size = new System.Drawing.Size(160, 20);
             this.LastNameTxt.TabIndex = 8;
             // 
             // AddressLabel
@@ -149,10 +165,9 @@ namespace UI
             this.AddressLabel.AutoSize = true;
             this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddressLabel.ForeColor = System.Drawing.Color.Teal;
-            this.AddressLabel.Location = new System.Drawing.Point(446, 240);
-            this.AddressLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.AddressLabel.Location = new System.Drawing.Point(297, 156);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(50, 25);
+            this.AddressLabel.Size = new System.Drawing.Size(38, 16);
             this.AddressLabel.TabIndex = 5;
             this.AddressLabel.Text = "آدرس";
             // 
@@ -161,10 +176,9 @@ namespace UI
             this.NationalCodeLabel.AutoSize = true;
             this.NationalCodeLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.NationalCodeLabel.ForeColor = System.Drawing.Color.Teal;
-            this.NationalCodeLabel.Location = new System.Drawing.Point(446, 138);
-            this.NationalCodeLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.NationalCodeLabel.Location = new System.Drawing.Point(297, 90);
             this.NationalCodeLabel.Name = "NationalCodeLabel";
-            this.NationalCodeLabel.Size = new System.Drawing.Size(56, 25);
+            this.NationalCodeLabel.Size = new System.Drawing.Size(43, 16);
             this.NationalCodeLabel.TabIndex = 4;
             this.NationalCodeLabel.Text = "کد ملی";
             // 
@@ -173,10 +187,9 @@ namespace UI
             this.LastNameLabel.AutoSize = true;
             this.LastNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LastNameLabel.ForeColor = System.Drawing.Color.Teal;
-            this.LastNameLabel.Location = new System.Drawing.Point(446, 88);
-            this.LastNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.LastNameLabel.Location = new System.Drawing.Point(297, 57);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(94, 25);
+            this.LastNameLabel.Size = new System.Drawing.Size(74, 16);
             this.LastNameLabel.TabIndex = 3;
             this.LastNameLabel.Text = "نام خانوادگی";
             // 
@@ -189,6 +202,11 @@ namespace UI
             this.FirstNameTxt.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.FirstNameTxt.Name = "FirstNameTxt";
             this.FirstNameTxt.Size = new System.Drawing.Size(240, 19);
+
+            this.FirstNameTxt.Location = new System.Drawing.Point(109, 28);
+            this.FirstNameTxt.Multiline = true;
+            this.FirstNameTxt.Name = "FirstNameTxt";
+            this.FirstNameTxt.Size = new System.Drawing.Size(160, 20);
             this.FirstNameTxt.TabIndex = 1;
             // 
             // FirstNameLabel
@@ -196,10 +214,9 @@ namespace UI
             this.FirstNameLabel.AutoSize = true;
             this.FirstNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FirstNameLabel.ForeColor = System.Drawing.Color.Teal;
-            this.FirstNameLabel.Location = new System.Drawing.Point(446, 43);
-            this.FirstNameLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.FirstNameLabel.Location = new System.Drawing.Point(297, 28);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(29, 25);
+            this.FirstNameLabel.Size = new System.Drawing.Size(22, 16);
             this.FirstNameLabel.TabIndex = 0;
             this.FirstNameLabel.Text = "نام";
             // 
@@ -208,23 +225,35 @@ namespace UI
             this.UserSubmitBtn.BackColor = System.Drawing.Color.Teal;
             this.UserSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UserSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.UserSubmitBtn.Location = new System.Drawing.Point(150, 594);
-            this.UserSubmitBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.UserSubmitBtn.Location = new System.Drawing.Point(437, 386);
             this.UserSubmitBtn.Name = "UserSubmitBtn";
-            this.UserSubmitBtn.Size = new System.Drawing.Size(90, 46);
+            this.UserSubmitBtn.Size = new System.Drawing.Size(60, 30);
             this.UserSubmitBtn.TabIndex = 13;
             this.UserSubmitBtn.Text = "ثبت ";
             this.UserSubmitBtn.UseVisualStyleBackColor = false;
             this.UserSubmitBtn.Click += new System.EventHandler(this.UserSubmitBtn_Click_1);
             // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.Teal;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.ForeColor = System.Drawing.Color.White;
+            this.BackBtn.Location = new System.Drawing.Point(100, 386);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(60, 30);
+            this.BackBtn.TabIndex = 34;
+            this.BackBtn.Text = "بازگشت";
+            this.BackBtn.UseVisualStyleBackColor = false;
+           
+            // 
             // UserRegistrationForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(876, 709);
+            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.RegistrationUserBox);
             this.Controls.Add(this.UserSubmitBtn);
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "UserRegistrationForm";
             this.Text = "UserRegistrationForm";
             this.Load += new System.EventHandler(this.UserRegistrationForm_Load);
@@ -249,5 +278,6 @@ namespace UI
         private Label PhoneNumberLabel;
         private TextBox PhoneNumberTxt;
         private Label Required1;
+        private Button BackBtn;
     }
 }

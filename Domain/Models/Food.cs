@@ -8,5 +8,6 @@ namespace Domain.Models
         public Guid Guid { get; set; }
         public string FoodName { get; set; }
         public decimal Price { get; set; }
+        public Guid RestaurantGuid { get; set;}
     }
 }
