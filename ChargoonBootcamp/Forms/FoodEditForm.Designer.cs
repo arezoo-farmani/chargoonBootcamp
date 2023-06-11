@@ -120,7 +120,7 @@
             this.Controls.Add(this.FoodNameText);
             this.Controls.Add(this.FoodNameLabel);
             this.Name = "FoodEditForm";
-            this.Text = "FoodEditForm";
+            this.Text = "فرم ویرایش غذا";
             this.Load += new System.EventHandler(this.FoodEditForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

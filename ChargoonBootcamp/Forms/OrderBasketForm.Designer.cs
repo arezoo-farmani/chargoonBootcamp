@@ -32,13 +32,13 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.OrderBasketBox = new System.Windows.Forms.GroupBox();
-            this.SumLabel = new System.Windows.Forms.Label();
-            this.TotalLabel = new System.Windows.Forms.Label();
-            this.PayBtn = new System.Windows.Forms.Button();
             this.OrderBasketDataGrid = new System.Windows.Forms.DataGridView();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.SumLabel = new System.Windows.Forms.Label();
+            this.TotalLabel = new System.Windows.Forms.Label();
+            this.PayBtn = new System.Windows.Forms.Button();
             this.OrderBasketBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderBasketDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -58,41 +58,6 @@
             this.OrderBasketBox.TabIndex = 5;
             this.OrderBasketBox.TabStop = false;
             this.OrderBasketBox.Text = "سبد خرید";
-            // 
-            // SumLabel
-            // 
-            this.SumLabel.AutoSize = true;
-            this.SumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SumLabel.ForeColor = System.Drawing.Color.Teal;
-            this.SumLabel.Location = new System.Drawing.Point(132, 259);
-            this.SumLabel.Name = "SumLabel";
-            this.SumLabel.Size = new System.Drawing.Size(14, 16);
-            this.SumLabel.TabIndex = 1;
-            this.SumLabel.Text = "0";
-            // 
-            // TotalLabel
-            // 
-            this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLabel.ForeColor = System.Drawing.Color.Teal;
-            this.TotalLabel.Location = new System.Drawing.Point(237, 259);
-            this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(32, 16);
-            this.TotalLabel.TabIndex = 0;
-            this.TotalLabel.Text = "جمع:";
-            // 
-            // PayBtn
-            // 
-            this.PayBtn.BackColor = System.Drawing.Color.Teal;
-            this.PayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.PayBtn.ForeColor = System.Drawing.Color.White;
-            this.PayBtn.Location = new System.Drawing.Point(92, 386);
-            this.PayBtn.Name = "PayBtn";
-            this.PayBtn.Size = new System.Drawing.Size(80, 30);
-            this.PayBtn.TabIndex = 14;
-            this.PayBtn.Text = "پرداخت";
-            this.PayBtn.UseVisualStyleBackColor = false;
-            this.PayBtn.Click += new System.EventHandler(this.PayBtn_Click);
             // 
             // OrderBasketDataGrid
             // 
@@ -150,6 +115,41 @@
             this.FoodPrice.HeaderText = "قیمت";
             this.FoodPrice.Name = "FoodPrice";
             // 
+            // SumLabel
+            // 
+            this.SumLabel.AutoSize = true;
+            this.SumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SumLabel.ForeColor = System.Drawing.Color.Teal;
+            this.SumLabel.Location = new System.Drawing.Point(132, 259);
+            this.SumLabel.Name = "SumLabel";
+            this.SumLabel.Size = new System.Drawing.Size(15, 16);
+            this.SumLabel.TabIndex = 1;
+            this.SumLabel.Text = "0";
+            // 
+            // TotalLabel
+            // 
+            this.TotalLabel.AutoSize = true;
+            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TotalLabel.ForeColor = System.Drawing.Color.Teal;
+            this.TotalLabel.Location = new System.Drawing.Point(237, 259);
+            this.TotalLabel.Name = "TotalLabel";
+            this.TotalLabel.Size = new System.Drawing.Size(33, 16);
+            this.TotalLabel.TabIndex = 0;
+            this.TotalLabel.Text = "جمع:";
+            // 
+            // PayBtn
+            // 
+            this.PayBtn.BackColor = System.Drawing.Color.Teal;
+            this.PayBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PayBtn.ForeColor = System.Drawing.Color.White;
+            this.PayBtn.Location = new System.Drawing.Point(92, 386);
+            this.PayBtn.Name = "PayBtn";
+            this.PayBtn.Size = new System.Drawing.Size(80, 30);
+            this.PayBtn.TabIndex = 14;
+            this.PayBtn.Text = "پرداخت";
+            this.PayBtn.UseVisualStyleBackColor = false;
+            this.PayBtn.Click += new System.EventHandler(this.PayBtn_Click);
+            // 
             // OrderBasketForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -158,7 +158,7 @@
             this.Controls.Add(this.PayBtn);
             this.Controls.Add(this.OrderBasketBox);
             this.Name = "OrderBasketForm";
-            this.Text = "OrderBasket";
+            this.Text = "فرم پرداخت";
             this.OrderBasketBox.ResumeLayout(false);
             this.OrderBasketBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.OrderBasketDataGrid)).EndInit();

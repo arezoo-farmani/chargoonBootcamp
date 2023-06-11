@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Service;
 using Domain.Models;
+using Domain.Handler;
 
 namespace UI
 {
@@ -30,7 +31,8 @@ namespace UI
                 RestaurantGuid = _editedFood.RestaurantGuid,
             };
             foodService.Update(food);
-            MessageBox.Show("تغییرات با موفقیت اعمال شد");
+            string foodEditMessage = MessageHandler.GetMessage("FoodEditForm", "Registration", true);
+            MessageBox.Show(foodEditMessage);
             this.Close();
         }
 

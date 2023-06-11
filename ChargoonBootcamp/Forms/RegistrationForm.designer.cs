@@ -85,7 +85,7 @@ namespace UI
             this.ClientSize = new System.Drawing.Size(584, 261);
             this.Controls.Add(this.RegistrationBox);
             this.Name = "RegistrationForm";
-            this.Text = "RegistrationForm";
+            this.Text = "فرم ثبت نام";
             this.RegistrationBox.ResumeLayout(false);
             this.ResumeLayout(false);
 

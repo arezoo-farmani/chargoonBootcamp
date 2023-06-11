@@ -35,12 +35,12 @@ namespace UI
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuBox = new System.Windows.Forms.GroupBox();
             this.MenuDataGrid = new System.Windows.Forms.DataGridView();
-            this.MenuSubmitBtn = new System.Windows.Forms.Button();
             this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Minus = new System.Windows.Forms.DataGridViewButtonColumn();
             this.Count = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.MenuSubmitBtn = new System.Windows.Forms.Button();
             this.MenuBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -95,19 +95,6 @@ namespace UI
             this.MenuDataGrid.TabIndex = 14;
             this.MenuDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuDataGrid_CellContentClick);
             // 
-            // MenuSubmitBtn
-            // 
-            this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
-            this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
-            this.MenuSubmitBtn.Name = "MenuSubmitBtn";
-            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
-            this.MenuSubmitBtn.TabIndex = 13;
-            this.MenuSubmitBtn.Text = "تکمبل خرید";
-            this.MenuSubmitBtn.UseVisualStyleBackColor = false;
-            this.MenuSubmitBtn.Click += new System.EventHandler(this.MenuSubmitBtn_Click);
-            // 
             // Add
             // 
             this.Add.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -159,6 +146,19 @@ namespace UI
             this.FoodPrice.Name = "FoodPrice";
             this.FoodPrice.ReadOnly = true;
             // 
+            // MenuSubmitBtn
+            // 
+            this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
+            this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
+            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
+            this.MenuSubmitBtn.Name = "MenuSubmitBtn";
+            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
+            this.MenuSubmitBtn.TabIndex = 13;
+            this.MenuSubmitBtn.Text = "تکمبل خرید";
+            this.MenuSubmitBtn.UseVisualStyleBackColor = false;
+            this.MenuSubmitBtn.Click += new System.EventHandler(this.MenuSubmitBtn_Click);
+            // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -167,7 +167,7 @@ namespace UI
             this.Controls.Add(this.MenuSubmitBtn);
             this.Controls.Add(this.MenuBox);
             this.Name = "MenuForm";
-            this.Text = "MenuForm";
+            this.Text = "فرم ثبت خرید";
             this.MenuBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.MenuDataGrid)).EndInit();
             this.ResumeLayout(false);

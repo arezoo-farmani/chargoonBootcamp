@@ -133,7 +133,7 @@ namespace UI
             this.SumLabel.ForeColor = System.Drawing.Color.Teal;
             this.SumLabel.Location = new System.Drawing.Point(162, 259);
             this.SumLabel.Name = "SumLabel";
-            this.SumLabel.Size = new System.Drawing.Size(14, 16);
+            this.SumLabel.Size = new System.Drawing.Size(15, 16);
             this.SumLabel.TabIndex = 1;
             this.SumLabel.Text = "0";
             // 
@@ -144,7 +144,7 @@ namespace UI
             this.TotalLabel.ForeColor = System.Drawing.Color.Teal;
             this.TotalLabel.Location = new System.Drawing.Point(209, 259);
             this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(32, 16);
+            this.TotalLabel.Size = new System.Drawing.Size(33, 16);
             this.TotalLabel.TabIndex = 0;
             this.TotalLabel.Text = "جمع:";
             // 
@@ -155,7 +155,7 @@ namespace UI
             this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.InvoicesBox);
             this.Name = "InvoicesForm";
-            this.Text = "AllInvoicesForm";
+            this.Text = "فرم لیست فاکتور";
             this.InvoicesBox.ResumeLayout(false);
             this.InvoicesBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGrid)).EndInit();

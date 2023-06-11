@@ -84,7 +84,7 @@ namespace UI
             this.ClientSize = new System.Drawing.Size(584, 261);
             this.Controls.Add(this.MainBox);
             this.Name = "ResturantOwnerForm";
-            this.Text = "ResturantOwnerForm";
+            this.Text = "فرم مالک رستوران";
             this.MainBox.ResumeLayout(false);
             this.ResumeLayout(false);
 

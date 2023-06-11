@@ -96,7 +96,7 @@
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.EditBtn);
             this.Name = "FoodListMenu";
-            this.Text = "FoodListMenu";
+            this.Text = "فرم لیست غذا";
             ((System.ComponentModel.ISupportInitialize)(this.FoodGridView)).EndInit();
             this.ResumeLayout(false);
 

@@ -141,7 +141,7 @@ namespace UI
             this.Controls.Add(this.MessageLabel);
             this.Controls.Add(this.ResturantsListBox);
             this.Name = "ResturantsForm";
-            this.Text = "AllResturantsForm";
+            this.Text = "فرم لیست رستوران";
             this.ResturantsListBox.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.RestaurantsDataGrid)).EndInit();
             this.ResumeLayout(false);

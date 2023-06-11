@@ -78,7 +78,7 @@ namespace UI
             this.Required1.ForeColor = System.Drawing.Color.Red;
             this.Required1.Location = new System.Drawing.Point(90, 94);
             this.Required1.Name = "Required1";
-            this.Required1.Size = new System.Drawing.Size(13, 16);
+            this.Required1.Size = new System.Drawing.Size(14, 16);
             this.Required1.TabIndex = 17;
             this.Required1.Text = "*";
             this.Required1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -103,7 +103,7 @@ namespace UI
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Teal;
             this.PhoneNumberLabel.Location = new System.Drawing.Point(297, 122);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(74, 16);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(75, 16);
             this.PhoneNumberLabel.TabIndex = 15;
             this.PhoneNumberLabel.Text = "شماره موبایل";
             // 
@@ -149,7 +149,7 @@ namespace UI
             this.AddressLabel.ForeColor = System.Drawing.Color.Teal;
             this.AddressLabel.Location = new System.Drawing.Point(297, 156);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(37, 16);
+            this.AddressLabel.Size = new System.Drawing.Size(38, 16);
             this.AddressLabel.TabIndex = 5;
             this.AddressLabel.Text = "آدرس";
             // 
@@ -160,7 +160,7 @@ namespace UI
             this.NationalCodeLabel.ForeColor = System.Drawing.Color.Teal;
             this.NationalCodeLabel.Location = new System.Drawing.Point(297, 90);
             this.NationalCodeLabel.Name = "NationalCodeLabel";
-            this.NationalCodeLabel.Size = new System.Drawing.Size(42, 16);
+            this.NationalCodeLabel.Size = new System.Drawing.Size(43, 16);
             this.NationalCodeLabel.TabIndex = 4;
             this.NationalCodeLabel.Text = "کد ملی";
             // 
@@ -171,7 +171,7 @@ namespace UI
             this.LastNameLabel.ForeColor = System.Drawing.Color.Teal;
             this.LastNameLabel.Location = new System.Drawing.Point(297, 57);
             this.LastNameLabel.Name = "LastNameLabel";
-            this.LastNameLabel.Size = new System.Drawing.Size(73, 16);
+            this.LastNameLabel.Size = new System.Drawing.Size(74, 16);
             this.LastNameLabel.TabIndex = 3;
             this.LastNameLabel.Text = "نام خانوادگی";
             // 
@@ -194,7 +194,7 @@ namespace UI
             this.FirstNameLabel.ForeColor = System.Drawing.Color.Teal;
             this.FirstNameLabel.Location = new System.Drawing.Point(297, 28);
             this.FirstNameLabel.Name = "FirstNameLabel";
-            this.FirstNameLabel.Size = new System.Drawing.Size(21, 16);
+            this.FirstNameLabel.Size = new System.Drawing.Size(22, 16);
             this.FirstNameLabel.TabIndex = 0;
             this.FirstNameLabel.Text = "نام";
             // 
@@ -222,6 +222,7 @@ namespace UI
             this.BackBtn.TabIndex = 34;
             this.BackBtn.Text = "بازگشت";
             this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // UserRegistrationForm
             // 
@@ -232,7 +233,7 @@ namespace UI
             this.Controls.Add(this.RegistrationUserBox);
             this.Controls.Add(this.UserSubmitBtn);
             this.Name = "UserRegistrationForm";
-            this.Text = "UserRegistrationForm";
+            this.Text = "فرم ثبت کاربر";
             this.RegistrationUserBox.ResumeLayout(false);
             this.RegistrationUserBox.PerformLayout();
             this.ResumeLayout(false);

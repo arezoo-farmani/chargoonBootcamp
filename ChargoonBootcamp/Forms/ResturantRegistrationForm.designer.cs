@@ -96,7 +96,7 @@ namespace UI
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Teal;
             this.PhoneNumberLabel.Location = new System.Drawing.Point(269, 95);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(74, 16);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(75, 16);
             this.PhoneNumberLabel.TabIndex = 14;
             this.PhoneNumberLabel.Text = "شماره موبایل";
             // 
@@ -178,7 +178,7 @@ namespace UI
             this.ToLabel.ForeColor = System.Drawing.Color.Teal;
             this.ToLabel.Location = new System.Drawing.Point(118, 126);
             this.ToLabel.Name = "ToLabel";
-            this.ToLabel.Size = new System.Drawing.Size(16, 16);
+            this.ToLabel.Size = new System.Drawing.Size(17, 16);
             this.ToLabel.TabIndex = 7;
             this.ToLabel.Text = "تا";
             // 
@@ -189,7 +189,7 @@ namespace UI
             this.FromLabel.ForeColor = System.Drawing.Color.Teal;
             this.FromLabel.Location = new System.Drawing.Point(212, 126);
             this.FromLabel.Name = "FromLabel";
-            this.FromLabel.Size = new System.Drawing.Size(16, 16);
+            this.FromLabel.Size = new System.Drawing.Size(17, 16);
             this.FromLabel.TabIndex = 6;
             this.FromLabel.Text = "از";
             // 
@@ -200,7 +200,7 @@ namespace UI
             this.AddressLabel.ForeColor = System.Drawing.Color.Teal;
             this.AddressLabel.Location = new System.Drawing.Point(269, 156);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(37, 16);
+            this.AddressLabel.Size = new System.Drawing.Size(38, 16);
             this.AddressLabel.TabIndex = 5;
             this.AddressLabel.Text = "آدرس";
             // 
@@ -211,7 +211,7 @@ namespace UI
             this.WorkHoursLabel.ForeColor = System.Drawing.Color.Teal;
             this.WorkHoursLabel.Location = new System.Drawing.Point(269, 126);
             this.WorkHoursLabel.Name = "WorkHoursLabel";
-            this.WorkHoursLabel.Size = new System.Drawing.Size(78, 16);
+            this.WorkHoursLabel.Size = new System.Drawing.Size(79, 16);
             this.WorkHoursLabel.TabIndex = 4;
             this.WorkHoursLabel.Text = "ساعت کارکرد";
             // 
@@ -222,7 +222,7 @@ namespace UI
             this.ResturantOwnerLabel.ForeColor = System.Drawing.Color.Teal;
             this.ResturantOwnerLabel.Location = new System.Drawing.Point(269, 63);
             this.ResturantOwnerLabel.Name = "ResturantOwnerLabel";
-            this.ResturantOwnerLabel.Size = new System.Drawing.Size(83, 16);
+            this.ResturantOwnerLabel.Size = new System.Drawing.Size(84, 16);
             this.ResturantOwnerLabel.TabIndex = 3;
             this.ResturantOwnerLabel.Text = "صاحب رستوران";
             // 
@@ -243,7 +243,7 @@ namespace UI
             this.ResturantNameLabel.ForeColor = System.Drawing.Color.Teal;
             this.ResturantNameLabel.Location = new System.Drawing.Point(269, 31);
             this.ResturantNameLabel.Name = "ResturantNameLabel";
-            this.ResturantNameLabel.Size = new System.Drawing.Size(65, 16);
+            this.ResturantNameLabel.Size = new System.Drawing.Size(66, 16);
             this.ResturantNameLabel.TabIndex = 0;
             this.ResturantNameLabel.Text = "نام رستوران";
             // 
@@ -258,7 +258,6 @@ namespace UI
             this.ResturantSubmitBtn.TabIndex = 13;
             this.ResturantSubmitBtn.Text = "ثبت ";
             this.ResturantSubmitBtn.UseVisualStyleBackColor = false;
-            this.RestaurantSubmitBtn.Click += new System.EventHandler(this.RestaurantSubmitBtn_Click);
             // 
             // BackBtn
             // 
@@ -285,6 +284,7 @@ namespace UI
             this.RestaurantSubmitBtn.TabIndex = 35;
             this.RestaurantSubmitBtn.Text = "ثبت ";
             this.RestaurantSubmitBtn.UseVisualStyleBackColor = false;
+            this.RestaurantSubmitBtn.Click += new System.EventHandler(this.RestaurantSubmitBtn_Click);
             // 
             // ResturantRegistrationForm
             // 
@@ -296,7 +296,7 @@ namespace UI
             this.Controls.Add(this.ResturantRegBox);
             this.Controls.Add(this.ResturantSubmitBtn);
             this.Name = "ResturantRegistrationForm";
-            this.Text = "ResturantRegistrationForm";
+            this.Text = "فرم ثبت رستوران";
             this.ResturantRegBox.ResumeLayout(false);
             this.ResturantRegBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.HourToTxt)).EndInit();

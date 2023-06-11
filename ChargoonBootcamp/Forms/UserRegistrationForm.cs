@@ -55,5 +55,9 @@ namespace UI
             PhoneNumberTxt.Text = "";
         }
 
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

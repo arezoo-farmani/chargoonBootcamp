@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Domain.Handler;
 using System;
 using System.Windows.Forms;
 using Service;
@@ -30,7 +31,9 @@ namespace UI
             };
             FoodService foodService = new FoodService();
             foodService.Save(food);
-            MessageBox.Show("Food Has Been Registered successfully.");
+            string foodRegMessage = MessageHandler.GetMessage("FoodMenu", "Registration", true);
+            MessageBox.Show(foodRegMessage);
+           
         }
 
         private void ListMenuBtn_Click_1(object sender, EventArgs e)
