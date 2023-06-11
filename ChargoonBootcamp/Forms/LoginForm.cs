@@ -2,6 +2,7 @@ using Domain.Models;
 using Service;
 using System;
 using System.Drawing;
+using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using UI;
 
@@ -22,7 +23,7 @@ namespace ResturantApp
             _defaultTextBoxColor = PhoneNumberTxt.BackColor;
             PhoneNumber = PhoneNumberTxt.Text;
 
-            if (string.IsNullOrWhiteSpace(PhoneNumber))
+            if (!IsValidPhoneNumber(PhoneNumber))
             {
                 PhoneNumberTxt.BackColor = Color.IndianRed;
                 return;
@@ -61,7 +62,15 @@ namespace ResturantApp
                 PhoneNumberTxt.BackColor = _defaultTextBoxColor;
             }
         }
-
+        private bool IsValidPhoneNumber(string phoneNumber)
+        {
+            if (string.IsNullOrEmpty(phoneNumber))
+                return false;
+            string pattern = @"^\d{11}$";
+            Regex regex = new Regex(pattern);
+            Match match = regex.Match(phoneNumber);
+            return match.Success;
+        }
         private void CloseBtn_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);

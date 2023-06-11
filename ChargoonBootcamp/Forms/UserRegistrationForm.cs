@@ -5,6 +5,9 @@ using System.Windows.Forms;
 using Service;
 using Domain.Handler;
 using Domain.Enumration;
+using System.Drawing;
+using System.Linq;
+using System.Text.RegularExpressions;
 
 namespace UI
 {
@@ -23,6 +26,12 @@ namespace UI
 
         private void UserSubmitBtn_Click_1(object sender, EventArgs e)
         {
+            if (!IsValidNationalCode(NationalCodeTxt.Text))
+            {
+                NationalCodeTxt.BackColor = Color.IndianRed;
+                return;
+            }
+
             User newUser = CreateNewUser();
             BaseService userService = new BaseService();
             userService.Save<User>(newUser);
@@ -54,6 +63,14 @@ namespace UI
             NationalCodeTxt.Text = "";
             AddressTxt.Text = "";
             PhoneNumberTxt.Text = "";
+        }
+        private bool IsValidNationalCode(string nationalCode)
+        {
+            if (string.IsNullOrWhiteSpace(nationalCode) || nationalCode.Length != 10)
+                return false;
+
+            string onlyNumericCharectersPattern = @"^\d+$";
+            return Regex.IsMatch(nationalCode, onlyNumericCharectersPattern);
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

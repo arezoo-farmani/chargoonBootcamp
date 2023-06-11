@@ -1,9 +1,11 @@
-﻿using Domain.Enumration;
+﻿using Domain.DataInterfaces;
+using Domain.Enumration;
 using Domain.Handler;
 using Domain.Models;
 using ResturantApp;
 using Service;
 using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace UI
@@ -23,6 +25,12 @@ namespace UI
 
         private void RestaurantSubmitBtn_Click(object sender, EventArgs e)
         {
+            if (string.IsNullOrWhiteSpace(ResturantNameTxt.Text))
+            {
+                ResturantNameTxt.BackColor = Color.IndianRed;
+                return;
+            }
+
             Restaurant newRestaurant = CreateNewRestaurant();
             BaseService restaurantService = new BaseService();
             restaurantService.Save<Restaurant>(newRestaurant);

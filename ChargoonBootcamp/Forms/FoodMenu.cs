@@ -4,6 +4,8 @@ using System;
 using System.Windows.Forms;
 using Service;
 using Domain.Enumration;
+using System.Text.RegularExpressions;
+using System.Drawing;
 
 namespace UI
 {
@@ -24,6 +26,11 @@ namespace UI
 
         private void SubmitBtn_Click(object sender, EventArgs e)
         {
+            if (!IsValidPrice(FoodPriceText.Text))
+            {
+                FoodPriceText.BackColor = Color.IndianRed;
+                return;
+            }
             Food food = new Food
             {
                 FoodName = FoodNameText.Text,
@@ -40,6 +47,11 @@ namespace UI
         {
             FoodListMenu foodListMenu = new FoodListMenu(_restaurantGuid);
             foodListMenu.ShowDialog();
+        }
+        private bool IsValidPrice(string foodPrice)
+        {
+            string onlyNumericCharectersPattern = @"^\d+$";
+            return Regex.IsMatch(foodPrice, onlyNumericCharectersPattern);
         }
     }
 }
