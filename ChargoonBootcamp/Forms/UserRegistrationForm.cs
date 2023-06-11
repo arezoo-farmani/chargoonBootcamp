@@ -4,6 +4,7 @@ using System;
 using System.Windows.Forms;
 using Service;
 using Domain.Handler;
+using Domain.Enumration;
 
 namespace UI
 {
@@ -25,7 +26,7 @@ namespace UI
             User newUser = CreateNewUser();
             BaseService userService = new BaseService();
             userService.Save<User>(newUser);
-            string userRegMessage = MessageHandler.GetMessage("UserRegistrationForm", "Registration", true);
+            string userRegMessage = MessageHandler.GetMessage(MessageType.UserSubmitOk);
             MessageBox.Show(userRegMessage);
             ClearFields();
 

@@ -3,6 +3,7 @@ using Domain.Handler;
 using System;
 using System.Windows.Forms;
 using Service;
+using Domain.Enumration;
 
 namespace UI
 {
@@ -31,9 +32,8 @@ namespace UI
             };
             FoodService foodService = new FoodService();
             foodService.Save(food);
-            string foodRegMessage = MessageHandler.GetMessage("FoodMenu", "Registration", true);
+            string foodRegMessage = MessageHandler.GetMessage(MessageType.FoodMenuSubmitOk);
             MessageBox.Show(foodRegMessage);
-           
         }
 
         private void ListMenuBtn_Click_1(object sender, EventArgs e)

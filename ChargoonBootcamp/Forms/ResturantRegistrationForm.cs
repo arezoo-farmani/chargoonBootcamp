@@ -1,4 +1,5 @@
-﻿using Domain.Handler;
+﻿using Domain.Enumration;
+using Domain.Handler;
 using Domain.Models;
 using ResturantApp;
 using Service;
@@ -25,7 +26,7 @@ namespace UI
             Restaurant newRestaurant = CreateNewRestaurant();
             BaseService restaurantService = new BaseService();
             restaurantService.Save<Restaurant>(newRestaurant);
-            string restaurantRegMessage = MessageHandler.GetMessage("ResturantRegistrationForm", "Registration", true);
+            string restaurantRegMessage = MessageHandler.GetMessage(MessageType.RestaurantSubmitOk);
             MessageBox.Show(restaurantRegMessage);
             ClearFields();
 

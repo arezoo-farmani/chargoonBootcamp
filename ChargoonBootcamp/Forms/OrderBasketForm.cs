@@ -1,4 +1,5 @@
-﻿using Domain.Handler;
+﻿using Domain.Enumration;
+using Domain.Handler;
 using Domain.Models;
 using Domain.ServiceInterfaces;
 using Service;
@@ -38,7 +39,7 @@ namespace UI
                 RestaurantGuid = _order.RestaurantGuid,
                 InvoiceAmount = _order.TotalOrderAmount,
             });
-            string orderBasketMessage = MessageHandler.GetMessage("OrderBasketForm", "Registration", true);
+            string orderBasketMessage = MessageHandler.GetMessage(MessageType.OrderBasketFormOk);
             MessageBox.Show(orderBasketMessage);
         }
     }

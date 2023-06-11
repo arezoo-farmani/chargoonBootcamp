@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Service;
 using Domain.Models;
 using Domain.Handler;
+using Domain.Enumration;
 
 namespace UI
 {
@@ -31,7 +32,7 @@ namespace UI
                 RestaurantGuid = _editedFood.RestaurantGuid,
             };
             foodService.Update(food);
-            string foodEditMessage = MessageHandler.GetMessage("FoodEditForm", "Registration", true);
+            string foodEditMessage = MessageHandler.GetMessage(MessageType.FoodEditFormSubmitOk);
             MessageBox.Show(foodEditMessage);
             this.Close();
         }

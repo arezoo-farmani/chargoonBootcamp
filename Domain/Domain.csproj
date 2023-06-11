@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="DataInterfaces\IBaseEntity.cs" />
     <Compile Include="DataInterfaces\IPhoneNumber.cs" />
+    <Compile Include="Enumration\MessageType.cs" />
     <Compile Include="Models\Food.cs" />
     <Compile Include="Models\Invoice.cs" />
     <Compile Include="ServiceInterfaces\IBaseService.cs" />
