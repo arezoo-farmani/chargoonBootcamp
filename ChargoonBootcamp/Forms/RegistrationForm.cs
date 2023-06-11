@@ -13,14 +13,12 @@ namespace UI
 
         private void UserRegBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form userRegistrationForm = new UserRegistrationForm();
             userRegistrationForm.Show();
         }
 
         private void ResturantRegBtn_Click(object sender, EventArgs e)
         {
-            this.Hide();
             Form resturantRegistartionForm = new ResturantRegistrationForm();
             resturantRegistartionForm.Show();
         }

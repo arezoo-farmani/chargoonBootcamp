@@ -40,7 +40,7 @@
             // 
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -49,26 +49,27 @@
             this.FoodGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.FoodGridView.DefaultCellStyle = dataGridViewCellStyle2;
-            this.FoodGridView.Location = new System.Drawing.Point(28, -5);
+            this.FoodGridView.Location = new System.Drawing.Point(12, 12);
             this.FoodGridView.Name = "FoodGridView";
             this.FoodGridView.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.FoodGridView.Size = new System.Drawing.Size(393, 267);
+            this.FoodGridView.Size = new System.Drawing.Size(452, 290);
             this.FoodGridView.TabIndex = 26;
             // 
             // BackBtn
             // 
             this.BackBtn.BackColor = System.Drawing.Color.Teal;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BackBtn.ForeColor = System.Drawing.Color.White;
-            this.BackBtn.Location = new System.Drawing.Point(51, 289);
+            this.BackBtn.Location = new System.Drawing.Point(15, 308);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(60, 30);
+            this.BackBtn.Size = new System.Drawing.Size(71, 30);
             this.BackBtn.TabIndex = 25;
             this.BackBtn.Text = "بازگشت";
             this.BackBtn.UseVisualStyleBackColor = false;
@@ -78,10 +79,11 @@
             // 
             this.EditBtn.BackColor = System.Drawing.Color.Teal;
             this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.EditBtn.ForeColor = System.Drawing.Color.White;
-            this.EditBtn.Location = new System.Drawing.Point(294, 289);
+            this.EditBtn.Location = new System.Drawing.Point(388, 308);
             this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(60, 30);
+            this.EditBtn.Size = new System.Drawing.Size(73, 30);
             this.EditBtn.TabIndex = 24;
             this.EditBtn.Text = "ویرایش";
             this.EditBtn.UseVisualStyleBackColor = false;
@@ -91,7 +93,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(477, 336);
+            this.ClientSize = new System.Drawing.Size(476, 360);
             this.Controls.Add(this.FoodGridView);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.EditBtn);

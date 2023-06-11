@@ -41,6 +41,7 @@ namespace UI
             this.Amount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.SumLabel = new System.Windows.Forms.Label();
             this.TotalLabel = new System.Windows.Forms.Label();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.InvoicesBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.InvoicesDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -51,9 +52,9 @@ namespace UI
             this.InvoicesBox.Controls.Add(this.SumLabel);
             this.InvoicesBox.Controls.Add(this.TotalLabel);
             this.InvoicesBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.InvoicesBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.InvoicesBox.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.InvoicesBox.ForeColor = System.Drawing.Color.Teal;
-            this.InvoicesBox.Location = new System.Drawing.Point(92, 80);
+            this.InvoicesBox.Location = new System.Drawing.Point(96, 37);
             this.InvoicesBox.Name = "InvoicesBox";
             this.InvoicesBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.InvoicesBox.Size = new System.Drawing.Size(400, 300);
@@ -74,7 +75,7 @@ namespace UI
             this.InvoicesDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -87,7 +88,7 @@ namespace UI
             this.Amount});
             dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             dataGridViewCellStyle5.ForeColor = System.Drawing.Color.Teal;
             dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
             dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -129,30 +130,45 @@ namespace UI
             // SumLabel
             // 
             this.SumLabel.AutoSize = true;
-            this.SumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SumLabel.ForeColor = System.Drawing.Color.Teal;
-            this.SumLabel.Location = new System.Drawing.Point(162, 259);
+            this.SumLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SumLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.SumLabel.Location = new System.Drawing.Point(131, 263);
             this.SumLabel.Name = "SumLabel";
-            this.SumLabel.Size = new System.Drawing.Size(15, 16);
+            this.SumLabel.Size = new System.Drawing.Size(16, 18);
             this.SumLabel.TabIndex = 1;
             this.SumLabel.Text = "0";
             // 
             // TotalLabel
             // 
             this.TotalLabel.AutoSize = true;
-            this.TotalLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalLabel.ForeColor = System.Drawing.Color.Teal;
-            this.TotalLabel.Location = new System.Drawing.Point(209, 259);
+            this.TotalLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.TotalLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.TotalLabel.Location = new System.Drawing.Point(227, 260);
             this.TotalLabel.Name = "TotalLabel";
-            this.TotalLabel.Size = new System.Drawing.Size(33, 16);
+            this.TotalLabel.Size = new System.Drawing.Size(69, 24);
             this.TotalLabel.TabIndex = 0;
-            this.TotalLabel.Text = "جمع:";
+            this.TotalLabel.Text = "جمع مبلغ:";
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.Teal;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BackBtn.ForeColor = System.Drawing.Color.White;
+            this.BackBtn.Location = new System.Drawing.Point(415, 343);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(75, 30);
+            this.BackBtn.TabIndex = 34;
+            this.BackBtn.Text = "بازگشت";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // InvoicesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.ClientSize = new System.Drawing.Size(584, 393);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.InvoicesBox);
             this.Name = "InvoicesForm";
             this.Text = "فرم لیست فاکتور";
@@ -171,5 +187,6 @@ namespace UI
         private DataGridView InvoicesDataGrid;
         private DataGridViewTextBoxColumn InvoiceName;
         private DataGridViewTextBoxColumn Amount;
+        private Button BackBtn;
     }
 }

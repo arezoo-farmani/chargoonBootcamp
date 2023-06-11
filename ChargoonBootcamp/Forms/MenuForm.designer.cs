@@ -30,9 +30,9 @@ namespace UI
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             this.MenuBox = new System.Windows.Forms.GroupBox();
             this.MenuDataGrid = new System.Windows.Forms.DataGridView();
             this.Add = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -41,6 +41,7 @@ namespace UI
             this.FoodName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.FoodPrice = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MenuSubmitBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.MenuBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.MenuDataGrid)).BeginInit();
             this.SuspendLayout();
@@ -49,12 +50,12 @@ namespace UI
             // 
             this.MenuBox.Controls.Add(this.MenuDataGrid);
             this.MenuBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MenuBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuBox.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.MenuBox.ForeColor = System.Drawing.Color.Teal;
-            this.MenuBox.Location = new System.Drawing.Point(42, 80);
+            this.MenuBox.Location = new System.Drawing.Point(42, 29);
             this.MenuBox.Name = "MenuBox";
             this.MenuBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.MenuBox.Size = new System.Drawing.Size(500, 300);
+            this.MenuBox.Size = new System.Drawing.Size(500, 314);
             this.MenuBox.TabIndex = 3;
             this.MenuBox.TabStop = false;
             this.MenuBox.Text = "منو";
@@ -64,14 +65,14 @@ namespace UI
             this.MenuDataGrid.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.MenuDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.MenuDataGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.MenuDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.MenuDataGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.MenuDataGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.MenuDataGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Add,
@@ -79,19 +80,19 @@ namespace UI
             this.Count,
             this.FoodName,
             this.FoodPrice});
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Teal;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.MenuDataGrid.DefaultCellStyle = dataGridViewCellStyle3;
-            this.MenuDataGrid.Location = new System.Drawing.Point(23, 21);
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.Teal;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.ButtonShadow;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.MenuDataGrid.DefaultCellStyle = dataGridViewCellStyle6;
+            this.MenuDataGrid.Location = new System.Drawing.Point(19, 35);
             this.MenuDataGrid.Name = "MenuDataGrid";
             this.MenuDataGrid.ReadOnly = true;
             this.MenuDataGrid.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.MenuDataGrid.Size = new System.Drawing.Size(442, 258);
+            this.MenuDataGrid.Size = new System.Drawing.Size(452, 258);
             this.MenuDataGrid.TabIndex = 14;
             this.MenuDataGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.MenuDataGrid_CellContentClick);
             // 
@@ -123,8 +124,8 @@ namespace UI
             // 
             this.Count.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.Count.DataPropertyName = "Count";
-            dataGridViewCellStyle2.NullValue = "0";
-            this.Count.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.NullValue = "0";
+            this.Count.DefaultCellStyle = dataGridViewCellStyle5;
             this.Count.HeaderText = "تعداد";
             this.Count.Name = "Count";
             this.Count.ReadOnly = true;
@@ -150,20 +151,36 @@ namespace UI
             // 
             this.MenuSubmitBtn.BackColor = System.Drawing.Color.Teal;
             this.MenuSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuSubmitBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.MenuSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.MenuSubmitBtn.Location = new System.Drawing.Point(42, 386);
+            this.MenuSubmitBtn.Location = new System.Drawing.Point(48, 349);
             this.MenuSubmitBtn.Name = "MenuSubmitBtn";
-            this.MenuSubmitBtn.Size = new System.Drawing.Size(80, 30);
+            this.MenuSubmitBtn.Size = new System.Drawing.Size(96, 30);
             this.MenuSubmitBtn.TabIndex = 13;
-            this.MenuSubmitBtn.Text = "تکمبل خرید";
+            this.MenuSubmitBtn.Text = "تکمیل خرید";
             this.MenuSubmitBtn.UseVisualStyleBackColor = false;
             this.MenuSubmitBtn.Click += new System.EventHandler(this.MenuSubmitBtn_Click);
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.Teal;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BackBtn.ForeColor = System.Drawing.Color.White;
+            this.BackBtn.Location = new System.Drawing.Point(443, 349);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(96, 30);
+            this.BackBtn.TabIndex = 14;
+            this.BackBtn.Text = "بازگشت";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // MenuForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(584, 461);
+            this.ClientSize = new System.Drawing.Size(584, 410);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.MenuSubmitBtn);
             this.Controls.Add(this.MenuBox);
             this.Name = "MenuForm";
@@ -184,5 +201,6 @@ namespace UI
         private DataGridViewTextBoxColumn Count;
         private DataGridViewTextBoxColumn FoodName;
         private DataGridViewTextBoxColumn FoodPrice;
+        private Button BackBtn;
     }
 }

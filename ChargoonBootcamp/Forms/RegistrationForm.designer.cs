@@ -41,7 +41,7 @@ namespace UI
             this.RegistrationBox.Controls.Add(this.ResturantRegBtn);
             this.RegistrationBox.Controls.Add(this.UserRegBtn);
             this.RegistrationBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.RegistrationBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RegistrationBox.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.RegistrationBox.ForeColor = System.Drawing.Color.Teal;
             this.RegistrationBox.Location = new System.Drawing.Point(80, 70);
             this.RegistrationBox.Margin = new System.Windows.Forms.Padding(0);
@@ -59,7 +59,7 @@ namespace UI
             this.ResturantRegBtn.ForeColor = System.Drawing.Color.White;
             this.ResturantRegBtn.Location = new System.Drawing.Point(224, 57);
             this.ResturantRegBtn.Name = "ResturantRegBtn";
-            this.ResturantRegBtn.Size = new System.Drawing.Size(120, 30);
+            this.ResturantRegBtn.Size = new System.Drawing.Size(135, 30);
             this.ResturantRegBtn.TabIndex = 1;
             this.ResturantRegBtn.Text = "ثبت نام رستوران";
             this.ResturantRegBtn.UseVisualStyleBackColor = false;

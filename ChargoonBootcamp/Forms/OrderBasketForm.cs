@@ -41,6 +41,7 @@ namespace UI
             });
             string orderBasketMessage = MessageHandler.GetMessage(MessageType.OrderBasketFormOk);
             MessageBox.Show(orderBasketMessage);
+            this.Close();
         }
     }
 }

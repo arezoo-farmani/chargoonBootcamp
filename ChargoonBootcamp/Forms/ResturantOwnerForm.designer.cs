@@ -33,6 +33,7 @@ namespace UI
             this.MainBox = new System.Windows.Forms.GroupBox();
             this.MenuBtn = new System.Windows.Forms.Button();
             this.ShowInvoicesBtn = new System.Windows.Forms.Button();
+            this.BackBtn = new System.Windows.Forms.Button();
             this.MainBox.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,10 +56,11 @@ namespace UI
             // 
             this.MenuBtn.BackColor = System.Drawing.Color.Teal;
             this.MenuBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MenuBtn.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.MenuBtn.ForeColor = System.Drawing.Color.White;
             this.MenuBtn.Location = new System.Drawing.Point(224, 57);
             this.MenuBtn.Name = "MenuBtn";
-            this.MenuBtn.Size = new System.Drawing.Size(120, 30);
+            this.MenuBtn.Size = new System.Drawing.Size(126, 30);
             this.MenuBtn.TabIndex = 1;
             this.MenuBtn.Text = "منو غذا";
             this.MenuBtn.UseVisualStyleBackColor = false;
@@ -68,20 +70,36 @@ namespace UI
             // 
             this.ShowInvoicesBtn.BackColor = System.Drawing.Color.Teal;
             this.ShowInvoicesBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ShowInvoicesBtn.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ShowInvoicesBtn.ForeColor = System.Drawing.Color.White;
-            this.ShowInvoicesBtn.Location = new System.Drawing.Point(78, 57);
+            this.ShowInvoicesBtn.Location = new System.Drawing.Point(70, 57);
             this.ShowInvoicesBtn.Name = "ShowInvoicesBtn";
-            this.ShowInvoicesBtn.Size = new System.Drawing.Size(120, 30);
+            this.ShowInvoicesBtn.Size = new System.Drawing.Size(132, 30);
             this.ShowInvoicesBtn.TabIndex = 0;
             this.ShowInvoicesBtn.Text = "نمایش فاکتورها";
             this.ShowInvoicesBtn.UseVisualStyleBackColor = false;
             this.ShowInvoicesBtn.Click += new System.EventHandler(this.ShowInvoicesBtn_Click);
+            // 
+            // BackBtn
+            // 
+            this.BackBtn.BackColor = System.Drawing.Color.Teal;
+            this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
+            this.BackBtn.ForeColor = System.Drawing.Color.White;
+            this.BackBtn.Location = new System.Drawing.Point(411, 208);
+            this.BackBtn.Name = "BackBtn";
+            this.BackBtn.Size = new System.Drawing.Size(81, 30);
+            this.BackBtn.TabIndex = 2;
+            this.BackBtn.Text = "بازگشت";
+            this.BackBtn.UseVisualStyleBackColor = false;
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // ResturantOwnerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(584, 261);
+            this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.MainBox);
             this.Name = "ResturantOwnerForm";
             this.Text = "فرم مالک رستوران";
@@ -95,5 +113,6 @@ namespace UI
         private GroupBox MainBox;
         private Button MenuBtn;
         private Button ShowInvoicesBtn;
+        private Button BackBtn;
     }
 }

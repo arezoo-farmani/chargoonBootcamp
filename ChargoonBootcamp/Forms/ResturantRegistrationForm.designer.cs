@@ -68,12 +68,12 @@ namespace UI
             this.ResturantRegBox.Controls.Add(this.ResturantNameTxt);
             this.ResturantRegBox.Controls.Add(this.ResturantNameLabel);
             this.ResturantRegBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ResturantRegBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResturantRegBox.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ResturantRegBox.ForeColor = System.Drawing.Color.Teal;
-            this.ResturantRegBox.Location = new System.Drawing.Point(100, 80);
+            this.ResturantRegBox.Location = new System.Drawing.Point(100, 25);
             this.ResturantRegBox.Name = "ResturantRegBox";
             this.ResturantRegBox.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.ResturantRegBox.Size = new System.Drawing.Size(400, 300);
+            this.ResturantRegBox.Size = new System.Drawing.Size(400, 310);
             this.ResturantRegBox.TabIndex = 2;
             this.ResturantRegBox.TabStop = false;
             this.ResturantRegBox.Text = "ثبت نام رستوران";
@@ -82,21 +82,22 @@ namespace UI
             // 
             this.PhoneNumberTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.PhoneNumberTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.PhoneNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.PhoneNumberTxt.Location = new System.Drawing.Point(65, 91);
+            this.PhoneNumberTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberTxt.Location = new System.Drawing.Point(66, 102);
+            this.PhoneNumberTxt.Multiline = true;
             this.PhoneNumberTxt.Name = "PhoneNumberTxt";
             this.PhoneNumberTxt.ReadOnly = true;
-            this.PhoneNumberTxt.Size = new System.Drawing.Size(160, 13);
-            this.PhoneNumberTxt.TabIndex = 15;
+            this.PhoneNumberTxt.Size = new System.Drawing.Size(160, 20);
+            this.PhoneNumberTxt.TabIndex = 2;
             // 
             // PhoneNumberLabel
             // 
             this.PhoneNumberLabel.AutoSize = true;
-            this.PhoneNumberLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PhoneNumberLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.PhoneNumberLabel.ForeColor = System.Drawing.Color.Teal;
-            this.PhoneNumberLabel.Location = new System.Drawing.Point(269, 95);
+            this.PhoneNumberLabel.Location = new System.Drawing.Point(263, 102);
             this.PhoneNumberLabel.Name = "PhoneNumberLabel";
-            this.PhoneNumberLabel.Size = new System.Drawing.Size(75, 16);
+            this.PhoneNumberLabel.Size = new System.Drawing.Size(88, 24);
             this.PhoneNumberLabel.TabIndex = 14;
             this.PhoneNumberLabel.Text = "شماره موبایل";
             // 
@@ -104,7 +105,7 @@ namespace UI
             // 
             this.HourToTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HourToTxt.ForeColor = System.Drawing.Color.Teal;
-            this.HourToTxt.Location = new System.Drawing.Point(48, 124);
+            this.HourToTxt.Location = new System.Drawing.Point(61, 141);
             this.HourToTxt.Maximum = new decimal(new int[] {
             24,
             0,
@@ -116,8 +117,8 @@ namespace UI
             0,
             0});
             this.HourToTxt.Name = "HourToTxt";
-            this.HourToTxt.Size = new System.Drawing.Size(60, 22);
-            this.HourToTxt.TabIndex = 12;
+            this.HourToTxt.Size = new System.Drawing.Size(60, 32);
+            this.HourToTxt.TabIndex = 4;
             this.HourToTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.HourToTxt.Value = new decimal(new int[] {
             1,
@@ -129,7 +130,7 @@ namespace UI
             // 
             this.HourFromTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.HourFromTxt.ForeColor = System.Drawing.Color.Teal;
-            this.HourFromTxt.Location = new System.Drawing.Point(140, 124);
+            this.HourFromTxt.Location = new System.Drawing.Point(153, 141);
             this.HourFromTxt.Maximum = new decimal(new int[] {
             24,
             0,
@@ -141,8 +142,8 @@ namespace UI
             0,
             0});
             this.HourFromTxt.Name = "HourFromTxt";
-            this.HourFromTxt.Size = new System.Drawing.Size(60, 22);
-            this.HourFromTxt.TabIndex = 11;
+            this.HourFromTxt.Size = new System.Drawing.Size(60, 32);
+            this.HourFromTxt.TabIndex = 3;
             this.HourFromTxt.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.HourFromTxt.Value = new decimal(new int[] {
             1,
@@ -154,75 +155,76 @@ namespace UI
             // 
             this.AddressTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.AddressTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.AddressTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.AddressTxt.Location = new System.Drawing.Point(23, 158);
+            this.AddressTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressTxt.Location = new System.Drawing.Point(38, 191);
             this.AddressTxt.Multiline = true;
             this.AddressTxt.Name = "AddressTxt";
-            this.AddressTxt.Size = new System.Drawing.Size(221, 49);
-            this.AddressTxt.TabIndex = 9;
+            this.AddressTxt.Size = new System.Drawing.Size(221, 64);
+            this.AddressTxt.TabIndex = 5;
             // 
             // ResturantOwnerTxt
             // 
             this.ResturantOwnerTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ResturantOwnerTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ResturantOwnerTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ResturantOwnerTxt.Location = new System.Drawing.Point(65, 59);
+            this.ResturantOwnerTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResturantOwnerTxt.Location = new System.Drawing.Point(65, 67);
+            this.ResturantOwnerTxt.Multiline = true;
             this.ResturantOwnerTxt.Name = "ResturantOwnerTxt";
-            this.ResturantOwnerTxt.Size = new System.Drawing.Size(160, 13);
-            this.ResturantOwnerTxt.TabIndex = 8;
+            this.ResturantOwnerTxt.Size = new System.Drawing.Size(160, 20);
+            this.ResturantOwnerTxt.TabIndex = 1;
             // 
             // ToLabel
             // 
             this.ToLabel.AutoSize = true;
-            this.ToLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ToLabel.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ToLabel.ForeColor = System.Drawing.Color.Teal;
-            this.ToLabel.Location = new System.Drawing.Point(118, 126);
+            this.ToLabel.Location = new System.Drawing.Point(131, 143);
             this.ToLabel.Name = "ToLabel";
-            this.ToLabel.Size = new System.Drawing.Size(17, 16);
+            this.ToLabel.Size = new System.Drawing.Size(18, 23);
             this.ToLabel.TabIndex = 7;
             this.ToLabel.Text = "تا";
             // 
             // FromLabel
             // 
             this.FromLabel.AutoSize = true;
-            this.FromLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FromLabel.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FromLabel.ForeColor = System.Drawing.Color.Teal;
-            this.FromLabel.Location = new System.Drawing.Point(212, 126);
+            this.FromLabel.Location = new System.Drawing.Point(225, 143);
             this.FromLabel.Name = "FromLabel";
-            this.FromLabel.Size = new System.Drawing.Size(17, 16);
+            this.FromLabel.Size = new System.Drawing.Size(20, 23);
             this.FromLabel.TabIndex = 6;
             this.FromLabel.Text = "از";
             // 
             // AddressLabel
             // 
             this.AddressLabel.AutoSize = true;
-            this.AddressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddressLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.AddressLabel.ForeColor = System.Drawing.Color.Teal;
-            this.AddressLabel.Location = new System.Drawing.Point(269, 156);
+            this.AddressLabel.Location = new System.Drawing.Point(272, 190);
             this.AddressLabel.Name = "AddressLabel";
-            this.AddressLabel.Size = new System.Drawing.Size(38, 16);
+            this.AddressLabel.Size = new System.Drawing.Size(48, 24);
             this.AddressLabel.TabIndex = 5;
             this.AddressLabel.Text = "آدرس";
             // 
             // WorkHoursLabel
             // 
             this.WorkHoursLabel.AutoSize = true;
-            this.WorkHoursLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WorkHoursLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.WorkHoursLabel.ForeColor = System.Drawing.Color.Teal;
-            this.WorkHoursLabel.Location = new System.Drawing.Point(269, 126);
+            this.WorkHoursLabel.Location = new System.Drawing.Point(265, 145);
             this.WorkHoursLabel.Name = "WorkHoursLabel";
-            this.WorkHoursLabel.Size = new System.Drawing.Size(79, 16);
+            this.WorkHoursLabel.Size = new System.Drawing.Size(89, 24);
             this.WorkHoursLabel.TabIndex = 4;
             this.WorkHoursLabel.Text = "ساعت کارکرد";
             // 
             // ResturantOwnerLabel
             // 
             this.ResturantOwnerLabel.AutoSize = true;
-            this.ResturantOwnerLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResturantOwnerLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ResturantOwnerLabel.ForeColor = System.Drawing.Color.Teal;
-            this.ResturantOwnerLabel.Location = new System.Drawing.Point(269, 63);
+            this.ResturantOwnerLabel.Location = new System.Drawing.Point(260, 67);
             this.ResturantOwnerLabel.Name = "ResturantOwnerLabel";
-            this.ResturantOwnerLabel.Size = new System.Drawing.Size(84, 16);
+            this.ResturantOwnerLabel.Size = new System.Drawing.Size(104, 24);
             this.ResturantOwnerLabel.TabIndex = 3;
             this.ResturantOwnerLabel.Text = "صاحب رستوران";
             // 
@@ -230,20 +232,21 @@ namespace UI
             // 
             this.ResturantNameTxt.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ResturantNameTxt.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.ResturantNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.ResturantNameTxt.Location = new System.Drawing.Point(65, 27);
+            this.ResturantNameTxt.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResturantNameTxt.Location = new System.Drawing.Point(65, 35);
+            this.ResturantNameTxt.Multiline = true;
             this.ResturantNameTxt.Name = "ResturantNameTxt";
-            this.ResturantNameTxt.Size = new System.Drawing.Size(160, 13);
-            this.ResturantNameTxt.TabIndex = 1;
+            this.ResturantNameTxt.Size = new System.Drawing.Size(160, 20);
+            this.ResturantNameTxt.TabIndex = 0;
             // 
             // ResturantNameLabel
             // 
             this.ResturantNameLabel.AutoSize = true;
-            this.ResturantNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResturantNameLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.ResturantNameLabel.ForeColor = System.Drawing.Color.Teal;
-            this.ResturantNameLabel.Location = new System.Drawing.Point(269, 31);
+            this.ResturantNameLabel.Location = new System.Drawing.Point(266, 35);
             this.ResturantNameLabel.Name = "ResturantNameLabel";
-            this.ResturantNameLabel.Size = new System.Drawing.Size(66, 16);
+            this.ResturantNameLabel.Size = new System.Drawing.Size(85, 24);
             this.ResturantNameLabel.TabIndex = 0;
             this.ResturantNameLabel.Text = "نام رستوران";
             // 
@@ -263,12 +266,13 @@ namespace UI
             // 
             this.BackBtn.BackColor = System.Drawing.Color.Teal;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BackBtn.ForeColor = System.Drawing.Color.White;
-            this.BackBtn.Location = new System.Drawing.Point(420, 385);
+            this.BackBtn.Location = new System.Drawing.Point(420, 342);
             this.BackBtn.Margin = new System.Windows.Forms.Padding(2);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(80, 29);
-            this.BackBtn.TabIndex = 34;
+            this.BackBtn.Size = new System.Drawing.Size(72, 30);
+            this.BackBtn.TabIndex = 0;
             this.BackBtn.Text = "بازگشت";
             this.BackBtn.UseVisualStyleBackColor = false;
             this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
@@ -277,11 +281,12 @@ namespace UI
             // 
             this.RestaurantSubmitBtn.BackColor = System.Drawing.Color.Teal;
             this.RestaurantSubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RestaurantSubmitBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.RestaurantSubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.RestaurantSubmitBtn.Location = new System.Drawing.Point(100, 386);
+            this.RestaurantSubmitBtn.Location = new System.Drawing.Point(105, 345);
             this.RestaurantSubmitBtn.Name = "RestaurantSubmitBtn";
-            this.RestaurantSubmitBtn.Size = new System.Drawing.Size(60, 30);
-            this.RestaurantSubmitBtn.TabIndex = 35;
+            this.RestaurantSubmitBtn.Size = new System.Drawing.Size(72, 30);
+            this.RestaurantSubmitBtn.TabIndex = 1;
             this.RestaurantSubmitBtn.Text = "ثبت ";
             this.RestaurantSubmitBtn.UseVisualStyleBackColor = false;
             this.RestaurantSubmitBtn.Click += new System.EventHandler(this.RestaurantSubmitBtn_Click);
@@ -290,7 +295,7 @@ namespace UI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(645, 442);
+            this.ClientSize = new System.Drawing.Size(578, 392);
             this.Controls.Add(this.RestaurantSubmitBtn);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.ResturantRegBox);

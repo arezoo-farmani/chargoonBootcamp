@@ -24,5 +24,10 @@ namespace UI
             Form invoiceForm = new InvoicesForm(_restaurantGuid);
             invoiceForm.Show();
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

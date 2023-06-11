@@ -40,8 +40,8 @@
             // 
             this.FoodPriceText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FoodPriceText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FoodPriceText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.FoodPriceText.Location = new System.Drawing.Point(96, 115);
+            this.FoodPriceText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FoodPriceText.Location = new System.Drawing.Point(77, 113);
             this.FoodPriceText.Multiline = true;
             this.FoodPriceText.Name = "FoodPriceText";
             this.FoodPriceText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -51,11 +51,11 @@
             // FoodPriceLabel
             // 
             this.FoodPriceLabel.AutoSize = true;
-            this.FoodPriceLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FoodPriceLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FoodPriceLabel.ForeColor = System.Drawing.Color.Teal;
-            this.FoodPriceLabel.Location = new System.Drawing.Point(262, 118);
+            this.FoodPriceLabel.Location = new System.Drawing.Point(243, 116);
             this.FoodPriceLabel.Name = "FoodPriceLabel";
-            this.FoodPriceLabel.Size = new System.Drawing.Size(36, 16);
+            this.FoodPriceLabel.Size = new System.Drawing.Size(47, 24);
             this.FoodPriceLabel.TabIndex = 32;
             this.FoodPriceLabel.Text = "قیمت ";
             // 
@@ -63,8 +63,8 @@
             // 
             this.FoodNameText.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.FoodNameText.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FoodNameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.FoodNameText.Location = new System.Drawing.Point(96, 59);
+            this.FoodNameText.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FoodNameText.Location = new System.Drawing.Point(77, 57);
             this.FoodNameText.Multiline = true;
             this.FoodNameText.Name = "FoodNameText";
             this.FoodNameText.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
@@ -74,11 +74,11 @@
             // FoodNameLabel
             // 
             this.FoodNameLabel.AutoSize = true;
-            this.FoodNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FoodNameLabel.Font = new System.Drawing.Font("B Yekan", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.FoodNameLabel.ForeColor = System.Drawing.Color.Teal;
-            this.FoodNameLabel.Location = new System.Drawing.Point(268, 59);
+            this.FoodNameLabel.Location = new System.Drawing.Point(249, 57);
             this.FoodNameLabel.Name = "FoodNameLabel";
-            this.FoodNameLabel.Size = new System.Drawing.Size(25, 16);
+            this.FoodNameLabel.Size = new System.Drawing.Size(32, 24);
             this.FoodNameLabel.TabIndex = 30;
             this.FoodNameLabel.Text = "نام ";
             // 
@@ -86,10 +86,11 @@
             // 
             this.BackBtn.BackColor = System.Drawing.Color.Teal;
             this.BackBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BackBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.BackBtn.ForeColor = System.Drawing.Color.White;
-            this.BackBtn.Location = new System.Drawing.Point(60, 191);
+            this.BackBtn.Location = new System.Drawing.Point(44, 191);
             this.BackBtn.Name = "BackBtn";
-            this.BackBtn.Size = new System.Drawing.Size(60, 30);
+            this.BackBtn.Size = new System.Drawing.Size(80, 30);
             this.BackBtn.TabIndex = 34;
             this.BackBtn.Text = "بازگشت";
             this.BackBtn.UseVisualStyleBackColor = false;
@@ -99,8 +100,9 @@
             // 
             this.SubmitBtn.BackColor = System.Drawing.Color.Teal;
             this.SubmitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubmitBtn.Font = new System.Drawing.Font("B Yekan", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(178)));
             this.SubmitBtn.ForeColor = System.Drawing.Color.White;
-            this.SubmitBtn.Location = new System.Drawing.Point(262, 191);
+            this.SubmitBtn.Location = new System.Drawing.Point(252, 191);
             this.SubmitBtn.Name = "SubmitBtn";
             this.SubmitBtn.Size = new System.Drawing.Size(80, 30);
             this.SubmitBtn.TabIndex = 35;
@@ -112,7 +114,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(415, 282);
+            this.ClientSize = new System.Drawing.Size(360, 250);
             this.Controls.Add(this.SubmitBtn);
             this.Controls.Add(this.BackBtn);
             this.Controls.Add(this.FoodPriceText);

@@ -19,8 +19,9 @@ namespace UI
             FoodGridView.DataSource = foodService.GetAllRestaurantFoods(restaurantGuid);
             FoodGridView.Columns["Guid"].Visible = false;
             FoodGridView.Columns["RestaurantGuid"].Visible = false;
-            FoodGridView.Columns[1].HeaderText = "نام غذا";
-            FoodGridView.Columns[2].HeaderText = "قیمت";
+            FoodGridView.Columns[2].HeaderText = "نام غذا";
+            FoodGridView.Columns[3].HeaderText = "قیمت";
+
         }
 
         private void BackBtn_Click(object sender, EventArgs e)

@@ -16,7 +16,7 @@ namespace UI
             InitializeComponent();
             AllResturantsForm_Load();
             _userGuid = user.Guid;
-            this.lblInfo.Text = $"{user.Name} خوش آمدید ";
+            this.lblInfo.Text = $"{user.Name} {user.Family} خوش آمدید ";
         }
 
         private void AllResturantsForm_Load()

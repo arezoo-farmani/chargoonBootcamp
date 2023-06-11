@@ -34,5 +34,10 @@ namespace UI
             }
             return totalAmount;
         }
+
+        private void BackBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
